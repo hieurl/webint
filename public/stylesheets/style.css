@@ -9,8 +9,23 @@ body {
 	margin: 0px 0 10px 0;
 }
 
+.top_menu_left {
+	width: 800px;
+	float: left;
+}
+
 .top_menu {
-	margin: 0 0 10px 0;
+	margin: 0 10px 10px 0;
+}
+
+.top_menu_right {
+	float: right;
+	width: 150px;
+}
+
+.search_bar {
+	position: relative;
+	float: right;
 }
 
 .main_content {
