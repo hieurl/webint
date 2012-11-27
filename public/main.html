@@ -3,6 +3,7 @@
 	<head>
 		<title></title>
 		<link rel="stylesheet" href="./stylesheets/style.css" type="text/css" />
+		<script type="text/javascript" src="./scripts/jquery-1.6.4.min.js"></script>
 		<script type="text/javascript" src="./scripts/js.js"></script>
 	</head>
 	
@@ -20,7 +21,14 @@
 
 		<div class="top_menu">
 			<div class="top_menu_left">
-				<a href="#">New event</a>
+				<a href="#new_event" class="event_window">New event</a>
+				<!--TODO: ADD NEW EVENT CONTENT FORM-->
+				<div id="new_event" class="event_popup">
+				    <a href="#" class="close"><img src="./images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+					This is form for create new event!
+				</div>
+
+
 				<div class="search_bar"> 
 					<input type="text" value="Search ..." width= 700 />
 					<input type="button" value="Search" />
