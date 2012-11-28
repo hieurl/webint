@@ -19,8 +19,8 @@ body {
 .top_menu_left {
 	width: 740px;
 	float: left;
-	margin-right: 5px;
 	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .top_menu {
@@ -31,6 +31,9 @@ body {
 	float: right;
 	width: 190px;
 	text-align: right;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-left: 5px;
 }
 
 .search_bar {
@@ -46,10 +49,9 @@ body {
 
 .page_aside {
 	float: right;
-	width: 180px;
+	width: 185px;
 	text-align: right;
-	margin-right: 10px;
-	margin-left: 5px;
+	margin: 10px 10px 10px 0px;
 	border-left-width: thin;
     border-left-style:solid;
     border-left-color:#ff9900;
@@ -79,6 +81,7 @@ body {
 .user_status {
 	float: right;
 	width: 190px;
+	text-align: right;
 }
 
 .headline {
