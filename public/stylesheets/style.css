@@ -3,24 +3,34 @@ body {
 	font-size: 11pt;
 	width: 960px;
 	margin: 0 auto;
+	border-top-style: hidden;
+	border-bottom-width: hidden;
+	border-left-width: thin;
+	border-right-width: thin;
+    border-left-style:solid;
+	border-right-style: solid;
+    border-color:#ff9900;
 }
 
 .top_nav {
-	margin: 0px 0 10px 0;
+	margin: 10px 10px 10px 10px;
 }
 
 .top_menu_left {
-	width: 750px;
+	width: 740px;
 	float: left;
+	margin-right: 5px;
+	padding-top: 10px;
 }
 
 .top_menu {
-	margin: 0 10px 10px 0;
+	margin: 10px 10px 10px 10px;
 }
 
 .top_menu_right {
 	float: right;
-	width: 200px;
+	width: 190px;
+	text-align: right;
 }
 
 .search_bar {
@@ -30,46 +40,53 @@ body {
 
 .main_content {
     float: left;
-    width: 750px;
-    margin: 0px 10px 10px 0px;
+    width: 740px;
+    margin: 10px 10px 10px 10px;
 }
 
 .page_aside {
 	float: right;
-	width: 200px;
-	margin: 0 auto;
+	width: 180px;
+	text-align: right;
+	margin-right: 10px;
+	margin-left: 5px;
+	border-left-width: thin;
+    border-left-style:solid;
+    border-left-color:#ff9900;
 }
 
 .page_footer {
-	position:absolute;
-	bottom:0;
+	position: relative;
+	clear: both;
+	bottom: -30px;
 	font-size: 10pt;
 	font-style: italic;
-	width:100%;
-	height:60px;
+	width: 950px;
+	height: 30px;
+	text-align: center;
 }
 
 .page_header {
 	min-height: 100px;
-	margin: 10px 0px 10px 0px;
+	margin: 10px 10px 10px 10px;
 }
 
 .logo {
 	float: left;
 	width: 750px;
-	margin: 0px 10px 10px 0px;
 }
 
 .user_status {
 	float: right;
-	width: 200px;
+	width: 190px;
 }
 
 .headline {
 	position: relative;
 	bottom: 0;
-	width: 100%;
-	margin: 10px 0 10px 0px;
+	width: 950px;
+	margin: 10px 10px 10px 10px;
+	padding-bottom: 10px;
 }
 
 .event_popup {
@@ -98,4 +115,9 @@ img.btn_close {
 	width: 100%; height: 100%;
 	opacity: 0.8;
 	z-index: 999;
+}
+
+h4 {
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
