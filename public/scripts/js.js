@@ -2,7 +2,7 @@
 $(document).ready(function() {
 	$('a.event_window').click(function() {
 		
-                //Getting the variable's value from a link 
+        //Getting the variable's value from a link 
 		var loginBox = $(this).attr('href');
 
 		//Fade in the Popup
