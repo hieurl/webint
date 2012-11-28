@@ -10,7 +10,7 @@ body {
 }
 
 .top_menu_left {
-	width: 800px;
+	width: 750px;
 	float: left;
 }
 
@@ -20,7 +20,7 @@ body {
 
 .top_menu_right {
 	float: right;
-	width: 150px;
+	width: 200px;
 }
 
 .search_bar {
@@ -30,13 +30,13 @@ body {
 
 .main_content {
     float: left;
-    width: 800px;
+    width: 750px;
     margin: 0px 10px 10px 0px;
 }
 
 .page_aside {
 	float: right;
-	width: 150px;
+	width: 200px;
 	margin: 0 auto;
 }
 

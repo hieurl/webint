@@ -31,4 +31,22 @@ $(document).ready(function() {
 	}); 
 	return false;
 	});
+	
+	//script for auto-complete course input
+	var availableCourses = [
+               "DistAlg",
+               "InternetApp",
+               "MobServ",
+               "Netw_I",
+               "OS",
+               "SecCom",
+               "SoftDev",
+               "SysSec",
+               "WebInt"
+	           ];
+   $( "#course_input" ).autocomplete({
+               	source: availableCourses
+	});
+
 });
+
