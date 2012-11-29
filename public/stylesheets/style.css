@@ -1,29 +1,93 @@
 body {
 	font-family: arial, tahoma;
 	font-size: 11pt;
-	width: 960px;
+	width: 978px;
 	margin: 0 auto;
-	border-top-style: hidden;
+	color: #505050;
+/*
+	border: hidden;
 	border-bottom-width: hidden;
 	border-left-width: thin;
 	border-right-width: thin;
-    border-left-style:solid;
+    border-left-style: solid;
 	border-right-style: solid;
-    border-color:#ff9900;
+    border-color: #505050;
+*/
+}
+
+.top_border {
+	height: 22px;
+	background: #363842;
+	text-align: right;
+	padding-right: 10px;
+	padding-top: 5px;
+	color: white;
+}
+
+.bottom_border {
+	height: 30px;
+	background: #363842;
+	bottom: -34px;
 }
 
 .top_nav {
-	margin: 10px 10px 10px 10px;
+	float: left;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	width: 987px;
+	background: #5D606E;
+}
+
+.top_nav a {
+	color: white;
+	text-decoration: none;
+}
+
+.top_nav li {
+	margin: 0px;
+	list-style: none;
+	padding: 0px;
+	float: left;
+}
+
+.top_nav li a {
+	display: block;
+	color: white;
+	font-size: 16px;
+	width: 189px;
+	text-decoration: none;
+	background: #5D606E;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 11px;
+}
+
+.top_nav li.home a {
+	width:50px;
+    background-image:url(images/home.png);
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+}
+.top_nav li a:hover {
+    background-color:#363842;
+}
+
+.top_nav a.active {
+	background: #239CD3;
 }
 
 .top_menu_left {
-	width: 740px;
+	width: 758px;
 	float: left;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
 
 .top_menu {
+	float: left;
+	width: 958px;
+	position: relative;
 	margin: 10px 10px 10px 10px;
 }
 
@@ -43,53 +107,66 @@ body {
 
 .main_content {
     float: left;
-    width: 740px;
+    width: 758px;
     margin: 10px 10px 10px 10px;
 }
 
 .page_aside {
 	float: right;
-	width: 185px;
+	width: 175px;
+	margin: 10px 10px 10px 10px;
 	text-align: right;
-	margin: 10px 10px 10px 0px;
 	border-left-width: thin;
     border-left-style:solid;
-    border-left-color:#ff9900;
+    border-left-color: #C3C3C3;
 }
 
 .page_footer {
 	position: relative;
 	clear: both;
-	bottom: -30px;
+	bottom: -35px;
 	font-size: 10pt;
 	font-style: italic;
-	width: 950px;
+	width: 968px;
 	height: 30px;
 	text-align: center;
+	margin-top: 5px;
+	color: white;
 }
 
 .page_header {
-	min-height: 100px;
-	margin: 10px 10px 10px 10px;
+	position: relative;
+	float: left;
+	width: 968px;
+	top: -43px;
 }
 
 .logo {
-	float: left;
-	width: 750px;
 }
 
 .user_status {
 	float: right;
+	margin-top: 45px;
 	width: 190px;
 	text-align: right;
+	color: #239CD3;
 }
 
 .headline {
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+	float: right;
+	margin-top: -54px;
+	width: 500px;
+	color: #239CD3;
+/*
 	position: relative;
 	bottom: 0;
 	width: 950px;
 	margin: 10px 10px 10px 10px;
 	padding-bottom: 10px;
+*/
 }
 
 .popup {
@@ -123,4 +200,19 @@ img.btn_close {
 h4 {
 	margin-top: 5px;
 	margin-bottom: 5px;
+	color: #239CD3;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	color: #505050;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover {
+	text-decoration: underline;
 }
