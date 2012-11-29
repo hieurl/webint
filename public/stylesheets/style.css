@@ -35,7 +35,7 @@ body {
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
-	width: 987px;
+	width: 978px;
 	background: #5D606E;
 }
 
@@ -78,7 +78,7 @@ body {
 }
 
 .top_menu_left {
-	width: 758px;
+	width: 788px;
 	float: left;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -86,9 +86,8 @@ body {
 
 .top_menu {
 	float: left;
-	width: 958px;
+	width: 978px;
 	position: relative;
-	margin: 10px 10px 10px 10px;
 }
 
 .top_menu_right {
@@ -97,7 +96,6 @@ body {
 	text-align: right;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	margin-left: 5px;
 }
 
 .search_bar {
@@ -107,18 +105,18 @@ body {
 
 .main_content {
     float: left;
-    width: 758px;
-    margin: 10px 10px 10px 10px;
+    width: 768px;
 }
 
 .page_aside {
 	float: right;
-	width: 175px;
-	margin: 10px 10px 10px 10px;
+	width: 170px;
 	text-align: right;
 	border-left-width: thin;
     border-left-style:solid;
     border-left-color: #C3C3C3;
+	padding-left: 10px;
+	padding-right: 20px;
 }
 
 .page_footer {
@@ -127,7 +125,6 @@ body {
 	bottom: -35px;
 	font-size: 10pt;
 	font-style: italic;
-	width: 968px;
 	height: 30px;
 	text-align: center;
 	margin-top: 5px;
@@ -150,6 +147,7 @@ body {
 	width: 190px;
 	text-align: right;
 	color: #239CD3;
+	font-size: 10pt;
 }
 
 .headline {
@@ -157,7 +155,7 @@ body {
 	font-weight: bold;
 	text-transform: uppercase;
 	float: right;
-	margin-top: -54px;
+	margin-top: -34px;
 	width: 500px;
 	color: #239CD3;
 /*
@@ -215,4 +213,16 @@ a {
 
 a:hover {
 	text-decoration: underline;
+}
+
+.overlap {
+	float: right;
+	top: 20px;
+	right: 5px;
+	position: absolute;
+	color: white;
+}
+
+.overlap a {
+	color: white;
 }
