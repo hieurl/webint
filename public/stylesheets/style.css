@@ -92,7 +92,7 @@ body {
 	padding-bottom: 10px;
 }
 
-.event_popup {
+.popup {
 	display:none;
 	background: #C0C0C0;
 	padding: 10px; 	

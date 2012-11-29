@@ -26,7 +26,7 @@
 			<div class="top_menu_left">
 				<a href="#new_event" class="event_window">New event</a>
 				<!--TODO: ADD NEW EVENT CONTENT FORM-->
-				<div id="new_event" class="event_popup">
+				<div id="new_event" class="popup">
 				    <a href="#" class="close"><img src="./images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
 					This is form for create new event!
 				</div>
@@ -38,8 +38,23 @@
 			
 			<div class="top_menu_right">
 				<div class="my_track">
-					<!--TODO: Choose track-->
-					<h4>WEB ENGINEER</h4>
+					<!--TODO: Choose track-->					
+					<a href="#choose_track" class="track_window">Web engineering <img src="./images/button_edit.png" width="20px" title="Change track" alt="Change" /></a>
+					<div class="popup" id="choose_track">
+						<a href="#" class="close"><img src="./images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+						<form>
+							<select>
+								<option>Web engineering</option>
+								<option>Network security</option>
+								<option>Embedded systems</option>
+								<option>Multimedia</option>
+								<option>Mobile communication system</option>
+								<option>Transmission techonologies</option>
+							</select> <br />
+							<input type="submit" value="Save" onclick="alert('Sorry, we have not developed this yet')" />
+							<input type="button" class="close" value="Cancel" onclick="this.close()" />
+						</form>
+					</div>
 				</div>
 			</div>
 		</section>
