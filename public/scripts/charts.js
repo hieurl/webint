@@ -58,6 +58,63 @@ $(function () {
             }]
         });
         
+        chartScore = new Highcharts.Chart({
+            chart: {
+                renderTo: 'score_chart_container',
+                type: 'column',
+                marginRight: 130,
+                marginBottom: 25,
+            },
+            colors: [
+							'#DB843D',		
+							'#B5CA92',	
+							'#A47D7C', 	
+							'#92A8CD', 	
+							'#3D96AE',	
+							'#80699B', 	
+							'#89A54E',	
+							'#AA4643',	
+							'#4572A7'    	
+						],
+            title: {
+                text: 'Exam Score',
+                x: -20 //center
+            },
+            xAxis: {
+            	 id: 'scores', 
+                categories: scores
+            },
+            yAxis: {
+                title: {
+                    text: 'Students',
+                },
+                min : 0,
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                formatter: function() {
+                        return '<b>Score: ' + this.x + '</b><br/>Students: '+ this.y ;
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -10,
+                y: 100,
+                borderWidth: 0,
+                enabled : false
+            },
+            series: [{
+            	 id: 'students',
+                name: 'Scores',
+                data: studentsScore
+            }]
+        });
                
 			//var grades=chartGrade.get('grades').categories;
 			//var students=chartGrade.get('students').data;	
@@ -114,13 +171,13 @@ $(function () {
     $('#my_score_button').click(function() {
     		if (!isNaN(document.getElementById('my_score').value)) {
 				var myScore = parseInt(document.getElementById('my_score').value);
-				if (myScore>=10 && myScore<=20) {	    		
+				if (myScore>=1 && myScore<=5) {	    		
 		    		avgScore=avgScore*sumScore;
 					sumScore+=1;
 					avgScore+=myScore;	
 					avgScore=avgScore/sumScore;	
 					document.getElementById('score_average').innerHTML = avgScore.toFixed(1);
-					chartScore.series[0].data[myScore-10].update(chartScore.series[0].data[myScore-10].y + 1);
+					chartScore.series[0].data[myScore-1].update(chartScore.series[0].data[myScore-1].y + 1);
 					document.getElementById('my_score').disabled=true;
 					document.getElementById('my_score_button').disabled=true;
 					document.getElementById('my_score_undo').hidden=false;
@@ -138,7 +195,7 @@ $(function () {
 			avgScore-=myScore;	
 			avgScore=avgScore/sumScore;	
 			document.getElementById('score_average').innerHTML = avgScore.toFixed(1);
-			chartScore.series[0].data[myScore-10].update(chartScore.series[0].data[myScore-10].y - 1);
+			chartScore.series[0].data[myScore-1].update(chartScore.series[0].data[myScore-1].y - 1);
 			document.getElementById('my_score').disabled=false;
 			document.getElementById('my_score_button').disabled=false;
 			document.getElementById('my_score_undo').hidden=true;
