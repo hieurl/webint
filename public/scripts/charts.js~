@@ -11,7 +11,6 @@ $(function () {
 	var scores=[1, 2, 3, 4, 5 ];    
 	var studentsScore= [3, 5, 3, 12, 17];   
     $(document).ready(function() {
-        
         chartGrade = new Highcharts.Chart({
             chart: {
                 renderTo: 'grade_chart_container',
