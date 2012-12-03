@@ -1,10 +1,11 @@
-var average = 0;
-var sum = 0;
-var chart;
-
 $(function () {
+	var avgGrade = 0;
+	var sumGrade = 0;
+	var chartGrade;
+	var grades=[10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];    
+	var students= [2, 3, 1, 5, 13, 7, 9, 5, 3, 1, 0];
     $(document).ready(function() {
-        chart = new Highcharts.Chart({
+        chartGrade = new Highcharts.Chart({
             chart: {
                 renderTo: 'grade_chart_container',
                 type: 'line',
@@ -16,8 +17,8 @@ $(function () {
                 x: -20 //center
             },
             xAxis: {
-                categories: ['10', '11', '12', '13', '14', '15',
-                    '16', '17', '18', '19', '20']
+            	 id: 'grades', 
+                categories: grades
             },
             yAxis: {
                 title: {
@@ -44,30 +45,32 @@ $(function () {
                 borderWidth: 0
             },
             series: [{
+            	 id: 'students',
                 name: 'Grades',
-                data: [2, 3, 1, 5, 13, 7, 9, 5, 3, 1, 0]
+                data: students
             }]
         });
+                 
+	   	
+			//var grades=chartGrade.get('grades').categories;
+			//var students=chartGrade.get('students').data;	
+			var i;
+			for (i=0;i<grades.length;i++) {
+				avgGrade+=grades[i]*students[i];
+				sumGrade+=students[i];
+			}
+			avgGrade=avgGrade/sumGrade;
+			document.getElementById('grade_average').innerHTML = avgGrade.toFixed(1);
     });
-   
-   var grades=[10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];    
-	var students= [2, 3, 1, 5, 13, 7, 9, 5, 3, 1, 0];
-	var i;
-	for (i=0;i<grades.length;i++) {
-		average+=grades[i]*students[i];
-		sum+=students[i];
-	}
-	average=average/sum;
-	document.getElementById('grade_average').innerHTML = average.toFixed(1);
+    
+    $('#my_grade_button').click(function() {
+    		avgGrade=avgGrade*sumGrade;
+			sumGrade+=1;
+			var myGrade = parseInt(document.getElementById('my_grade').value);
+			avgGrade+=myGrade;	
+			avgGrade=avgGrade/sumGrade;	
+			document.getElementById('grade_average').innerHTML = avgGrade.toFixed(1);
+			chartGrade.series[0].data[myGrade-10].update(chartGrade.series[0].data[myGrade-10].y + 3);
+    });
 
 });
-
-function updateAverageGrade() {
-	average=average*sum;
-	sum+=1;
-	var myGrade = parseInt(document.getElementById('my_grade').value);
-	average+=myGrade;	
-	average=average/sum;	
-	document.getElementById('grade_average').innerHTML = average.toFixed(1);
-	chart.series[0].data[0].update(chart.series[0].data[0].y + 3);
-};
