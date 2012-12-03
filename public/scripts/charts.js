@@ -1,8 +1,8 @@
 var average = 0;
 var sum = 0;
+var chart;
 
 $(function () {
-    var chart;
     $(document).ready(function() {
         chart = new Highcharts.Chart({
             chart: {
@@ -65,8 +65,9 @@ $(function () {
 function updateAverageGrade() {
 	average=average*sum;
 	sum+=1;
-	var l = document.getElementById('my_grade').value.parseInt();
-	average+=l;	
+	var myGrade = parseInt(document.getElementById('my_grade').value);
+	average+=myGrade;	
 	average=average/sum;	
-	document.getElementById('grade_average').innerHTML = average.toFixed(1);	
-}
+	document.getElementById('grade_average').innerHTML = average.toFixed(1);
+	chart.series[0].data[0].update(chart.series[0].data[0].y + 3);
+};
