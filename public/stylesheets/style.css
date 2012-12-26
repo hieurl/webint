@@ -113,8 +113,8 @@ body {
 	width: 170px;
 	text-align: right;
 	border-left-width: thin;
-    border-left-style:solid;
-    border-left-color: #C3C3C3;
+	border-left-style:solid;
+	border-left-color: #C3C3C3;
 	padding-left: 10px;
 	padding-right: 20px;
 }
@@ -201,6 +201,14 @@ h4 {
 	color: #239CD3;
 }
 
+h3 {
+
+    margin-top: 7px;
+    margin-bottom: 7px;
+    color: #239CD3;
+    font-weight: bold;
+}
+
 li {
 	list-style: none;
 }
@@ -210,6 +218,7 @@ a {
 	text-decoration: none;
 	font-weight: bold;
 }
+
 
 a:hover {
 	text-decoration: underline;
@@ -225,4 +234,18 @@ a:hover {
 
 .overlap a {
 	color: white;
+}
+
+.page_aside_title {
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #239CD3;
+    font-weight: bold;
+}
+
+.course_description {
+    
+    font-size: 13px;
+    font-style: italic;
 }

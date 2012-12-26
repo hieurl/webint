@@ -1,5 +1,16 @@
 .login_form {
 
-    text-align: center;
-	
+    margin : 250px 0 200px 300px;
+    
 }
+
+.logo_login {
+    
+    background : #239CD3;
+    color : #239CD3;
+    width: 250px;
+    margin-left:110px;
+    text-align:center;
+    
+}
+
