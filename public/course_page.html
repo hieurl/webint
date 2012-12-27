@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>WebInt</title>
     <link rel="stylesheet" href="./stylesheets/style.css" type="text/css" />
-    <link rel="stylesheet" href="./stylesheets/course_style.css" type="text/css" />
+    <link rel="stylesheet" href="./stylesheets/cours_style.css" type="text/css" />
+    
 
     
 
@@ -21,11 +22,6 @@
       </div>
       <div class="logo"><img src="./images/logo.gif" /></div>
     </header>
-    
-    <section class="main_content">	
-      
-    </section>
-
 
     <nav>
       <ul class="top_nav">
@@ -33,6 +29,38 @@
 	<li><a href="./course_page.html">WebInt</a></li>
       </ul>
     </nav>
+
+    <section class="course">
+      <article class="course_descript">
+	<h4><a href="#" >Course Description</a></h4>
+      Human's computer interaction (HCI) is the study of interaction between people (users) and computers. It is often regarded as the intersection of computer science, behavioural sciences, design and several other fields of study...
+      </article>
+      <article class="classmates">
+	<h4><a href="#" >Find your classmates</a></h4>
+	<img src="./images/Hieu.jpg" class="classmate_pict" />
+	<p>Hieu is also taking this course<br />
+	   Find more classmates ... </p>
+      </article>
+
+      <article class="course_descript">
+	<h4><a href="./evaluation.html" >Evaluation and Statistics</a></h4>
+      <p>Get an idea about students' satisfaction, their grades and more useful informations.</p> 
+      </article>
+
+     <article class="course_descript">
+	<h4><a href="#" >Project</a></h4>
+      <p>Manage your WebInt project and create some awsome websites' Interfaces</p> 
+      </article>
+     
+     <article class="comments">
+       <textarea class="comment" id="comment" placeholder="What's up WebInt ?..." ></textarea><br />
+       <input type="button" id="add" class="post" value="POST" />
+       <div id="comment_post" class="comment_post"></div>
+     </article>
+    </section>
+
+     
+    
 
     <aside class="page_aside">
       <article id="track">
@@ -59,5 +87,7 @@
     </footer>
     <div class="bottom_border"></div>
   </body>
+
+  <script type="text/javascript" src="./scripts/add_comment.js"></script>
 
 </html>
