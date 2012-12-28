@@ -220,6 +220,14 @@ h4 {
 	color: #239CD3;
 }
 
+h3 {
+
+    margin-top: 7px;
+    margin-bottom: 7px;
+    color: #239CD3;
+    font-weight: bold;
+}
+
 li {
 	list-style: none;
 }
@@ -245,3 +253,18 @@ a:hover {
 .overlap a {
 	color: white;
 }
+
+.page_aside_title {
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #239CD3;
+    font-weight: bold;
+}
+
+.course_description {
+    
+    font-size: 13px;
+    font-style: italic;
+}
+
