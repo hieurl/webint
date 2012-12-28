@@ -66,7 +66,9 @@ $(document).ready(function() {
                "SecCom",
                "SoftDev",
                "SysSec",
-               "WebInt"
+               "WebInt",
+	       "Entrep",
+	       "TeamLead"
 	           ];
    $( "#course_input" ).autocomplete({
                	source: availableCourses
