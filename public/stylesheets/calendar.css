@@ -1,0 +1,26 @@
+.day {
+	float:left;
+	width:160px;
+}
+
+
+
+.vevent {
+	border: thin solid grey;
+	-webkit-border-radius: 2px 12px 2px 2px;
+	margin-right: 10px;
+	padding-left: 3px;
+}
+
+.vevent .summary{
+	margin: 0 5px;
+}
+
+.vevent .description{
+	font-size:1em;
+	font-weight:normal;
+}
+
+.vevent .location {
+	font-style: italic;
+} 

@@ -116,13 +116,17 @@ body {
 
 .main_content {
     float: left;
-    width: 768px;
+    //width: 768px;
 }
 
 /* === Tablet and Desktops === */
 @media screen and (min-width: 768px) {
 	aside{
 		float: right;
+	}
+	
+	.schedule_container {
+	margin-left: 18px;
 	}
 }
 .page_aside {
