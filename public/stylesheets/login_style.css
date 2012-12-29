@@ -1,6 +1,6 @@
 .login_form {
 
-    margin : 250px 0 200px 300px;
+    margin : 230px 0 200px 300px;
     
 }
 
@@ -8,9 +8,19 @@
     
     background : #239CD3;
     color : #239CD3;
-    width: 250px;
+    width: 300px;
     margin-left:110px;
     text-align:center;
     
 }
 
+.button {
+    width: 305px;
+    background: #CCCCCC;
+}
+
+.text {
+    width:300px;
+    background: #CCCCCC;
+    font-style:italic;
+}
