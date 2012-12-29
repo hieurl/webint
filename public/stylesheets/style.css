@@ -1,3 +1,14 @@
+/* === Mobile CSS (Readme!!) === */
+/* The mobile version of the website will be CSS3 entirely.
+  This yields that in this stylesheet:
+    the mobile style will appear first;
+	the desktop style will be defined by the new media queries.
+  If you want some style to be applied to desktop elements only, please use media queries! */
+  
+aside {
+	float:none;
+}
+
 body {
 	font-family: arial, tahoma;
 	font-size: 11pt;
@@ -105,16 +116,27 @@ body {
 
 .main_content {
     float: left;
-    width: 768px;
+    //width: 768px;
 }
 
+/* === Tablet and Desktops === */
+@media screen and (min-width: 768px) {
+	aside{
+		float: right;
+	}
+	
+	.schedule_container {
+	margin-left: 18px;
+	}
+}
 .page_aside {
-	float: right;
+	//! float property must be specified in @media only.
+	//float: right;
 	width: 170px;
 	text-align: right;
 	border-left-width: thin;
-	border-left-style:solid;
-	border-left-color: #C3C3C3;
+    border-left-style:solid;
+    border-left-color: #C3C3C3;
 	padding-left: 10px;
 	padding-right: 20px;
 }
@@ -134,7 +156,8 @@ body {
 .page_header {
 	position: relative;
 	float: left;
-	width: 968px;
+	//width: 968px;
+	width:100%;
 	top: -43px;
 }
 
@@ -218,7 +241,6 @@ a {
 	text-decoration: none;
 	font-weight: bold;
 }
-
 
 a:hover {
 	text-decoration: underline;

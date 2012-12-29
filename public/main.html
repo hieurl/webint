@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head profile="http://microformats.org/profile/hcalendar">
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="./stylesheets/style.css" type="text/css" />
+    <link rel="stylesheet" href="./stylesheets/calendar.css" type="text/css" />
     <link rel="stylesheet" href="./stylesheets/jquery-ui.css" type="text/css" />
-
+  
     <script type="text/javascript" src="./scripts/jquery-1.8.3.js"></script>
     <script type="text/javascript" src="./scripts/jquery-ui.js"></script>
     <script type="text/javascript" src="./scripts/js.js"></script>
@@ -22,13 +23,13 @@
       <div class="logo"><img src="./images/logo.gif" /></div>
       <div class="headline">NEWS OF THE WEEK</div>
     </header>
-
+  
     <nav>
       <ul class="top_nav">
 	<li><a href="./main.html">HOME</a></li>
       </ul>
     </nav>
-
+  
     <section class="top_menu">
       <div class="top_menu_left">
 	<a href="#new_event" class="event_window">New event</a>
@@ -65,29 +66,80 @@
 	</div>
       </div>
     </section>
-
+  
     <section class="main_content">	
-       <!--TODO: Put the schedule here!-->
+      <!--TODO: Put the schedule here!-->
       <article id="schedule">
 	<header><h4 class="content_header">MY SCHEDULE</h4></header>
 	<section class="schedule_container">
 	  This is the section to put the schedule/time table
+	  <!-- SCHEDULE -->
+	  <!-- This is a scratch for the schedule-to-be. -->
+	  <div id="calendar">
+	    <div class="day">
+	      <div class="day_head">
+		<h1>Today, 16th</h1>
+	      </div>
+	      <div class="day_body">
+		<!-- EVENTS -->	
+		<article id="event001" class="vevent">
+		  <h1 class="summary"> WebInt </h1>
+		  <h2 class="description"> "HTML5" </h2>
+		  <p> from 
+		    <abbr class="dtstart" title="2013-01-09T08:45:00+01:00">8.45</abbr>
+		    to  
+		    <abbr class="dtend" title="2013-01-09T12:00:00+01:00">12</abbr>
+		  </p>
+		  <p class="location"> room 101 </p>
+		  
+		</article>
+	      </div>
+	    </div>
+	    <div class="day">
+	      <div class="day_head">
+		<h1>Tomorrow, 17th</h1>
+	      </div>
+	      <div class="day_body">
+		<!-- EVENTS -->	
+	      </div>
+	    </div>
+	    <div class="day">
+	      <div class="day_head">
+		<h1>18th, Fri</h1>
+	      </div>
+	      <div class="day_body">
+		<!-- EVENTS -->	
+	      </div>
+	    </div>
+	    <div class="day">
+	      <div class="day_head">
+		<h1>22nd, Mon</h1>
+	      </div>
+	      <div class="day_body">
+		<!-- EVENTS -->	
+	      </div>
+	    </div>
+	    <div class="day">
+	      <div class="day_head">
+		<h1>23rd, Tue</h1>
+	      </div>
+	      <div class="day_body">
+		<!-- EVENTS -->	
+	      </div>
+	    </div>
+	  </div>
 	</section>
       </article>
       
-      <article id="statistic">
-	<section class="course_statistic">
-	  Course statistic
-	</section>
-      </article>		
+      
     </section>
-
+  
     <aside class="page_aside">
       <article id="my_course">
 	<header><h4 class="page_aside_title"> MY COURSES</h4></header>
 	<section class="my_course_content">
 	  <ul>
-	    <li><a href="./course_page.html">WebInt</a></li>
+	    <li>WebInt</li>
 	    <li>Network</li>
 	    <li>...</li>
 	  </ul>
@@ -104,7 +156,7 @@
 	  </div>
 	  <script>
 	    $(function() {
-
+	    
 	    
 	    });
 	  </script>
@@ -115,8 +167,14 @@
 	<header><h4 class="page_aside_title">RSS</h4></header>
 	<section class="RSS_content"></section>
       </article>
+      
+      <article id="statistic">
+	<section class="course_statistic">
+	  Course statistic
+	</section>
+      </article>
     </aside>
-
+  
     <footer class="page_footer">
       Copyright Team Eurecom 2012
     </footer>

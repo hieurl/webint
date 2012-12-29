@@ -59,9 +59,19 @@ p {
 
     width : 100px;
     background : #239CD3;
-    font-style : italic;
+    Font-style : italic;
     font-family: Tahoma, sans-serif;
     border-radius: 5px;
     margin-left : 310px;
 }
 
+
+
+.what {
+    text-align : center;
+    margin-top : 20px;
+    font-style: italic;
+    font-size : 22px;
+    color : #239CD3;
+
+}
