@@ -1,6 +1,41 @@
 $(document).ready(function(){
+   addHandlersRateComment();
+ });
+
+function addHandlersRateComment() {
+  /* HANDLERS */
+   $('.comment_up').click(rateUp);
+    
+   $('.comment_down').click(rateDown);
+   
+	$('.comment_up').hover(
+		function() {
+			$('img', this).attr('src', images["hover_up"]);
+		},
+		function() {
+			if ($(this).parents('div').find('.voted').html() == VOTED_NOT) {
+				$('img', this).attr('src', images["before_up"]);
+			} else {
+				$('img', this).attr('src', images["after_up"]);
+			}
+		}
+	);
 	
-	// costants for rating state
+	$('.comment_down').hover(
+		function() {
+			$('img', this).attr('src', images["hover_down"]);
+		},
+		function() {
+			if ($(this).parents('div').find('.voted').html() == VOTED_NOT) {
+				$('img', this).attr('src', images["before_down"]);
+			} else {
+				$('img', this).attr('src', images["after_down"]);
+			}
+		}
+	);
+}
+
+// costants for rating state
 	// state defined in hidden <span class="voted"> 
 	var VOTED_NOT = "not";
 	var VOTED_UP = "up";
@@ -76,36 +111,3 @@ $(document).ready(function(){
  			voted.html(VOTED_NOT);
  		}
    }
-   
-   /* HANDLERS */
-   $('.comment_up').click(rateUp);
-    
-   $('.comment_down').click(rateDown);
-   
-	$('.comment_up').hover(
-		function() {
-			$('img', this).attr('src', images["hover_up"]);
-		},
-		function() {
-			if ($(this).parents('div').find('.voted').html() == VOTED_NOT) {
-				$('img', this).attr('src', images["before_up"]);
-			} else {
-				$('img', this).attr('src', images["after_up"]);
-			}
-		}
-	);
-	
-	$('.comment_down').hover(
-		function() {
-			$('img', this).attr('src', images["hover_down"]);
-		},
-		function() {
-			if ($(this).parents('div').find('.voted').html() == VOTED_NOT) {
-				$('img', this).attr('src', images["before_down"]);
-			} else {
-				$('img', this).attr('src', images["after_down"]);
-			}
-		}
-	);
-	
- });

@@ -62,13 +62,28 @@ function update_comments() {
 	count++
 	//add comment
 	text_comment.innerHTML="<textarea class=\"comment\" id=\"comment\" placeholder=\"Post your comment...\" ></textarea>"
-	var to_add="<div id=\"comment_post"+count+"\">"+commentToAdd+"<div id=\"user"+count+"\">posted by user</div><div id=\"time"+count+"\">"+month + "/" + day + "/" + year+" @ "+hours+":"+minutes+"</div></div><input type=\"button\" id=\""+count+"\" class=\"post\" value=\"DELETE\" />"
+	var to_add="<div id=\"comment_post"+count+"\">"+
+	'<div>'+
+	  '<a class="comment_up" href="plus1" title="Rate up!">'+
+	    '<img src="./images/arrow_up_gray.png" alt="up arrow" >'+
+	  '</a>'+
+	  '<div class="comment_rate_num">0</div>'+
+	  '<span class="voted" hidden="hidden" >not</span>'+
+	  '<a class="comment_down" href="minus1" title="Rate down!">'+
+	    '<img src="./images/arrow_down_gray.png" alt="up arrow" >'+
+	  '</a>'+
+	'</div>'+
+	commentToAdd+
+	"<div id=\"user"+count+"\">posted by user</div><div id=\"time"+count+"\">"+month + "/" + day + "/" + year+" @ "+hours+":"+minutes+"</div></div><input type=\"button\" id=\""+count+"\" class=\"post\" value=\"DELETE\" />"
 	//array_messages.push(to_add)
 	str=to_add+str
 	article.innerHTML=str
 	
 	//style
 	modifyCss()
+	
+	//comment rating handlers
+	addHandlersRateComment();
 	}
 }
 
