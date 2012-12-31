@@ -1,42 +1,58 @@
 <!DOCTYPE html>
+
 <html lang="en">
+<head>
+  <meta name="generator" content="Bluefish 2.0.2" >
+  <meta charset="UTF-8">
 
-  <head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-    <!--link rel="stylesheet" href="./stylesheets/style.css" type="text/css" /-->
-    <link rel="stylesheet" href="./stylesheets/style2.css" type="text/css" />
-    <link rel="stylesheet" href="./stylesheets/login_style.css" type="text/css" />
-
-  </head>
-
-  <body>
-    <div class="top_border"></div>
-    <header class="page_header">
-      <a class="overlap" href="#">Sign up</a>
-      <div class="logo"><img src="./images/logo.gif" /></div>
-      <div class="headline">LOGIN</div>
-    </header>
-    
-    
-    <section class="login_form">
-      <form method="post" >
-	<input type="text" class="text" id="login" name="login" placeholder="address@eurecom.fr" size="30" /><br />
-	<div class="logo_login">LOGIN</div>
-	<input type="password" class="text" id="passwrd" name="password" placeholder="Password" size="30" /><br />
-	<div class="logo_login">PASSWORD</div>
-	<input type="button" id="subm" class="button" value="LOGIN"/>
-	<div class="logo_login">WELCOME</div>
-      </form>
-      
-    </section>
-    
-
-<footer class="page_footer">
-      Copyright Team Eurecom 2012
-    </footer>
-    <div class="bottom_border"></div>
-  </body>
-
+  <title>Login</title>
+  <!--link rel="stylesheet" href="./stylesheets/style.css" type="text/css" -->
+  <link rel="stylesheet" href="./stylesheets/style2.css" type="text/css">
+  <link rel="stylesheet" href="./stylesheets/login_style.css" type="text/css">
+  
+  <script type="text/javascript" src="./scripts/jquery-1.8.3.js"></script>
   <script type="text/javascript" src="./scripts/submit_form.js"></script>
+</head>
+
+<body>
+  <div class="top_border"></div>
+
+  <header class="page_header">
+    <a class="overlap" href="#">Sign up</a>
+
+    <div class="logo"><img src="./images/logo.gif" alt=
+    "Eurecom Logo"></div>
+
+    <div class="headline">
+      LOGIN
+    </div>
+  </header>
+
+  <section class="login_form">
+    <form method="post">
+      <input type="text" class="text" id="login" name="login"
+      placeholder="address@eurecom.fr" size="30"><br>
+
+      <div class="logo_login">
+        LOGIN
+      </div><input type="password" class="text" id="passwrd" name=
+      "password" placeholder="Password" size="30"><br>
+
+      <div class="logo_login">
+        PASSWORD
+      </div><input type="button" id="subm" class="button" value=
+      "LOGIN">
+
+      <div class="logo_login">
+        WELCOME
+      </div>
+    </form>
+  </section>
+
+  <footer class="page_footer">
+    Copyright Team Eurecom 2012
+  </footer>
+
+  <div class="bottom_border"></div>
+</body>
 </html>

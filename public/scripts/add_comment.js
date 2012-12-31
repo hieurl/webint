@@ -103,7 +103,7 @@ function delete_comment(number) {
     
 }
 
-
-document.getElementById('add').addEventListener("click",update_comments,true)
-
+$(document).ready(function(){
+  document.getElementById('add').addEventListener("click",update_comments,true)
+});
 

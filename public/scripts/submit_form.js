@@ -16,4 +16,6 @@ function submit_form() {
     }
 }
 
-document.getElementById('subm').addEventListener("click",submit_form,true)
+$(document).ready(function(){
+document.getElementById('subm').addEventListener("click",submit_form,true);
+});
