@@ -17,6 +17,7 @@ body {
     //width: 978px;
     margin: 0 auto;
     color: #505050;
+	padding: 10px 10px 10px 10px
 
 /*
   border: hidden;
@@ -49,8 +50,9 @@ body {
     list-style: none;
     margin: 0px;
     padding: 0px;
-    width: 978px;
-    background: #5D606E;
+	width: 100%
+    /*width: 978px;*/
+    /*background: #5D606E;*/
 }
 
 .top_nav a {
@@ -62,7 +64,7 @@ body {
     margin: 0px;
     list-style: none;
     padding: 0px;
-    float: left;
+    /*float: left;*/
 }
 
 .top_nav li a {
@@ -100,7 +102,7 @@ body {
 
 .top_menu {
     float: left;
-    width: 978px;
+    width: 100%;
     position: relative;
 }
 
