@@ -2,14 +2,14 @@ $(function () {
 	var avgGrade = 0;
 	var sumGrade = 0;
 	var chartGrade;
-	var grades=[10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];    
-	var studentsGrade= [2, 3, 1, 5, 13, 7, 9, 5, 3, 1, 0];
+	var grades=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];    
+	var studentsGrade= [0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 2, 3, 1, 5, 13, 7, 9, 5, 3, 1, 0];
 	
 	var avgScore = 0;
 	var sumScore = 0;
 	var chartScore;
 	var scores=[1, 2, 3, 4, 5 ];    
-	var studentsScore= [3, 5, 3, 12, 17];   
+	var studentsScore= [3, 5, 3, 7, 12];   
     $(document).ready(function() {
         
         chartGrade = new Highcharts.Chart({
@@ -137,18 +137,18 @@ $(function () {
     $('#my_grade_button').click(function() {
     		if (!isNaN(document.getElementById('my_grade').value)) {
 				var myGrade = parseInt(document.getElementById('my_grade').value);
-				if (myGrade>=10 && myGrade<=20) {	    		
+				if (is_int(document.getElementById('my_grade').value) && myGrade>=0 && myGrade<=20) {	    		
 		    		avgGrade=avgGrade*sumGrade;
 					sumGrade+=1;
 					avgGrade+=myGrade;	
 					avgGrade=avgGrade/sumGrade;	
 					document.getElementById('grade_average').innerHTML = avgGrade.toFixed(1);
-					chartGrade.series[0].data[myGrade-10].update(chartGrade.series[0].data[myGrade-10].y + 1);
+					chartGrade.series[0].data[myGrade].update(chartGrade.series[0].data[myGrade].y + 1);
 					document.getElementById('my_grade').disabled=true;
 					document.getElementById('my_grade_button').disabled=true;
 					document.getElementById('my_grade_undo').hidden=false;
 				} else {
-					alert('Please, put a number between 10 and 20');
+					alert('Please, put an integer number between 0 and 20');
 				}	
 			} else {
 				alert('Only numbers allowed');
@@ -161,7 +161,7 @@ $(function () {
 			avgGrade-=myGrade;	
 			avgGrade=avgGrade/sumGrade;	
 			document.getElementById('grade_average').innerHTML = avgGrade.toFixed(1);
-			chartGrade.series[0].data[myGrade-10].update(chartGrade.series[0].data[myGrade-10].y - 1);
+			chartGrade.series[0].data[myGrade].update(chartGrade.series[0].data[myGrade].y - 1);
 			document.getElementById('my_grade').disabled=false;
 			document.getElementById('my_grade_button').disabled=false;
 			document.getElementById('my_grade_undo').hidden=true;
@@ -171,7 +171,7 @@ $(function () {
     $('#my_score_button').click(function() {
     		if (!isNaN(document.getElementById('my_score').value)) {
 				var myScore = parseInt(document.getElementById('my_score').value);
-				if (myScore>=1 && myScore<=5) {	    		
+				if (is_int(document.getElementById('my_score').value) && myScore>=1 && myScore<=5) {	    		
 		    		avgScore=avgScore*sumScore;
 					sumScore+=1;
 					avgScore+=myScore;	
@@ -182,7 +182,7 @@ $(function () {
 					document.getElementById('my_score_button').disabled=true;
 					document.getElementById('my_score_undo').hidden=false;
 				} else {
-					alert('Please, put a number between 10 and 20');
+					alert('Please, put an integer number between 0 and 5');
 				}	
 			} else {
 				alert('Only numbers allowed');
@@ -202,3 +202,11 @@ $(function () {
     });
 
 });
+
+function is_int(value){
+  if((parseFloat(value) == parseInt(value)) && !isNaN(value)){
+      return true;
+  } else {
+      return false;
+  }
+}
