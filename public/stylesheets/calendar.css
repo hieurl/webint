@@ -24,3 +24,16 @@
 .vevent .location {
 	font-style: italic;
 } 
+
+/* === Tablet and Desktops === */
+@media screen and (min-width: 480px) {
+	.day{
+		height:400px;
+	}
+	
+	.day_body {
+		position:absolute;
+	}
+	
+	
+}
