@@ -2,7 +2,7 @@
 <html lang="en">
   <head profile="http://microformats.org/profile/hcalendar">
     <meta charset="UTF-8">
-    <title>Main</title>
+    <title>Setup your timetable</title>
     <link rel="stylesheet" href="./stylesheets/style.css" type="text/css" />
     <link rel="stylesheet" href="./stylesheets/calendar.css" type="text/css" />
     <link rel="stylesheet" href="./stylesheets/jquery-ui.css" type="text/css" />
@@ -22,7 +22,6 @@
 	  <a hef="#">2 Events</a><br />
       </div>
       <div class="logo"><img src="./images/logo.gif" /></div>
-      <div class="headline">NEWS OF THE WEEK</div>
     </header>
   
     <nav>
@@ -33,23 +32,29 @@
   
     <section class="top_menu">
       <div class="top_menu_left">
-	<a href="#new_event" class="event_window">New event</a>
-	<!--TODO: ADD NEW EVENT CONTENT FORM-->
-	<div id="new_event" class="popup">
-	  <a href="#" class="close"><img src="./images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
-	  This is form for create new event!
-	</div>
-	<div class="search_bar"> 
-	  <input type="text" value="Search ..." width= 700 />
-	  <input type="button" value="Search" />
-	</div>
       </div>
       
-   <div class="top_menu_right">
-		<div class="my_track">				
-	  		<a href="#choose_track" class="track_window">Web engineering </a>
-		</div>
-   </div>
+      <div class="top_menu_right">
+	<div class="my_track">
+	  <!--TODO: Choose track-->					
+	  <a href="#choose_track" class="track_window">Web engineering <img src="./images/button_edit.png" width="20px" title="Change track" alt="Change" /></a>
+	  <div class="popup" id="choose_track">
+	    <a href="#" class="close"><img src="./images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+	    <form>
+	      <select>
+		<option>Web engineering</option>
+		<option>Network security</option>
+		<option>Embedded systems</option>
+		<option>Multimedia</option>
+		<option>Mobile communication system</option>
+		<option>Transmission techonologies</option>
+	      </select> <br />
+	      <input type="submit" value="Save" onclick="alert('Sorry, we have not developed this yet')" />
+	      <input type="button" class="close" value="Cancel" onclick="this.close()" />
+	    </form>
+	  </div>
+	</div>
+      </div>
     </section>
   
     <section class="main_content">	
@@ -57,7 +62,9 @@
       <article id="schedule">
 	<header><h4 class="content_header">MY SCHEDULE</h4></header>
 	<section class="schedule_container">
+	  This is the section to put the schedule/time table
 	  <!-- SCHEDULE -->
+	  <!-- This is a scratch for the schedule-to-be. -->
 	  <div id="calendar">
 	    <div class="day">
 	      <div class="day_head">
@@ -145,7 +152,7 @@
 	<header><h4 class="page_aside_title"> MY COURSES</h4></header>
 	<section class="my_course_content">
 	  <ul>
-	    <li><a href="./course.html">WebInt</a></li>
+	    <li>WebInt</li>
 	    <li>Network</li>
 	    <li>...</li>
 	  </ul>
@@ -153,12 +160,12 @@
       </article>
       
       <article id="available_course">
-	<header><h4 class="page_aside_title"> SEARCH COURSE</h4></header>
+	<header><h4 class="page_aside_title">ADD COURSE</h4></header>
 	<section class="available_course_content">
-	  <!--Some form to choose course-->
+	  <!--Some form to choose/add course-->
 	  <div class="ui-widget">
 	    <input type="text" size="14" id="course_input" />
-	    <input type="button" value="Search" />
+	    <input type="button" value="Add" />
 	  </div>
 	</section>
       </article>
