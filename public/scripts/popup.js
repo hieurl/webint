@@ -1,4 +1,3 @@
-//Show new event
 $(document).ready(function() {
 	$('a.track_window').click(function() {
 		var trackBox = $(this).attr('href');
@@ -82,22 +81,9 @@ $(document).ready(function() {
 		return false;
 	});
 	
-	//script for auto-complete course input
-	var availableCourses = [
-               "DistAlg",
-               "InternetApp",
-               "MobServ",
-               "Netw_I",
-               "OS",
-               "SecCom",
-               "SoftDev",
-               "SysSec",
-               "WebInt",
-	       "Entrep",
-	       "TeamLead"
-	           ];
+   //Course Autocompletion
    $( "#course_input" ).autocomplete({
-               	source: availableCourses
+               	source: courses
 	});
 
 });
