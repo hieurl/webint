@@ -94,7 +94,7 @@ body {
 }
 
 .top_menu_left {
-    width: 788px;
+    width: 80%;
     float: left;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -108,7 +108,7 @@ body {
 
 .top_menu_right {
     float: right;
-    width: 190px;
+    width: 17%;
     text-align: right;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -121,7 +121,7 @@ body {
 
 .main_content {
     float: left;
-    //width: 768px;
+    width: 80%;
 }
 
 /* === Tablet and Desktops === */
@@ -135,9 +135,8 @@ body {
     }
 }
 .page_aside {
-    //! float property must be specified in @media only.
-	//float: right;
-	width: 170px;
+	float: right;
+	width: 17%;
 	text-align: right;
 	border-left-width: thin;
 	border-left-style:solid;
@@ -197,7 +196,7 @@ body {
 
 .popup {
     display:none;
-    background: #C0C0C0;
+    background: #64FE2E;
     padding: 10px; 	
     border: 2px solid #ddd;
     float: left;
@@ -206,6 +205,7 @@ body {
     top: 50%; left: 50%;
     z-index: 99999;
     border-radius:3px 3px 3px 3px;
+	color: white;
 }
 
 img.btn_close { 
@@ -238,7 +238,7 @@ h3 {
 }
 
 li {
-    list-style: none;
+    /*list-style: none;*/
 }
 
 a {
@@ -277,3 +277,35 @@ a:hover {
     font-style: italic;
 }
 
+
+.my_course_content ul {
+	list-style-image: url('../images/arrow_left.png');
+}
+
+.my_course_content {	
+}
+.my_course_content a{
+	display: table-cell;
+	color: white;
+	font-size: 16px;
+	width: 240px;
+	height: 50px;
+	text-decoration: none;
+	background: #5D606E;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.my_course_content a:hover{
+	background:#363842;
+}
+
+.menu_button {
+	display: table-cell;
+	width: 150px;
+	height: 50px;
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	background: #2E9AFE;
+}

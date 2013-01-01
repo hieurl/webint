@@ -45,7 +45,7 @@
 
   <section class="top_menu">
     <div class="top_menu_left">
-      <a href="#new_event" class="event_window">New event</a> 
+      <a href="#new_event" class="event_window menu_button">New event</a> 
       <!--TODO: ADD NEW EVENT CONTENT FORM-->
 
       <div id="new_event" class="popup">
@@ -62,8 +62,18 @@
 
     <div class="top_menu_right">
       <div class="my_track">
-        <a href="#choose_track" class="track_window">Web
-        engineering</a>
+        <a href="#choose_track" class="track_window menu_button" style="width: 210px">WEB ENGINEERING</a>
+		<div id="choose_track" class="popup">
+			<a href="#" class="close"><img src="./images/close_pop.png"
+	         class="btn_close" title="Close Window" alt="Close"></a>
+
+			<select>
+				<option>Web Engineerning</option>
+				<option>Network</option>
+			</select></br>
+			<input type="button" value="Save"/>
+			<input type="button" class="close" value="Close"/>
+		</div>
       </div>
     </div>
   </section>
@@ -186,15 +196,12 @@
       </header>
 
       <section class="my_course_content">
-        <ul>
-          <li>
-            <a href="./course.html">WebInt</a>
-          </li>
-
-          <li>Network</li>
-
-          <li>...</li>
-        </ul>
+            <a href="./course.html" style="background: #64FE2E">WebInt</a>
+<br/>
+						<a href="#network" style="background: #FFBF00">Network</a>
+<br />
+						<a href="#system" style="background: #FA58D0">SysSec</a>
+<br />
       </section>
     </article>
 
