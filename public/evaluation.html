@@ -7,6 +7,8 @@
 
   <title>Course Evaluation</title>
   <link rel="stylesheet" href="./stylesheets/style.css" type="text/css">
+  <link rel="stylesheet" href="./stylesheets/calendar.css" type="text/css">
+
   <link rel="stylesheet" href="./stylesheets/jquery-ui.css" type="text/css">
   
   <script type="text/javascript" src="./scripts/jquery-1.8.3.js"></script>
@@ -93,35 +95,39 @@
   <aside class="page_aside">
     <article id="track">
       <header>
-        <h4 class="page_aside_title">Web Engineering</h4>
       </header>
     </article>
 
-    <article id="course">
-      <header>
-        <h3><a href="./course_page.html">WebInt</a></h3>
-      </header>
-
-      <section class="course_content">
-        <h4><a href="mailto:raphael.troncy@eurecom.fr">Raphael
-        Troncy</a></h4>
-
-        <div class="course_description">
-          Although Human-computer interaction for the Web:
-          interaction design and user evaluatio is the course in
-          Eurecom with the longest name ever, it also has the
-          coolest course code: WebInt.
+	<article id="course">
+      <header class="my_course_content">
+         <a href="./course_page.html" class="bg-color-green" style="width:210px; padding-top: 5px; margin-top:10px">WebInt</a>
+       </header>
+ 
+       <section class="course_content" style="text-align:center">
+                 <img src="http://www.eurecom.fr/~troncy/raphael.jpg" width="100"/>
+         <h4><a href="mailto:raphael.troncy@eurecom.fr">Raphael
+         Troncy</a></h4>
+ 
+        <div class="course_description" style="text-align: justify">
+           Although Human-computer interaction for the Web:
+           interaction design and user evaluatio is the course in
+           Eurecom with the longest name ever, it also has the
+           coolest course code: WebInt.
         </div>
       </section>
     </article>
 
     <article id="course_RSS">
-      <header>
-        <h2 class="page_aside_title">RSS</h2>
+     <header>
+        <h3 class="page_aside_title bg-color-green" style="color: white; display-table:cell; width:210; height:30; text-align:center; vertical-alg    in:middle">Course activity</h3>
       </header>
 
-      <section class="RSS_content"></section>
+      <section class="RSS_content">
+                <li><img src="./images/Antonio.jpg" width="20" /> Antonio and <img src="./images/Ghassane.jpg" width="20" /> Ghassane also joined     the course<br /></li>
+                <li><img src="./images/Luca.jpg" width="20" /> Luca uploaded a <a href="#file">file</a> to WebInt </li>
+            </section>
     </article>
+
   </aside>
 
   <footer class="page_footer">
