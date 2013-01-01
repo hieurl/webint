@@ -1,0 +1,50 @@
+/* Prevent the text contents of draggable elements from being selectable */
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.courses_side {
+}
+
+.course_side {
+  float: left;
+  height: 25px;
+  width: 150px;
+  border: 2px solid #666666;
+  background-color: #ccc;
+  margin-right: 5px;
+  -webkit-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 3px #000;
+  -ms-box-shadow: inset 0 0 3px #000;
+  box-shadow: inset 0 0 3px #000;
+  text-align: center;
+  /*IMPORTANT: don't forget it!*/
+  cursor: move;
+}
+
+/* Add the style you prefer when hovered */
+#calendar_stub.over {
+  						border: 2px dashed #000;
+}			
+
+#calendar_stub {
+	clear: both;
+	height: 200px;
+  	width: 150px;
+  	border: 2px solid #666666;
+  	background-color: #FFF;
+  	margin-right: 5px;
+  	-webkit-border-radius: 10px;
+  	-ms-border-radius: 10px;
+  	-moz-border-radius: 10px;
+  	border-radius: 10px;
+  	-webkit-box-shadow: inset 0 0 3px #000;
+  	-ms-box-shadow: inset 0 0 3px #000;
+  	box-shadow: inset 0 0 3px #000;
+}			

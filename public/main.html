@@ -3,17 +3,20 @@
 <html lang="en">
 <head profile="http://microformats.org/profile/hcalendar">
   <meta name="generator" content="Bluefish 2.0.2" >
+  <meta name="generator" content="Bluefish 2.0.2" >
   <meta charset="UTF-8">
 
   <title>Main</title>
   <link rel="stylesheet" href="./stylesheets/style.css" type="text/css">
   <link rel="stylesheet" href="./stylesheets/calendar.css" type="text/css">
   <link rel="stylesheet" href="./stylesheets/jquery-ui.css" type="text/css">
+  
   <script type="text/javascript" src="./scripts/jquery-1.8.3.js"></script>
   <script type="text/javascript" src="./scripts/jquery-ui.js"></script>
-  <script type="text/javascript" src="./scripts/js.js"></script>
+  <script type="text/javascript" src="./scripts/ects.js"></script>
+  <script type="text/javascript" src="./scripts/main.js"></script>
   <script type="text/javascript" src="./scripts/calendar.js"></script>
-  <script type="text/javascript" src="./scripts/calendar_drag_out.js"></script>
+  <script type="text/javascript" src=  "./scripts/calendar_drag_out.js"></script>
 </head>
 
 <body>
@@ -35,28 +38,25 @@
     </div>
   </header>
 
-  <nav class= "top_nav">
-        <a href="./main.html">HOME</a> <img height="12" src="./images/arrow_right_red.png"/>
+  <nav class="top_nav">
+    <a href="./main.html">HOME</a> <img height="12" src=
+    "./images/arrow_right_red.png" alt="Arrow Red">
   </nav>
 
   <section class="top_menu">
     <div class="top_menu_left">
-      <a href="#new_event" class="event_window menu_button">New Event</a> 
-      <!--TODO: ADD NEW EVENT CONTENT FORM-->
+      <a href="#new_event" class="event_window menu_button">New
+      Event</a> <!--TODO: ADD NEW EVENT CONTENT FORM-->
 
       <div id="new_event" class="popup">
         <a href="#" class="close"><img src="./images/close_pop.png"
         class="btn_close" title="Close Window" alt="Close"></a>
         This is form for create new event!
-      </div>
-
-			<a href="CalendarDragOut.txt" class="menu_button" id="dragout" draggable="true"
-      data-downloadurl=
-      "application/octet-stream:Calendar.txt:http://UrlForTheFile.txt">
-      Export calendar</a>
-			
-			<a href="#dropbox" class="menu_button">Import calendar</a>
-			
+      </div><a href="CalendarDragOut.txt" class="menu_button" id=
+      "dragout" draggable="true" data-downloadurl=
+      "application/octet-stream:Calendar.txt:http://UrlForTheFile.txt">Export
+      calendar</a> <a href="#dropbox" class="menu_button">Import
+      calendar</a>
 
       <div class="search_bar">
         <input type="text" value="Search ..." width="700">
@@ -66,25 +66,13 @@
 
     <div class="top_menu_right">
       <div class="my_track">
-        <a href="#choose_track" class="track_window menu_button" style="width: 185px">WEB ENGINEERING</a>
-		<div id="choose_track" class="popup">
-			<a href="#" class="close"><img src="./images/close_pop.png"
-	         class="btn_close" title="Close Window" alt="Close"></a>
-
-			<select>
-				<option>Web Engineerning</option>
-				<option>Network</option>
-			</select></br>
-			<input type="button" value="Save"/>
-			<input type="button" class="close" value="Close"/>
-		</div>
+        <a href="#choose_track" class="track_window menu_button"
+        style="width: 185px">WEB ENGINEERING</a>
       </div>
     </div>
   </section>
 
   <section class="main_content">
-    <!--TODO: Put the schedule here!-->
-
     <article id="schedule">
       <header>
         <h4 class="content_header">MY SCHEDULE</h4>
@@ -95,37 +83,36 @@
 
         <div id="calendar">
           <div class="day">
-            <div class="day_head bg-color-green" > 
+            <div class="day_head bg-color-green">
               <h1>Monday, 16th</h1>
             </div>
 
             <div class="day_body">
               <!-- EVENTS -->
-							<div class="day_morning">
-							</div>
 
-							<div class="day_afternoon"> 
-									<article id="event_syssec" class="vevent bg-color-pink">
-		                <h1 class="summary">SYSSEC</h1>
+              <div class="day_morning"></div>
 
-    		            <h2 class="description">"Hacking, yeah!"</h2>
+              <div class="day_afternoon">
+                <article id="event_syssec2" class=
+                "vevent bg-color-pink">
+                  <h1 class="summary">SYSSEC</h1>
 
-        		        <p>from <abbr class="dtstart" title=
-            		    "2013-01-09T08:45:00+01:00">8.45</abbr> to
-		                <abbr class="dtend" title=
-		                "2013-01-09T12:00:00+01:00">12</abbr></p>
+                  <h2 class="description">"Hacking, yeah!"</h2>
 
-    		            <p class="location">room 101</p>
+                  <p>from <abbr class="dtstart" title=
+                  "2013-01-09T08:45:00+01:00">8.45</abbr> to
+                  <abbr class="dtend" title=
+                  "2013-01-09T12:00:00+01:00">12</abbr></p>
 
-		                <form>
-		                  <!-- This form defines the timelapse where to show the event -->
- 		        	         <input type="hidden" value="845" name="from">
-    		      	        <input type="hidden" value="1200" name="to">
-      		          </form>
-        		      </article>
+                  <p class="location">room 101</p>
 
-							</div>
-
+                  <form>
+                    <!-- This form defines the timelapse where to show the event -->
+                    <input type="hidden" value="845" name="from">
+                    <input type="hidden" value="1200" name="to">
+                  </form>
+                </article>
+              </div>
             </div>
           </div>
 
@@ -135,10 +122,9 @@
             </div>
 
             <div class="day_body">
-							<div class="day_morning"></div>
-              <!-- EVENTS -->
-							<div class="day_afternoon"></div>
+              <div class="day_morning"></div><!-- EVENTS -->
 
+              <div class="day_afternoon"></div>
             </div>
           </div>
 
@@ -148,29 +134,29 @@
             </div>
 
             <div class="day_body">
-								<div class="day_morning"></div>
-              <!-- EVENTS -->
-								<div class="day_afternoon">
-									<article id="event_webint" class="vevent bg-color-green">
-		                <h1 class="summary">WebInt</h1>
+              <div class="day_morning"></div><!-- EVENTS -->
 
-    		            <h2 class="description">"HTML5"</h2>
+              <div class="day_afternoon">
+                <article id="event_webint" class=
+                "vevent bg-color-green">
+                  <h1 class="summary">WebInt</h1>
 
-        		        <p>from <abbr class="dtstart" title=
-            		    "2013-01-09T08:45:00+01:00">8.45</abbr> to
-		                <abbr class="dtend" title=
-		                "2013-01-09T12:00:00+01:00">12</abbr></p>
+                  <h2 class="description">"HTML5"</h2>
 
-    		            <p class="location">room 101</p>
+                  <p>from <abbr class="dtstart" title=
+                  "2013-01-09T08:45:00+01:00">8.45</abbr> to
+                  <abbr class="dtend" title=
+                  "2013-01-09T12:00:00+01:00">12</abbr></p>
 
-		                <form>
-		                  <!-- This form defines the timelapse where to show the event -->
- 		        	         <input type="hidden" value="845" name="from">
-    		      	        <input type="hidden" value="1200" name="to">
-      		          </form>
-        		      </article>
+                  <p class="location">room 101</p>
 
-								</div>
+                  <form>
+                    <!-- This form defines the timelapse where to show the event -->
+                    <input type="hidden" value="845" name="from">
+                    <input type="hidden" value="1200" name="to">
+                  </form>
+                </article>
+              </div>
             </div>
           </div>
 
@@ -180,30 +166,30 @@
             </div>
 
             <div class="day_body">
-							<div class="day_morning">
-								<article id="event_syssec" class="vevent bg-color-orange">
-		                <h1 class="summary">NETWORK</h1>
+              <div class="day_morning">
+                <article id="event_syssec1" class=
+                "vevent bg-color-orange">
+                  <h1 class="summary">NETWORK</h1>
 
-    		            <h2 class="description">"Package, protocols, ..."</h2>
+                  <h2 class="description">"Package, protocols,
+                  ..."</h2>
 
-        		        <p>from <abbr class="dtstart" title=
-            		    "2013-01-09T08:45:00+01:00">8.45</abbr> to
-		                <abbr class="dtend" title=
-		                "2013-01-09T12:00:00+01:00">12</abbr></p>
+                  <p>from <abbr class="dtstart" title=
+                  "2013-01-09T08:45:00+01:00">8.45</abbr> to
+                  <abbr class="dtend" title=
+                  "2013-01-09T12:00:00+01:00">12</abbr></p>
 
-    		            <p class="location">room 101</p>
+                  <p class="location">room 101</p>
 
-		                <form>
-		                  <!-- This form defines the timelapse where to show the event -->
- 		        	         <input type="hidden" value="845" name="from">
-    		      	        <input type="hidden" value="1200" name="to">
-      		          </form>
-        		      </article>
+                  <form>
+                    <!-- This form defines the timelapse where to show the event -->
+                    <input type="hidden" value="845" name="from">
+                    <input type="hidden" value="1200" name="to">
+                  </form>
+                </article>
+              </div><!-- EVENTS -->
 
-							</div>
-              <!-- EVENTS -->
-							<div class="day_afternoon"></div>
-
+              <div class="day_afternoon"></div>
             </div>
           </div>
 
@@ -213,9 +199,9 @@
             </div>
 
             <div class="day_body">
-							<div class="day_morning"></div>
-              <!-- EVENTS -->
-							<div class="day_afternoon"></div>
+              <div class="day_morning"></div><!-- EVENTS -->
+
+              <div class="day_afternoon"></div>
             </div>
           </div>
         </div>
@@ -230,12 +216,10 @@
       </header>
 
       <section class="my_course_content">
-            <a href="./course.html" class="bg-color-green">WebInt</a>
-<br/>
-						<a href="#network" class="bg-color-orange">Network</a>
-<br />
-						<a href="#system" class="bg-color-pink">SysSec</a>
-<br />
+        <a href="./course.html" class=
+        "bg-color-green">WebInt</a><br>
+        <a href="#network" class="bg-color-orange">Network</a><br>
+        <a href="#system" class="bg-color-pink">SysSec</a><br>
       </section>
     </article>
 

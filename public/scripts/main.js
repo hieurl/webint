@@ -1,23 +1,5 @@
 //Show new event
 $(document).ready(function() {
-	$('a.track_window').click(function() {
-		var trackBox = $(this).attr('href');
-		$(trackBox).fadeIn(300);
-
-		var popMargTop = ($(trackBox).height() + 24) / 2;
-		var popMargLeft = ($(trackBox).height() + 24) / 2;
-		
-		$(trackBox).css({
-			'margin-top' : -popMargTop,
-			'margin-left' : -popMargLeft
-		});
-
-		$('body').append('<div id="mask"></div>');
-		$('#mask').fadeIn(300);
-		
-		return false;
-	});
-
 	$('a.event_window').click(function() {
 		
         //Getting the variable's value from a link 
@@ -56,22 +38,8 @@ $(document).ready(function() {
 		return false;
 	});
 	
-	//script for auto-complete course input
-	var availableCourses = [
-               "DistAlg",
-               "InternetApp",
-               "MobServ",
-               "Netw_I",
-               "OS",
-               "SecCom",
-               "SoftDev",
-               "SysSec",
-               "WebInt",
-	       "Entrep",
-	       "TeamLead"
-	           ];
    $( "#course_input" ).autocomplete({
-               	source: availableCourses
+               	source: courses
 	});
 
 });
