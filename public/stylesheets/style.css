@@ -17,7 +17,7 @@ body {
     //width: 978px;
     margin: 0 auto;
     color: #505050;
-	padding: 10px 10px 10px 10px
+	padding: 10px 70px 10px 70px
 
 /*
   border: hidden;
@@ -289,9 +289,8 @@ a:hover {
 	color: white;
 	font-size: 16px;
 	width: 240px;
-	height: 50px;
+	height: 30px;
 	text-decoration: none;
-	background: #5D606E;
 	text-align: center;
 	vertical-align: middle;
 }
@@ -303,9 +302,11 @@ a:hover {
 .menu_button {
 	display: table-cell;
 	width: 150px;
-	height: 50px;
+	height: 22px;
 	color: white;
 	text-align: center;
 	vertical-align: middle;
 	background: #2E9AFE;
+	float: left;
+	padding-top: 5px;
 }

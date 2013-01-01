@@ -1,15 +1,40 @@
 .day {
 	float:left;
 	width:160px;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	color: white;
 }
 
+.day_head {
+	border: 2px #E2E2E2 solid;
+	margin-bottom: 5px;
+	width: 160px;
+}
 
+.day_body {
+	width: 160px;
+	height: 310px;
+}
 
+.day_morning {
+	margin-bottom: 5px;
+	width: 160px;
+	height: 150px;
+	border: 2px #E2E2E2 solid;
+}
+
+.day_afternoon {
+    width: 160px;
+    height: 150px;
+    border: 2px #E2E2E2 solid;
+}
 .vevent {
-	border: thin solid grey;
-	-webkit-border-radius: 2px 12px 2px 2px;
-	margin-right: 10px;
-	padding-left: 3px;
+/*	border: thin solid grey;
+	-webkit-border-radius: 2px 12px 2px 2px;*/
+	margin: 3px 3px 3px 3px;
+	height: 144px;
 }
 
 .vevent .summary{
@@ -36,4 +61,28 @@
 	}
 	
 	
+}
+
+.bg-color-blue {
+	background-color: #2E9AFE;
+}
+
+.bg-color-green {
+	background-color: #64FE2E;
+}
+
+.bg-color-pink {
+	background-color: #FA58D0;
+}
+
+.bg-color-orange {
+	background-color: #FFBF00;
+}
+
+.bg-color-yellow {
+	background-color: #D7DF01;
+}
+
+.bg-color-gray {
+	background-color: gray;
 }
