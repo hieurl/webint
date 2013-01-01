@@ -35,17 +35,13 @@
     </div>
   </header>
 
-  <nav>
-    <ul class="top_nav">
-      <li>
-        <a href="./main.html">HOME</a>
-      </li>
-    </ul>
+  <nav class= "top_nav">
+        <a href="./main.html">HOME</a> <img height="12" src="./images/arrow_right_red.png"/>
   </nav>
 
   <section class="top_menu">
     <div class="top_menu_left">
-      <a href="#new_event" class="event_window menu_button">New event</a> 
+      <a href="#new_event" class="event_window menu_button">New Event</a> 
       <!--TODO: ADD NEW EVENT CONTENT FORM-->
 
       <div id="new_event" class="popup">
@@ -53,6 +49,14 @@
         class="btn_close" title="Close Window" alt="Close"></a>
         This is form for create new event!
       </div>
+
+			<a href="CalendarDragOut.txt" class="menu_button" id="dragout" draggable="true"
+      data-downloadurl=
+      "application/octet-stream:Calendar.txt:http://UrlForTheFile.txt">
+      Export calendar</a>
+			
+			<a href="#dropbox" class="menu_button">Import calendar</a>
+			
 
       <div class="search_bar">
         <input type="text" value="Search ..." width="700">
@@ -216,13 +220,7 @@
           </div>
         </div>
       </section>
-    </article><!-- DRAG OUT EXAMPLE -->
-    <section style="float: left">
-      <a href="CalendarDragOut.txt" id="dragout" draggable="true"
-      data-downloadurl=
-      "application/octet-stream:Calendar.txt:http://UrlForTheFile.txt">
-      Drag out your calendar!</a>
-    </section>
+    </article>
   </section>
 
   <aside class="page_aside">
