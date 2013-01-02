@@ -55,7 +55,9 @@ $(function () {
             	 id: 'students',
                 name: 'Grades',
                 data: studentsGrade
-            }]
+            }],
+            credits : {
+              enabled : false}
         });
         
         chartScore = new Highcharts.Chart({
@@ -113,7 +115,10 @@ $(function () {
             	 id: 'students',
                 name: 'Scores',
                 data: studentsScore
-            }]
+            }],
+            credits : {
+              enabled : false
+            }
         });
                
 			//var grades=chartGrade.get('grades').categories;

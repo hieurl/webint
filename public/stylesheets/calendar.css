@@ -2,7 +2,6 @@
   display: inline-block;
   /*hack for display block alignment*/
   vertical-align: top;
-/*	width:160px;*/
   width: 18%;	
 	padding-left: 1%;
 	padding-right: 1%;
@@ -10,31 +9,47 @@
 	margin-right: -4px;
 	margin-left: -4px;
 	text-align: center;
-	/*color: white;*/
+	color: white;
 }
 
 .day_head {
 	border: 2px #E2E2E2 solid;
   margin-bottom: 5px;
-/*	width: 160px;*/
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 3px #000;
+  -ms-box-shadow: inset 0 0 3px #000;
+  box-shadow: inset 0 0 3px #000;
 }
 
 .day_body {
 /*	width: 160px;*/
 	height: 310px;
+	-webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
 }
 
 .day_morning {
 	margin-bottom: 5px;
-/*	width: 160px;*/
 	height: 150px;
 	border: 2px #E2E2E2 solid;
+	-webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
 }
 
 .day_afternoon {
-/*    width: 160px;*/
-    height: 150px;
-    border: 2px #E2E2E2 solid;
+  height: 150px;
+  border: 2px #E2E2E2 solid;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
 }
 
 
