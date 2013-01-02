@@ -3,7 +3,6 @@
 <html lang="en">
 <head profile="http://microformats.org/profile/hcalendar">
   <meta name="generator" content="Bluefish 2.0.2" >
-  <meta name="generator" content="Bluefish 2.0.2" >
   <meta charset="UTF-8">
 
   <title>Setup your timetable</title>
@@ -16,7 +15,7 @@
   <script type="text/javascript" src="./scripts/jquery-1.8.3.js"></script>
   <script type="text/javascript" src="./scripts/jquery-ui.js"></script>
   <script type="text/javascript" src="./scripts/popup.js"></script>
-  <script type="text/javascript" src="./scripts/calendar.js"></script>
+  <!-- <script type="text/javascript" src="./scripts/calendar.js"></script> -->
   <script type="text/javascript" src="./scripts/ects.js"></script>
   <script type="text/javascript" src="./scripts/courses_drag_drop.js"></script>
 </head>
@@ -44,7 +43,8 @@
   <section class="top_menu">
     <div class="top_menu_left">
       <a href="#dropbox" class="dropbox menu_button">Import
-      calendar</a> <!--BEGIN DROPBOX-->
+      calendar</a>
+      <!--BEGIN DROPBOX-->
 
       <div id="dropbox" class="popup">
         <a href="#" class="close"><img src="./images/close_pop.png"
@@ -71,9 +71,9 @@
 
         <div id="messages">
           <p>Status Messages</p>
-        </div><script src="./scripts/filedrag.js">
-</script>
-      </div><!--END OF POPUP DROPBOX-->
+        </div><script src="./scripts/filedrag.js"></script>
+      </div>
+      <!--END OF POPUP DROPBOX-->
 
       <div class="search_bar">
         <input type="text" value="Search ..." width="700">
@@ -122,125 +122,82 @@
 
         <div id="calendar">
           <div class="day">
-            <div class="day_head bg-color-green">
-              <h1>Monday, 16th</h1>
-            </div>
-
-            <div class="day_body">
-              <!-- EVENTS -->
-
-              <div class="day_morning"></div>
-
-              <div class="day_afternoon">
-                <article id="event_syssec1" class=
-                "vevent bg-color-pink">
-                  <h1 class="summary">SYSSEC</h1>
-
-                  <h2 class="description">"Hacking, yeah!"</h2>
-
-                  <p>from <abbr class="dtstart" title=
-                  "2013-01-09T08:45:00+01:00">8.45</abbr> to
-                  <abbr class="dtend" title=
-                  "2013-01-09T12:00:00+01:00">12</abbr></p>
-
-                  <p class="location">room 101</p>
-
-                  <form>
-                    <!-- This form defines the timelapse where to show the event -->
-                    <input type="hidden" value="845" name="from">
-                    <input type="hidden" value="1200" name="to">
-                  </form>
-                </article>
-              </div>
-            </div>
-          </div>
-
-          <div class="day">
-            <div class="day_head bg-color-pink">
-              <h1>Tuesday, 17th</h1>
-            </div>
-
-            <div class="day_body">
-              <div class="day_morning"></div><!-- EVENTS -->
-
-              <div class="day_afternoon"></div>
-            </div>
-          </div>
-
-          <div class="day bg-color-gray">
             <div class="day_head bg-color-blue">
-              <h1>Wednesday, 18th</h1>
+              <h1>Monday</h1>
             </div>
 
-            <div class="day_body">
-              <div class="day_morning"></div><!-- EVENTS -->
+            <div id="MON" class="day_body">
+
+              <div class="day_morning">
+              </div>
 
               <div class="day_afternoon">
-                <article id="event_webint" class=
-                "vevent bg-color-green">
-                  <h1 class="summary">WebInt</h1>
-
-                  <h2 class="description">"HTML5"</h2>
-
-                  <p>from <abbr class="dtstart" title=
-                  "2013-01-09T08:45:00+01:00">8.45</abbr> to
-                  <abbr class="dtend" title=
-                  "2013-01-09T12:00:00+01:00">12</abbr></p>
-
-                  <p class="location">room 101</p>
-
-                  <form>
-                    <!-- This form defines the timelapse where to show the event -->
-                    <input type="hidden" value="845" name="from">
-                    <input type="hidden" value="1200" name="to">
-                  </form>
-                </article>
               </div>
+              
             </div>
           </div>
 
           <div class="day">
-            <div class="day_head bg-color-orange">
-              <h1>Thursday, 22nd</h1>
+            <div class="day_head bg-color-blue">
+              <h1>Tuesday</h1>
             </div>
 
-            <div class="day_body">
+            <div id="TUE" class="day_body">
+            
               <div class="day_morning">
-                <article id="event_syssec2" class=
-                "vevent bg-color-orange">
-                  <h1 class="summary">NETWORK</h1>
+              </div>
 
-                  <h2 class="description">"Package, protocols,
-                  ..."</h2>
-
-                  <p>from <abbr class="dtstart" title=
-                  "2013-01-09T08:45:00+01:00">8.45</abbr> to
-                  <abbr class="dtend" title=
-                  "2013-01-09T12:00:00+01:00">12</abbr></p>
-
-                  <p class="location">room 101</p>
-
-                  <form>
-                    <!-- This form defines the timelapse where to show the event -->
-                    <input type="hidden" value="845" name="from">
-                    <input type="hidden" value="1200" name="to">
-                  </form>
-                </article>
-              </div><!-- EVENTS -->
-
-              <div class="day_afternoon"></div>
+              <div class="day_afternoon">
+              </div>
+              
             </div>
           </div>
 
           <div class="day">
-            <div class="day_head bg-color-yellow">
-              <h1>Friday, 23rd</h1>
+            <div class="day_head bg-color-blue">
+              <h1>Wednesday</h1>
             </div>
 
-            <div class="day_body">
-              <div class="day_morning"></div><!-- EVENTS -->
+            <div id="WED" class="day_body">
+            
+              <div class="day_morning">
+              </div>
 
-              <div class="day_afternoon"></div>
+              <div class="day_afternoon">
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="day">
+            <div class="day_head bg-color-blue">
+              <h1>Thursday</h1>
+            </div>
+
+            <div id="THU" class="day_body">
+            
+              <div class="day_morning">
+              </div>
+
+              <div class="day_afternoon">
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="day">
+            <div class="day_head bg-color-blue">
+              <h1>Friday</h1>
+            </div>
+
+            <div id="FRI" class="day_body">
+              
+              <div class="day_morning">
+              </div>
+             
+              <div class="day_afternoon">
+              </div>
+              
             </div>
           </div>
         </div>
@@ -256,49 +213,27 @@
 
       <section>
         <div id="courses_side">
-          <div class="course_side" draggable="true">
-            DistAlg
-          </div>
+          <div class="course_side" draggable="true">DistAlg</div>
 
-          <div class="course_side" draggable="true">
-            InternetApp
-          </div>
+          <div class="course_side" draggable="true">InternetApp</div>
 
-          <div class="course_side" draggable="true">
-            MobServ
-          </div>
+          <div class="course_side" draggable="true">MobServ</div>
 
-          <div class="course_side" draggable="true">
-            Netw_I
-          </div>
+          <div class="course_side" draggable="true">Netw_I</div>
 
-          <div class="course_side" draggable="true">
-            OS
-          </div>
+          <div class="course_side" draggable="true">OS</div>
 
-          <div class="course_side" draggable="true">
-            SecCom
-          </div>
+          <div class="course_side" draggable="true">SecCom</div>
 
-          <div class="course_side" draggable="true">
-            SoftDev
-          </div>
+          <div class="course_side" draggable="true">SoftDev</div>
 
-          <div class="course_side" draggable="true">
-            SysSec
-          </div>
+          <div class="course_side" draggable="true">SysSec</div>
 
-          <div class="course_side" draggable="true">
-            WebInt
-          </div>
+          <div class="course_side" draggable="true">WebInt</div>
 
-          <div class="course_side" draggable="true">
-            Entrep
-          </div>
+          <div class="course_side" draggable="true">Entrep</div>
 
-          <div class="course_side" draggable="true">
-            TeamLead
-          </div>
+          <div class="course_side" draggable="true">TeamLead</div>
         </div>
       </section>
     </article>

@@ -55,7 +55,7 @@ function handleDrop(e) {
   /* INSERT HERE YOUR CODE TO BE EXECUTED AFTER DROPPED */
   /*DESTINATION SIDE*/
   var course = e.dataTransfer.getData('text/html');
-  addCourse(course);
+  addCourseDrop(course);
   
   return false;
 }

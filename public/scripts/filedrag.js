@@ -77,7 +77,7 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 			filedrag.style.display = "block";
 
 			// remove submit button
-			submitbutton.style.display = "none";
+			//submitbutton.style.display = "none";
 		}
 
 	}

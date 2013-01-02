@@ -56,11 +56,11 @@ function addHandlersRateComment() {
 		up.find('img').attr("src",images["after_up"]);
 		up.attr("title","Click again to undo");
 		
-		comment.find(".comment_down").hide();
+		comment.find(".comment_down").css("visibility","hidden");
 	}
 	
 	function alreadyRatedDown(comment) {
-		comment.find(".comment_up").hide();
+		comment.find(".comment_up").css("visibility","hidden");
 		
 		var down = comment.find(".comment_down");
 		down.find('img').attr("src",images["after_down"]);
@@ -71,12 +71,12 @@ function addHandlersRateComment() {
 		var up = comment.find(".comment_up");
 		up.find('img').attr("src",images["before_up"]);
 		up.attr("title","Rate up!");
-		up.show();
+		up.css("visibility","visible");
 				
 		var down = comment.find(".comment_down");
 		down.find('img').attr("src",images["before_down"]);
 		down.attr("title","Rate down!");
-		down.show();
+		down.css("visibility","visible");
 	}
 	
 	/* HANDLERS FUNCTIONS */
