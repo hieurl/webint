@@ -3,21 +3,21 @@
 <html lang="en">
 <head profile="http://microformats.org/profile/hcalendar">
   <meta name="generator" content="Bluefish 2.0.2" >
+  <meta name="generator" content="Bluefish 2.0.2" >
   <meta charset="UTF-8">
 
   <title>Setup your timetable</title>
   <link rel="stylesheet" href="./stylesheets/jquery-ui.css" type="text/css">
-  <link rel="stylesheet" href="./stylesheets/drag_drop_style.css" type="text/css">
   <link rel="stylesheet" type="text/css" media="all" href="./stylesheets/drop_styles.css">
   <link rel="stylesheet" href="./stylesheets/style.css" type="text/css">
   <link rel="stylesheet" href="./stylesheets/calendar.css" type="text/css">
-  
   <script type="text/javascript" src="./scripts/jquery-1.8.3.js"></script>
   <script type="text/javascript" src="./scripts/jquery-ui.js"></script>
   <script type="text/javascript" src="./scripts/popup.js"></script>
-  <!-- <script type="text/javascript" src="./scripts/calendar.js"></script> -->
+<!-- <script type="text/javascript" src="./scripts/calendar.js"></script> -->
   <script type="text/javascript" src="./scripts/ects.js"></script>
-  <script type="text/javascript" src="./scripts/courses_drag_drop.js"></script>
+  <script type="text/javascript" src="./scripts/courses_drag_drop.js">
+</script>
 </head>
 
 <body>
@@ -27,12 +27,16 @@
     <a class="overlap" href="#">Logout</a>
 
     <div class="user_status">
-	  <table valign="top" align="left">
+      <table align="left">
         <tr>
-          <td><img src="./images/Hieu.jpg" width="50" /></td>
+          <td><img src="./images/Hieu.jpg" width="50" alt=
+          "Hieu Profile Photo"></td>
+
           <td align="left">
-            <a href="#2event" ><img src="./images/Event.png" width="20" /> 2 events </a><br />
-            <a href="#0msg" ><img src="./images/PM.jpg" width="20" /> 0 message</a>
+            <a href="#2event"><img src="./images/Event.png" width=
+            "20" alt="Event Image"> 2 events</a><br>
+            <a href="#0msg"><img src="./images/PM.jpg" width="20"
+            alt="Messages Image"> 0 message</a>
           </td>
         </tr>
       </table>
@@ -50,8 +54,7 @@
   <section class="top_menu">
     <div class="top_menu_left">
       <a href="#dropbox" class="dropbox menu_button">Import
-      calendar</a>
-      <!--BEGIN DROPBOX-->
+      calendar</a> <!--BEGIN DROPBOX-->
 
       <div id="dropbox" class="popup">
         <a href="#" class="close"><img src="./images/close_pop.png"
@@ -81,6 +84,8 @@
         </div><script src="./scripts/filedrag.js"></script>
       </div>
       <!--END OF POPUP DROPBOX-->
+      
+    </div>
 
     <div class="top_menu_right">
       <div class="my_track">
@@ -111,14 +116,6 @@
       <header>
         <h4 class="content_header">BUILD YOUR SCHEDULE</h4>
       </header>
-
-      <!--
-      <div id="calendar_stub">
-        <ul id="ulCal">
-          <li>Drag here a course</li>
-        </ul>
-      </div>
-      -->
       
       <section class="schedule_container">
         <!-- SCHEDULE -->
@@ -130,13 +127,9 @@
             </div>
 
             <div id="MON" class="day_body">
+              <div class="day_morning"></div>
 
-              <div class="day_morning">
-              </div>
-
-              <div class="day_afternoon">
-              </div>
-              
+              <div class="day_afternoon"></div>
             </div>
           </div>
 
@@ -146,13 +139,9 @@
             </div>
 
             <div id="TUE" class="day_body">
-            
-              <div class="day_morning">
-              </div>
+              <div class="day_morning"></div>
 
-              <div class="day_afternoon">
-              </div>
-              
+              <div class="day_afternoon"></div>
             </div>
           </div>
 
@@ -162,13 +151,9 @@
             </div>
 
             <div id="WED" class="day_body">
-            
-              <div class="day_morning">
-              </div>
+              <div class="day_morning"></div>
 
-              <div class="day_afternoon">
-              </div>
-              
+              <div class="day_afternoon"></div>
             </div>
           </div>
 
@@ -178,13 +163,9 @@
             </div>
 
             <div id="THU" class="day_body">
-            
-              <div class="day_morning">
-              </div>
+              <div class="day_morning"></div>
 
-              <div class="day_afternoon">
-              </div>
-              
+              <div class="day_afternoon"></div>
             </div>
           </div>
 
@@ -194,13 +175,9 @@
             </div>
 
             <div id="FRI" class="day_body">
-              
-              <div class="day_morning">
-              </div>
-             
-              <div class="day_afternoon">
-              </div>
-              
+              <div class="day_morning"></div>
+
+              <div class="day_afternoon"></div>
             </div>
           </div>
         </div>

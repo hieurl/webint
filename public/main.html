@@ -3,6 +3,7 @@
 <html lang="en">
 <head profile="http://microformats.org/profile/hcalendar">
   <meta name="generator" content="Bluefish 2.0.2" >
+  <meta name="generator" content="Bluefish 2.0.2" >
   <meta charset="UTF-8">
 
   <title>Main</title>
@@ -10,13 +11,13 @@
   <link rel="stylesheet" href="./stylesheets/calendar.css" type="text/css">
   <link rel="stylesheet" href="./stylesheets/jquery-ui.css" type="text/css">
   <link rel="stylesheet" type="text/css" media="all" href="./stylesheets/drop_styles.css">
-  
   <script type="text/javascript" src="./scripts/jquery-1.8.3.js"></script>
   <script type="text/javascript" src="./scripts/jquery-ui.js"></script>
   <script type="text/javascript" src="./scripts/ects.js"></script>
   <script type="text/javascript" src="./scripts/popup.js"></script>
   <script type="text/javascript" src="./scripts/calendar.js"></script>
-  <script type="text/javascript" src="./scripts/calendar_drag_out.js"></script>
+  <script type="text/javascript" src="./scripts/calendar_drag_out.js">
+</script>
 </head>
 
 <body>
@@ -26,15 +27,19 @@
     <a class="overlap" href="./login.html">Logout</a>
 
     <div class="user_status">
-			<table valign="top" align="left">
-				<tr>
-					<td><img src="./images/Hieu.jpg" width="50" /></td>
-					<td align="left">
-						<a href="#2event" ><img src="./images/Event.png" width="20" /> 2 events </a><br />
-						<a href="#0msg" ><img src="./images/PM.jpg" width="20" /> 0 message</a>
-					</td>
-				</tr>
-			</table>
+      <table align="left">
+        <tr>
+          <td><img src="./images/Hieu.jpg" width="50" alt=
+          "Hieu Profile Photo"></td>
+
+          <td align="left">
+            <a href="#2event"><img src="./images/Event.png" width=
+            "20" alt="Event Image"> 2 events</a><br>
+            <a href="#0msg"><img src="./images/PM.jpg" width="20"
+            alt="Messages Image"> 0 message</a>
+          </td>
+        </tr>
+      </table>
     </div>
 
     <div class="logo"><img src="./images/logo.gif" alt=
@@ -52,59 +57,67 @@
 
   <section class="top_menu">
     <div class="top_menu_left">
-<<<<<<< HEAD
-      <a href="#new_event" class="event_window"><img src=
-        "./images/button_edit.png" width="20" title="Change track"
-        alt="Change"> New event</a> 
-=======
-      <a href="#new_event" class="event_window menu_button">New Event</a>
->>>>>>> dec62202459e819c1f77d705ac809f8b75ed8024
-      <!--TODO: ADD NEW EVENT CONTENT FORM-->
+      <a href="#new_event" class="event_window menu_button">New
+      Event</a> <!--TODO: ADD NEW EVENT CONTENT FORM-->
 
       <div id="new_event" class="popup">
         <a href="#" class="close"><img src="./images/close_pop.png"
         class="btn_close" title="Close Window" alt="Close"></a>
-        
-				<div id="contact">
-					<h3>New event</h3>
-						<form action="#" method="post">
-						  <div class="type" style="float: left">
-							<label for="etype">What do you plan?</label> <br />
-							<ul id="etype" style="list-style-type: none">
-								<li><input type="radio" name="event_type" value="Study group" />
-																		<img src="./images/pen.png" width="20" /> Study group</li>
-                                <li><input type="radio" name="event_type" value="Lunch" />
-                                                                        <img src="./images/lunch.png" width="20" /> Lunch</li>
-                                <li><input type="radio" name="event_type" value="Car lift" />
-                                                                        <img src="./images/car.png" width="20" /> Carlift</li>
-                                <li><input type="radio" name="event_type" value="Game" />
-                                                                        <img src="./images/game.jpg" width="20" /> Game</li>
-                                <li><input type="radio" name="event_type" value="Other" />
-                                                                         Other: <input type="text" width="25" /></li>
 
-									
-							</ul>
-						  </div>
-						  <div class="privacy" style="float: left">
-							<label for="pubpri">Public or private?</label><br />
-							<ul id="pubpri" style="list-style-type:none">
-	                       	 <li><input type="radio" name="_type" value="Public" /> Public</li>
-                             <li><input type="radio" name="_type" value="Private" /> Private</li>
-							</ul>
-                          </div>
-						  <div style="float: left" >
-							<label for="date">Date, time?</label><br />
-							<img id="date" src="./images/date.png" width="200"/>
-						 	<br /><br />
-							<input type="button" value="Create" /> <input type="button" value="Cancel" class="btn_close" />
-						  </div>
-						</form>
-				</div>	
+        <div id="contact">
+          <h3>New event</h3>
 
-      </div>
+          <form action="#" method="post">
+            <div class="type" style="float: left">
+              <label for="etype">What do you plan?</label><br>
 
-      <a href="#dropbox" class="dropbox menu_button">Import calendar</a> 
-      <!--BEGIN DROPBOX-->
+              <ul id="etype" style="list-style-type: none">
+                <li><input type="radio" name="event_type" value=
+                "Study group"> <img src="./images/pen.png" width=
+                "20" alt="Pen"> Study group</li>
+
+                <li><input type="radio" name="event_type" value=
+                "Lunch"> <img src="./images/lunch.png" width="20"
+                alt="Lunch"> Lunch</li>
+
+                <li><input type="radio" name="event_type" value=
+                "Car lift"> <img src="./images/car.png" width="20"
+                alt="Car"> Carlift</li>
+
+                <li><input type="radio" name="event_type" value=
+                "Game"> <img src="./images/game.jpg" width="20"
+                alt="Game"> Game</li>
+
+                <li><input type="radio" name="event_type" value=
+                "Other"> Other: <input type="text" width="25" alt=
+                "Other"></li>
+              </ul>
+            </div>
+
+            <div class="privacy" style="float: left">
+              <label for="pubpri">Public or private?</label><br>
+
+              <ul id="pubpri" style="list-style-type:none">
+                <li><input type="radio" name="_type" value=
+                "Public"> Public</li>
+
+                <li><input type="radio" name="_type" value=
+                "Private"> Private</li>
+              </ul>
+            </div>
+
+            <div style="float: left">
+              <label for="date">Date, time?</label><br>
+              <img id="date" src="./images/date.png" width="200"
+              alt="Date"><br>
+              <br>
+              <input type="button" value="Create"> <input type=
+              "button" value="Cancel" class="btn_close">
+            </div>
+          </form>
+        </div>
+      </div><a href="#dropbox" class="dropbox menu_button">Import
+      calendar</a> <!--BEGIN DROPBOX-->
 
       <div id="dropbox" class="popup">
         <a href="#" class="close"><img src="./images/close_pop.png"
@@ -131,17 +144,14 @@
 
         <div id="messages">
           <p>Status Messages</p>
-        </div>
-        <script src="./scripts/filedrag.js"></script>
-      </div>
-      
-      <!--END OF POPUP DROPBOX-->
-      
+        </div><script src="./scripts/filedrag.js">
+</script>
+      </div><!--END OF POPUP DROPBOX-->
       <a href="CalendarDragOut.txt" class="menu_button" id=
       "dragout" draggable="true" data-downloadurl=
       "application/octet-stream:Calendar.txt:http://UrlForTheFile.txt">Export
       calendar</a>
-     
+
       <div class="search_bar">
         <input type="text" value="Search ..." width="700">
         <input type="button" value="Search">
@@ -150,63 +160,21 @@
 
     <div class="top_menu_right">
       <div class="my_track">
-<<<<<<< HEAD
-        <!--TODO: Choose track-->
-        <a href="#choose_track" class="track_window">Web engineering <img src=
-        "./images/button_edit.png" width="20" title="Change track"
-        alt="Change"></a>
-
-        <div class="popup" id="choose_track">
-          <a href="#" class="close"><img src=
-          "./images/close_pop.png" class="btn_close" title=
-          "Close Window" alt="Close"></a>
-
-          <form>
-            <select>
-              <option>
-                Web engineering
-              </option>
-
-              <option>
-                Network security
-              </option>
-
-              <option>
-                Embedded systems
-              </option>
-
-              <option>
-                Multimedia
-              </option>
-
-              <option>
-                Mobile communication system
-              </option>
-
-              <option>
-                Transmission techonologies
-              </option>
-            </select><br>
-            <input type="submit" value="Save" onclick=
-            "alert('Sorry, we have not developed this yet')">
-            <input type="button" class="close" value="Cancel"
-            onclick="this.close()">
-          </form>
-        </div>
-=======
         <a href="#choose_track" class=
         "track_window_static menu_button" style="width: 185px">WEB
         ENGINEERING</a>
->>>>>>> dec62202459e819c1f77d705ac809f8b75ed8024
       </div>
+    </div>
   </section>
 
   <section class="main_content">
     <article id="schedule">
       <header>
-        <h4 class="content_header">MY SCHEDULE</h4>
-				<a href="#" ><img src = "./images/arrows_back.png" width="30"/></a>
-				<a href="#" ><img src = "./images/arrows_forward.png" width="30"/></a>				
+        <h4 class="content_header">MY SCHEDULE</h4><a href=
+        "#"><img src="./images/arrows_back.png" width="30" alt=
+        "Arrow Back"></a> <a href="#"><img src=
+        "./images/arrows_forward.png" width="30" alt=
+        "Arrow Forward"></a>
       </header>
 
       <section class="schedule_container">
@@ -214,7 +182,7 @@
 
         <div id="calendar">
           <div class="day">
-            <div class="day_head bg-color-blue" > 
+            <div class="day_head bg-color-blue">
               <h1>Monday, 16th</h1>
             </div>
 
@@ -253,8 +221,7 @@
             </div>
 
             <div class="day_body">
-              <div class="day_morning"></div>
-              <!-- EVENTS -->
+              <div class="day_morning"></div><!-- EVENTS -->
 
               <div class="day_afternoon"></div>
             </div>
@@ -348,23 +315,10 @@
       </header>
 
       <section class="my_course_content">
-<<<<<<< HEAD
-            <a href="./course.html">WebInt</a>
-<br/>
-						<a href="#network">Network</a>
-<br />
-						<a href="#system">SysSec</a>
-<br />
-=======
-	<img src="./images/close_button.png" height="30" style="float:right"/>
-	<a href="./course.html" class="bg-color-green">WebInt</a><br/>
-
-	<img src="./images/close_button.png" height="30" style="float:right"/>
-	<a href="#network" class="bg-color-orange">Network</a><br />
-
-	<img src="./images/close_button.png" height="30" style="float:right"/>
-	<a href="#system" class="bg-color-pink">SysSec</a><br />
->>>>>>> dec62202459e819c1f77d705ac809f8b75ed8024
+        <a href="./course.html" class=
+        "bg-color-green">WebInt</a><br>
+        <a href="#network" class="bg-color-orange">Network</a><br>
+        <a href="#system" class="bg-color-pink">SysSec</a><br>
       </section>
     </article>
 
@@ -407,20 +361,29 @@
       </div>
     </article>
 
-	<article id="RSS">
+    <article id="RSS">
       <header>
         <h4 class="page_aside_title">ACTIVITIES</h4>
       </header>
 
       <section class="RSS_content">
-        <ul >
-         <li><img src="./images/Antonio.jpg" width="20" /> Antonio joined WebInt </li>
-         <li><img src="./images/Ghassane.jpg" width="20" /> Ghassane created event <a href="#drink">Drink to hell</a> </li>
-         <li><img src="./images/Luca.jpg" width="20" /> Luca posted a file to WebInt </li>
-         <li><img src="./images/Hieu.jpg" width="20" />  Hieu joined the network</li>
+        <ul>
+          <li><img src="./images/Antonio.jpg" width="20" alt=
+          "Antonio Profile Photo"> Antonio joined WebInt</li>
 
+          <li>
+            <img src="./images/Ghassane.jpg" width="20" alt=
+            "Ghassane Profile Photo"> Ghassane created event
+            <a href="#drink">Drink to hell</a>
+          </li>
+
+          <li><img src="./images/Luca.jpg" width="20" alt=
+          "Luca Profile Photo"> Luca posted a file to WebInt</li>
+
+          <li><img src="./images/Hieu.jpg" width="20" alt=
+          "Hieu Profile Photo"> Hieu joined the network</li>
         </ul>
-	  </section>
+      </section>
     </article>
   </aside>
 
