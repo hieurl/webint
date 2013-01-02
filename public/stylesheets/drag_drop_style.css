@@ -29,7 +29,7 @@
 }
 
 /* Add the style you prefer when hovered */
-#calendar_stub.over {
+#calendar.over {
   						border: 2px dashed #000;
 }			
 

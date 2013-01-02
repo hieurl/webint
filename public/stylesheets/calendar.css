@@ -1,35 +1,43 @@
 .day {
-	float:left;
-	width:160px;
-	padding-left: 10px;
-	padding-right: 10px;
+  display: inline-block;
+  /*hack for display block alignment*/
+  vertical-align: top;
+/*	width:160px;*/
+  width: 18%;	
+	padding-left: 1%;
+	padding-right: 1%;
+	/*hack for display-block white spaces*/
+	margin-right: -4px;
+	margin-left: -4px;
 	text-align: center;
 	/*color: white;*/
 }
 
 .day_head {
 	border: 2px #E2E2E2 solid;
-	margin-bottom: 5px;
-	width: 160px;
+  margin-bottom: 5px;
+/*	width: 160px;*/
 }
 
 .day_body {
-	width: 160px;
+/*	width: 160px;*/
 	height: 310px;
 }
 
 .day_morning {
 	margin-bottom: 5px;
-	width: 160px;
+/*	width: 160px;*/
 	height: 150px;
 	border: 2px #E2E2E2 solid;
 }
 
 .day_afternoon {
-    width: 160px;
+/*    width: 160px;*/
     height: 150px;
     border: 2px #E2E2E2 solid;
 }
+
+
 .vevent {
 /*	border: thin solid grey;
 	-webkit-border-radius: 2px 12px 2px 2px;*/
@@ -50,18 +58,15 @@
 	font-style: italic;
 } 
 
+
 /* === Tablet and Desktops === */
+
 @media screen and (min-width: 480px) {
 	.day{
 		height:400px;
 	}
-	
-	.day_body {
-		position:absolute;
-	}
-	
-	
 }
+
 
 .bg-color-blue {
 	background-color: #2E9AFE;

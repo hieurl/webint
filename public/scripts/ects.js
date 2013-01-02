@@ -102,10 +102,7 @@ var selectedCourses = new Array();
  */
 function addToCalendar(course) {
   //pure javascript (from handlers in pure javascript)
-  var li = document.createElement('li');
-  li.innerHTML = course;
-  document.getElementById('ulCal').appendChild(li);
-  dragSrcEl.style.visibility= 'hidden';
+  dragSrcEl.style.display="none";
   
   //JQuery
   var dst = $('#' + DAY[courseHour[course][0]] + ' .' + HR_SLOT[courseHour[course][1]]);
@@ -120,29 +117,61 @@ function addToCalendar(course) {
   
   //if only incompatible courses in list NOT hide
   //or user will be forced to delete the element to see the other courses in the list
-  if (list.find("li").length <= 1) {
-    dst.prepend("<div class='selected_course_whole'>"
+  var up = dst.find(".selected_course_up");
+  if(up.length == 0) {
+    dst.prepend("<div class='selected_course_up'>"
     +"<a href='#"+course+"'>"+course+"</a>"
     +"</div>");
-    list.hide();
-  } else {
-    var up = dst.find(".selected_course_up");
-    if ( up.length == 0) {
-      dst.prepend("<div class='selected_course_up'>"
-      +"<a href='#"+course+"'>"+course+"</a>"
-      +"</div>");
-      list.addClass("inner_course_list_down");
-    } else {
-      up.after("<div class='selected_course_down'>"
-      +"<a href='#"+course+"'>"+course+"</a>"
-      +"</div>");
+    dst.find(".selected_course_up").find("a").click(removeCourseClick);
+    if (list.find("li").length <= 1) {
       list.hide();
+    } else {
+      list.addClass("inner_course_list_down");
     }
+  } else {
+    up.after("<div class='selected_course_down'>"
+    +"<a href='#"+course+"'>"+course+"</a>"
+    +"</div>");
+    dst.find(".selected_course_down").find("a").click(removeCourseClick);
+    list.hide();
   }
 }
 
 function removeFromCalendar(course) {
+  //pure javascript (from handlers in pure javascript)
+  dragSrcEl.style.display= "";
   
+  //JQuery
+  var dst = $('#' + DAY[courseHour[course][0]] + ' .' + HR_SLOT[courseHour[course][1]]);
+  var list = dst.find(".inner_course_list");
+  
+  //show the course li
+  list.find("li").each(function() {
+      if ( $(this).find("a").html() == course ) {
+        $(this).show();
+      }
+    });
+  
+  var down = dst.find(".selected_course_down");
+  var up = dst.find(".selected_course_up");
+  if ( down.length == 0) {
+    up.remove();
+    if (list.find("li").length <= 1) {
+      list.show();
+    } else {
+      list.removeClass("inner_course_list_down");
+    } 
+  } else {
+    if (down.find("a").html()==course) {
+      down.remove();
+      list.show();
+    } else {
+      up.remove();
+      down.removeClass("selected_course_down");
+      down.addClass("selected_course_up");
+      list.show();
+    }
+  }
 }
 
 
@@ -170,7 +199,15 @@ function addCourseClick() {
   }
 }
 
-function removeCourseDrop(course) {
+function removeCourseClick() {
+  var course = $(this).html();
+  var side = document.querySelectorAll("#courses_side .course_side");
+  for (var i in side) {
+    if (course == side[i].innerHTML) {
+      dragSrcEl=side[i];
+      break;
+    }
+  }
   var idx = selectedCourses.indexOf(course);
   if(idx != -1) {
     selectedCourses.splice(idx, 1); //remove element from array
@@ -229,14 +266,21 @@ function initializeCalendar() {
   for (var d in DAY) {
     for (var h in HR_SLOT) {
       var list = $('#' + DAY[d] + ' .' + HR_SLOT[h]);
-      list.html("<div class='inner_course_list'><ul></ul></div>");
+      var textToInstert = "<div class='inner_course_list'><ul></ul>"
+      if (h == "MOR") {
+        textToInstert += '<form><input type="hidden" value="845" name="from"><input type="hidden" value="1200" name="to"></form>';
+      } else {
+        textToInstert += '<form><input type="hidden" value="1330" name="from"><input type="hidden" value="1645" name="to"></form>';
+      }
+      textToInstert += "</div>";
+      list.html(textToInstert);
       list = list.find(".inner_course_list");
       for (var c in courseHour) {
         if (courseHour[c][0]==d && courseHour[c][1]==h) {
           list.append("<li><a "+"href='#"+c+"'>"+c+"</a></li>");
-          list.find('li > a').click(addCourseClick);
         }
       }
+      list.find('li > a').click(addCourseClick);
     }
   }
 }
