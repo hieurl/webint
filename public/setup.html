@@ -5,22 +5,25 @@
   <meta name="generator" content="Bluefish 2.0.2" >
   <meta charset="UTF-8">
 
-  <title>Main</title>
+  <title>Setup your timetable</title>
   <link rel="stylesheet" href="./stylesheets/style.css" type="text/css">
   <link rel="stylesheet" href="./stylesheets/calendar.css" type="text/css">
   <link rel="stylesheet" href="./stylesheets/jquery-ui.css" type="text/css">
+  <link rel="stylesheet" href="./stylesheets/drag_drop_style.css" type="text/css">
+  
   <script type="text/javascript" src="./scripts/jquery-1.8.3.js"></script>
   <script type="text/javascript" src="./scripts/jquery-ui.js"></script>
   <script type="text/javascript" src="./scripts/js.js"></script>
   <script type="text/javascript" src="./scripts/calendar.js"></script>
-  <script type="text/javascript" src="./scripts/calendar_drag_out.js"></script>
+  <script type="text/javascript" src="./scripts/ects.js"></script>
+  <script type="text/javascript" src="./scripts/courses_drag_drop.js"></script>
 </head>
 
 <body>
   <div class="top_border"></div>
 
   <header class="page_header">
-    <a class="overlap" href="./login.html">Logout</a>
+    <a class="overlap" href="#">Logout</a>
 
     <div class="user_status">
       <a href="#">0 Msg</a><br>
@@ -29,10 +32,6 @@
 
     <div class="logo"><img src="./images/logo.gif" alt=
     "Eurecom Logo"></div>
-
-    <div class="headline">
-      NEWS OF THE WEEK
-    </div>
   </header>
 
   <nav>
@@ -44,23 +43,7 @@
   </nav>
 
   <section class="top_menu">
-    <div class="top_menu_left">
-      <a href="#new_event" class="event_window"><img src=
-        "./images/button_edit.png" width="20" title="Change track"
-        alt="Change"> New event</a> 
-      <!--TODO: ADD NEW EVENT CONTENT FORM-->
-
-      <div id="new_event" class="popup">
-        <a href="#" class="close"><img src="./images/close_pop.png"
-        class="btn_close" title="Close Window" alt="Close"></a>
-        This is form for create new event!
-      </div>
-
-      <div class="search_bar">
-        <input type="text" value="Search ..." width="700">
-        <input type="button" value="Search">
-      </div>
-    </div>
+    <div class="top_menu_left"></div>
 
     <div class="top_menu_right">
       <div class="my_track">
@@ -107,6 +90,7 @@
           </form>
         </div>
       </div>
+    </div>
   </section>
 
   <section class="main_content">
@@ -118,7 +102,9 @@
       </header>
 
       <section class="schedule_container">
+        This is the section to put the schedule/time table 
         <!-- SCHEDULE -->
+         <!-- This is a scratch for the schedule-to-be. -->
 
         <div id="calendar">
           <div class="day">
@@ -209,54 +195,84 @@
             </div>
           </div>
         </div>
-      </section>
-    </article><!-- DRAG OUT EXAMPLE -->
 
-    <section>
-      <a href="CalendarDragOut.txt" id="dragout" draggable="true"
-      data-downloadurl=
-      "application/octet-stream:Calendar.txt:http://UrlForTheFile.txt">
-      Drag out your calendar!</a>
-    </section>
+        <div id="calendar_stub">
+          <ul id="ulCal">
+            <li>Drag here a course</li>
+          </ul>
+        </div>
+      </section>
+    </article>
   </section>
 
   <aside class="page_aside">
     <article id="my_course">
       <header>
         <h4 class="page_aside_title">MY COURSES</h4>
-      </header>
+      </header><!-- DRAG AND DROP COURSES -->
 
-      <section class="my_course_content">
-            <a href="./course.html">WebInt</a>
-<br/>
-						<a href="#network">Network</a>
-<br />
-						<a href="#system">SysSec</a>
-<br />
+      <section>
+        <div id="courses_side">
+          <div class="course_side" draggable="true">
+            DistAlg
+          </div>
+
+          <div class="course_side" draggable="true">
+            InternetApp
+          </div>
+
+          <div class="course_side" draggable="true">
+            MobServ
+          </div>
+
+          <div class="course_side" draggable="true">
+            Netw_I
+          </div>
+
+          <div class="course_side" draggable="true">
+            OS
+          </div>
+
+          <div class="course_side" draggable="true">
+            SecCom
+          </div>
+
+          <div class="course_side" draggable="true">
+            SoftDev
+          </div>
+
+          <div class="course_side" draggable="true">
+            SysSec
+          </div>
+
+          <div class="course_side" draggable="true">
+            WebInt
+          </div>
+
+          <div class="course_side" draggable="true">
+            Entrep
+          </div>
+
+          <div class="course_side" draggable="true">
+            TeamLead
+          </div>
+        </div>
       </section>
     </article>
 
     <article id="available_course">
       <header>
-        <h4 class="page_aside_title">SEARCH COURSE</h4>
+        <h4 class="page_aside_title">ADD COURSE</h4>
       </header>
 
       <section class="available_course_content">
-        <!--Some form to choose course-->
+        <!--Some form to choose/add course-->
 
         <div class="ui-widget">
           <input type="text" size="14" id="course_input">
-          <input type="button" value="Search">
+          <input type="button" value="Add">
         </div>
       </section>
-    </article>
-
-    <article id="RSS">
-      <header>
-        <h4 class="page_aside_title">RSS</h4>
-      </header>
-
-      <section class="RSS_content"></section>
     </article>
 
     <article id="statistics">

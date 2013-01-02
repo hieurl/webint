@@ -1,7 +1,11 @@
 .login_form {
 
-    margin : 230px 0 200px 300px;
-    
+    margin-top : 230px;
+    margin-right: auto;
+    margin-left : auto;
+    margin-bottom:230px;
+    width : 310px;
+    //min-height :100%;
 }
 
 .logo_login {
@@ -23,4 +27,11 @@
     width:300px;
     background: #CCCCCC;
     font-style:italic;
+}
+
+html {
+    height :100%;
+}
+body{
+    height : 100%;
 }

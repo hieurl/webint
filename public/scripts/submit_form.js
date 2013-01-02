@@ -1,5 +1,4 @@
-// a simple checkin of the users with one user. Me :-)
-var loginList=["amchyaa@eurecom.fr","ghassane.amchyaa@eurecom.fr"]
+var loginList=["amchyaa@eurecom.fr","ghassane.amchyaa@eurecom.fr", "antonio.verardi@eurecom.fr"]
 var password="webint"
 
 //verify if an object is the array or not
@@ -19,4 +18,6 @@ function submit_form() {
     }
 }
 
-document.getElementById('subm').addEventListener("click",submit_form,true)
+$(document).ready(function(){
+document.getElementById('subm').addEventListener("click",submit_form,true);
+});
