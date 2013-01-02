@@ -17,7 +17,7 @@ body {
     //width: 978px;
     margin: 0 auto;
     color: #505050;
-	padding: 10px 70px 10px 70px
+	
 
 /*
   border: hidden;
@@ -28,6 +28,13 @@ body {
   border-right-style: solid;
   border-color: #505050;
   */
+}
+
+/* === Tablet and Desktops === */
+@media screen and (min-width: 768px) {
+	body{
+		padding: 10px 70px 10px 70px;
+	}
 }
 
 .top_border {
@@ -123,22 +130,29 @@ body {
 
 .main_content {
     float: left;
-    width: 80%;
+    width: 100%; //For mobile.
 }
 
 /* === Tablet and Desktops === */
 @media screen and (min-width: 768px) {
     aside{
-	float: right;
+		float: right;
     }
-    
+	
+	.page_aside{
+		width: 17%;
+    }
+	
+	.main_content {
+		width: 80%;
+		}
     /*.schedule_container {
 	margin-left: 18px;
     }*/
 }
 .page_aside {
-	float: right;
-	width: 17%;
+	//float: right; Again, no. This is only for desktops. See above.
+	//width: 17%; idem.
 	text-align: right;
 	border-left-width: thin;
 	border-left-style:solid;
