@@ -9,9 +9,12 @@
   <link rel="stylesheet" href="./stylesheets/style.css" type="text/css">
   <link rel="stylesheet" href="./stylesheets/calendar.css" type="text/css">
   <link rel="stylesheet" href="./stylesheets/jquery-ui.css" type="text/css">
+  <link rel="stylesheet" type="text/css" media="all" href="./stylesheets/drop_styles.css">
+  
   <script type="text/javascript" src="./scripts/jquery-1.8.3.js"></script>
   <script type="text/javascript" src="./scripts/jquery-ui.js"></script>
-  <script type="text/javascript" src="./scripts/js.js"></script>
+  <script type="text/javascript" src="./scripts/ects.js"></script>
+  <script type="text/javascript" src="./scripts/popup.js"></script>
   <script type="text/javascript" src="./scripts/calendar.js"></script>
   <script type="text/javascript" src="./scripts/calendar_drag_out.js"></script>
 </head>
@@ -23,8 +26,15 @@
     <a class="overlap" href="./login.html">Logout</a>
 
     <div class="user_status">
-      <a href="#">0 Msg</a><br>
-      <a href="#">2 Events</a><br>
+			<table valign="top" align="left">
+				<tr>
+					<td><img src="./images/Hieu.jpg" width="50" /></td>
+					<td align="left">
+						<a href="#2event" ><img src="./images/Event.png" width="20" /> 2 events </a><br />
+						<a href="#0msg" ><img src="./images/PM.jpg" width="20" /> 0 message</a>
+					</td>
+				</tr>
+			</table>
     </div>
 
     <div class="logo"><img src="./images/logo.gif" alt=
@@ -35,27 +45,103 @@
     </div>
   </header>
 
-  <nav>
-    <ul class="top_nav">
-      <li>
-        <a href="./main.html">HOME</a>
-      </li>
-    </ul>
+  <nav class="top_nav">
+    <a href="./main.html">HOME</a> <img height="12" src=
+    "./images/arrow_right_red.png" alt="Arrow Red">
   </nav>
 
   <section class="top_menu">
     <div class="top_menu_left">
+<<<<<<< HEAD
       <a href="#new_event" class="event_window"><img src=
         "./images/button_edit.png" width="20" title="Change track"
         alt="Change"> New event</a> 
+=======
+      <a href="#new_event" class="event_window menu_button">New Event</a>
+>>>>>>> dec62202459e819c1f77d705ac809f8b75ed8024
       <!--TODO: ADD NEW EVENT CONTENT FORM-->
 
       <div id="new_event" class="popup">
         <a href="#" class="close"><img src="./images/close_pop.png"
         class="btn_close" title="Close Window" alt="Close"></a>
-        This is form for create new event!
+        
+				<div id="contact">
+					<h3>New event</h3>
+						<form action="#" method="post">
+						  <div class="type" style="float: left">
+							<label for="etype">What do you plan?</label> <br />
+							<ul id="etype" style="list-style-type: none">
+								<li><input type="radio" name="event_type" value="Study group" />
+																		<img src="./images/pen.png" width="20" /> Study group</li>
+                                <li><input type="radio" name="event_type" value="Lunch" />
+                                                                        <img src="./images/lunch.png" width="20" /> Lunch</li>
+                                <li><input type="radio" name="event_type" value="Car lift" />
+                                                                        <img src="./images/car.png" width="20" /> Carlift</li>
+                                <li><input type="radio" name="event_type" value="Game" />
+                                                                        <img src="./images/game.jpg" width="20" /> Game</li>
+                                <li><input type="radio" name="event_type" value="Other" />
+                                                                         Other: <input type="text" width="25" /></li>
+
+									
+							</ul>
+						  </div>
+						  <div class="privacy" style="float: left">
+							<label for="pubpri">Public or private?</label><br />
+							<ul id="pubpri" style="list-style-type:none">
+	                       	 <li><input type="radio" name="_type" value="Public" /> Public</li>
+                             <li><input type="radio" name="_type" value="Private" /> Private</li>
+							</ul>
+                          </div>
+						  <div style="float: left" >
+							<label for="date">Date, time?</label><br />
+							<img id="date" src="./images/date.png" width="200"/>
+						 	<br /><br />
+							<input type="button" value="Create" /> <input type="button" value="Cancel" class="btn_close" />
+						  </div>
+						</form>
+				</div>	
+
       </div>
 
+      <a href="#dropbox" class="dropbox menu_button">Import calendar</a> 
+      <!--BEGIN DROPBOX-->
+
+      <div id="dropbox" class="popup">
+        <a href="#" class="close"><img src="./images/close_pop.png"
+        class="btn_close" title="Close Window" alt="Close"></a>
+
+        <form id="upload" action="" method="post" enctype=
+        "multipart/form-data" name="upload">
+          <fieldset>
+            <legend>Import your calendar</legend> <input type=
+            "hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value=
+            "300000">
+
+            <div>
+              <label for="fileselect">Files to upload:</label>
+              <input type="file" id="fileselect" name=
+              "fileselect[]" multiple="multiple">
+
+              <div id="filedrag" style="display: block;" class="">
+                or drop files here
+              </div>
+            </div><button type="submit">Upload Files</button>
+          </fieldset>
+        </form>
+
+        <div id="messages">
+          <p>Status Messages</p>
+        </div>
+        <script src="./scripts/filedrag.js"></script>
+      </div>
+      
+      <!--END OF POPUP DROPBOX-->
+      
+      <a href="CalendarDragOut.txt" class="menu_button" id=
+      "dragout" draggable="true" data-downloadurl=
+      "application/octet-stream:Calendar.txt:http://UrlForTheFile.txt">Export
+      calendar</a>
+     
       <div class="search_bar">
         <input type="text" value="Search ..." width="700">
         <input type="button" value="Search">
@@ -64,6 +150,7 @@
 
     <div class="top_menu_right">
       <div class="my_track">
+<<<<<<< HEAD
         <!--TODO: Choose track-->
         <a href="#choose_track" class="track_window">Web engineering <img src=
         "./images/button_edit.png" width="20" title="Change track"
@@ -106,15 +193,20 @@
             onclick="this.close()">
           </form>
         </div>
+=======
+        <a href="#choose_track" class=
+        "track_window_static menu_button" style="width: 185px">WEB
+        ENGINEERING</a>
+>>>>>>> dec62202459e819c1f77d705ac809f8b75ed8024
       </div>
   </section>
 
   <section class="main_content">
-    <!--TODO: Put the schedule here!-->
-
     <article id="schedule">
       <header>
         <h4 class="content_header">MY SCHEDULE</h4>
+				<a href="#" ><img src = "./images/arrows_back.png" width="30"/></a>
+				<a href="#" ><img src = "./images/arrows_forward.png" width="30"/></a>				
       </header>
 
       <section class="schedule_container">
@@ -122,102 +214,131 @@
 
         <div id="calendar">
           <div class="day">
-            <div class="day_head">
-              <h1>Today, 16th</h1>
+            <div class="day_head bg-color-blue" > 
+              <h1>Monday, 16th</h1>
             </div>
 
             <div class="day_body">
               <!-- EVENTS -->
 
-              <article id="event001" class="vevent">
-                <h1 class="summary">WebInt</h1>
+              <div class="day_morning"></div>
 
-                <h2 class="description">"HTML5"</h2>
+              <div class="day_afternoon">
+                <article id="event_syssec2" class=
+                "vevent bg-color-pink">
+                  <h1 class="summary">SYSSEC</h1>
 
-                <p>from <abbr class="dtstart" title=
-                "2013-01-09T08:45:00+01:00">8.45</abbr> to
-                <abbr class="dtend" title=
-                "2013-01-09T12:00:00+01:00">12</abbr></p>
+                  <h2 class="description">"Hacking, yeah!"</h2>
 
-                <p class="location">room 101</p>
+                  <p>from <abbr class="dtstart" title=
+                  "2013-01-09T08:45:00+01:00">8.45</abbr> to
+                  <abbr class="dtend" title=
+                  "2013-01-09T12:00:00+01:00">12</abbr></p>
 
-                <form>
-                  <!-- This form defines the timelapse where to show the event -->
-                  <input type="hidden" value="845" name="from">
-                  <input type="hidden" value="1200" name="to">
-                </form>
-              </article>
+                  <p class="location">room 101</p>
+
+                  <form>
+                    <!-- This form defines the timelapse where to show the event -->
+                    <input type="hidden" value="845" name="from">
+                    <input type="hidden" value="1200" name="to">
+                  </form>
+                </article>
+              </div>
             </div>
           </div>
 
           <div class="day">
-            <div class="day_head">
-              <h1>Tomorrow, 17th</h1>
+            <div class="day_head bg-color-blue">
+              <h1>Tuesday, 17th</h1>
             </div>
 
             <div class="day_body">
+              <div class="day_morning"></div>
               <!-- EVENTS -->
+
+              <div class="day_afternoon"></div>
+            </div>
+          </div>
+
+          <div class="day bg-color-gray">
+            <div class="day_head bg-color-blue">
+              <h1>Wednesday, 18th</h1>
+            </div>
+
+            <div class="day_body">
+              <div class="day_morning"></div><!-- EVENTS -->
+
+              <div class="day_afternoon">
+                <article id="event_webint" class=
+                "vevent bg-color-green">
+                  <h1 class="summary">WebInt</h1>
+
+                  <h2 class="description">"HTML5"</h2>
+
+                  <p>from <abbr class="dtstart" title=
+                  "2013-01-09T08:45:00+01:00">8.45</abbr> to
+                  <abbr class="dtend" title=
+                  "2013-01-09T12:00:00+01:00">12</abbr></p>
+
+                  <p class="location">room 101</p>
+
+                  <form>
+                    <!-- This form defines the timelapse where to show the event -->
+                    <input type="hidden" value="845" name="from">
+                    <input type="hidden" value="1200" name="to">
+                  </form>
+                </article>
+              </div>
             </div>
           </div>
 
           <div class="day">
-            <div class="day_head">
-              <h1>18th, Fri</h1>
+            <div class="day_head bg-color-blue">
+              <h1>Thursday, 22nd</h1>
             </div>
 
             <div class="day_body">
-              <!-- EVENTS -->
+              <div class="day_morning">
+                <article id="event_syssec1" class=
+                "vevent bg-color-orange">
+                  <h1 class="summary">NETWORK</h1>
+
+                  <h2 class="description">"Package,
+                  protocols,..."</h2>
+
+                  <p>from <abbr class="dtstart" title=
+                  "2013-01-09T08:45:00+01:00">8.45</abbr> to
+                  <abbr class="dtend" title=
+                  "2013-01-09T12:00:00+01:00">12</abbr></p>
+
+                  <p class="location">room 101</p>
+
+                  <form>
+                    <!-- This form defines the timelapse where to show the event -->
+                    <input type="hidden" value="845" name="from">
+                    <input type="hidden" value="1200" name="to">
+                  </form>
+                </article>
+              </div><!-- EVENTS -->
+
+              <div class="day_afternoon"></div>
             </div>
           </div>
 
           <div class="day">
-            <div class="day_head">
-              <h1>22nd, Mon</h1>
+            <div class="day_head bg-color-blue">
+              <h1>Friday, 23rd</h1>
             </div>
 
             <div class="day_body">
-              <!-- EVENTS -->
+              <div class="day_morning"></div><!-- EVENTS -->
 
-              <article id="event002" class="vevent">
-                <h1 class="summary">SysSec</h1>
-
-                <h2 class="description">"SQL injection"</h2>
-
-                <p>from <abbr class="dtstart" title=
-                "2013-01-14T13:30:00+01:00">13.30</abbr> to
-                <abbr class="dtend" title=
-                "2013-01-09T16:45:00+01:00">16.45</abbr></p>
-
-                <p class="location">room 101</p>
-
-                <form>
-                  <!-- This form defines the timelapse where to show the event -->
-                  <input type="hidden" value="1330" name="from">
-                  <input type="hidden" value="1645" name="to">
-                </form>
-              </article>
-            </div>
-          </div>
-
-          <div class="day">
-            <div class="day_head">
-              <h1>23rd, Tue</h1>
-            </div>
-
-            <div class="day_body">
-              <!-- EVENTS -->
+              <div class="day_afternoon"></div>
             </div>
           </div>
         </div>
       </section>
-    </article><!-- DRAG OUT EXAMPLE -->
-
-    <section>
-      <a href="CalendarDragOut.txt" id="dragout" draggable="true"
-      data-downloadurl=
-      "application/octet-stream:Calendar.txt:http://UrlForTheFile.txt">
-      Drag out your calendar!</a>
-    </section>
+    </article>
   </section>
 
   <aside class="page_aside">
@@ -227,12 +348,23 @@
       </header>
 
       <section class="my_course_content">
+<<<<<<< HEAD
             <a href="./course.html">WebInt</a>
 <br/>
 						<a href="#network">Network</a>
 <br />
 						<a href="#system">SysSec</a>
 <br />
+=======
+	<img src="./images/close_button.png" height="30" style="float:right"/>
+	<a href="./course.html" class="bg-color-green">WebInt</a><br/>
+
+	<img src="./images/close_button.png" height="30" style="float:right"/>
+	<a href="#network" class="bg-color-orange">Network</a><br />
+
+	<img src="./images/close_button.png" height="30" style="float:right"/>
+	<a href="#system" class="bg-color-pink">SysSec</a><br />
+>>>>>>> dec62202459e819c1f77d705ac809f8b75ed8024
       </section>
     </article>
 
@@ -251,16 +383,8 @@
       </section>
     </article>
 
-    <article id="RSS">
-      <header>
-        <h4 class="page_aside_title">RSS</h4>
-      </header>
-
-      <section class="RSS_content"></section>
-    </article>
-
     <article id="statistics">
-      <h1>ECTS Statistics</h1>
+      <h4 class="page_aside_title">ECTS Statistics</h4>
 
       <div class="statistics">
         Mandatory <span id="mandatory_ects">0</span>
@@ -281,6 +405,22 @@
       <div class="statistics">
         Total <span id="total_ects">0</span>
       </div>
+    </article>
+
+	<article id="RSS">
+      <header>
+        <h4 class="page_aside_title">ACTIVITIES</h4>
+      </header>
+
+      <section class="RSS_content">
+        <ul >
+         <li><img src="./images/Antonio.jpg" width="20" /> Antonio joined WebInt </li>
+         <li><img src="./images/Ghassane.jpg" width="20" /> Ghassane created event <a href="#drink">Drink to hell</a> </li>
+         <li><img src="./images/Luca.jpg" width="20" /> Luca posted a file to WebInt </li>
+         <li><img src="./images/Hieu.jpg" width="20" />  Hieu joined the network</li>
+
+        </ul>
+	  </section>
     </article>
   </aside>
 

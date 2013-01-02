@@ -14,8 +14,10 @@ DAY["FRI"]="FRI";
  * Ex: HR_SLOT["MOR"]=class_cells_08.45-12.00_in_my_calendar
  */
 var HR_SLOT = new Object();
-HR_SLOT["MOR"]="08.45-12.00";
-HR_SLOT["AFT"]="13.30-16.45";
+HR_SLOT["MOR"]="day_morning";
+HR_SLOT["AFT"]="day_afternoon";
+//HR_SLOT["MOR"]="08.45-12.00";
+//HR_SLOT["AFT"]="13.30-16.45";
   
 // THE SAME AS BEFORE
 var TYPE = new Object();
@@ -27,6 +29,7 @@ TYPE['N']='N'; //non technical
 var courses =
   [
     "DistAlg",
+    "Entrep",
     "InternetApp",
     "MobServ",
     "Netw_I",
@@ -34,9 +37,8 @@ var courses =
     "SecCom",
     "SoftDev",
     "SysSec",
+    "TeamLead",
     "WebInt",
-    "Entrep",
-    "TeamLead"
   ];
   
 var courseEcts = new Object();
@@ -69,7 +71,7 @@ var courseHour = new Object();
 courseHour["DistAlg"]= [ "WED", "MOR" ];
 courseHour["InternetApp"]= ["WED", "AFT" ];
 courseHour["MobServ"]= [ "WED", "MOR" ];
-courseHour["Netw_I"]= [ "THU", "MOR", "THU", "AFT" ];
+courseHour["Netw_I"]= [ "THU", "MOR" ];
 courseHour["OS"]= [ "FRI", "MOR" ];
 courseHour["SecCom"]= [ "FRI", "MOR" ];
 courseHour["SoftDev"]= [ "MON", "MOR" ];
@@ -99,18 +101,81 @@ var selectedCourses = new Array();
  * WRITE THE JAVASCRIPT FOR THE INTERACTION WITH THE CALENDAR
  */
 function addToCalendar(course) {
-  var li = document.createElement('li');
-  li.innerHTML = course;
-  document.getElementById('ulCal').appendChild(li);
-  dragSrcEl.style.visibility= 'hidden';
+  //pure javascript (from handlers in pure javascript)
+  dragSrcEl.style.display="none";
+  
+  //JQuery
+  var dst = $('#' + DAY[courseHour[course][0]] + ' .' + HR_SLOT[courseHour[course][1]]);
+  var list = dst.find(".inner_course_list");
+  
+  //hide the course li
+  list.find("li").each(function() {
+      if ( $(this).find("a").html() == course ) {
+        $(this).hide();
+      }
+    });
+  
+  //if only incompatible courses in list NOT hide
+  //or user will be forced to delete the element to see the other courses in the list
+  var up = dst.find(".selected_course_up");
+  if(up.length == 0) {
+    dst.prepend("<div class='selected_course_up'>"
+    +"<a href='#"+course+"'>"+course+"</a>"
+    +"</div>");
+    dst.find(".selected_course_up").find("a").click(removeCourseClick);
+    if (list.find("li").length <= 1) {
+      list.hide();
+    } else {
+      list.addClass("inner_course_list_down");
+    }
+  } else {
+    up.after("<div class='selected_course_down'>"
+    +"<a href='#"+course+"'>"+course+"</a>"
+    +"</div>");
+    dst.find(".selected_course_down").find("a").click(removeCourseClick);
+    list.hide();
+  }
 }
 
 function removeFromCalendar(course) {
+  //pure javascript (from handlers in pure javascript)
+  dragSrcEl.style.display= "";
   
+  //JQuery
+  var dst = $('#' + DAY[courseHour[course][0]] + ' .' + HR_SLOT[courseHour[course][1]]);
+  var list = dst.find(".inner_course_list");
+  
+  //show the course li
+  list.find("li").each(function() {
+      if ( $(this).find("a").html() == course ) {
+        $(this).show();
+      }
+    });
+  
+  var down = dst.find(".selected_course_down");
+  var up = dst.find(".selected_course_up");
+  if ( down.length == 0) {
+    up.remove();
+    if (list.find("li").length <= 1) {
+      list.show();
+    } else {
+      list.removeClass("inner_course_list_down");
+    } 
+  } else {
+    if (down.find("a").html()==course) {
+      down.remove();
+      list.show();
+    } else {
+      up.remove();
+      down.removeClass("selected_course_down");
+      down.addClass("selected_course_up");
+      list.show();
+    }
+  }
 }
 
 
-function addCourse(course, srcHandle) {
+function addCourseDrop(course) {
   if (checkCourseCompatibility(course)) {
     selectedCourses.push(course);
     updateCourseEcts(course,ADD_COURSE);
@@ -118,7 +183,31 @@ function addCourse(course, srcHandle) {
   }
 }
 
-function removeCourse(course) {
+function addCourseClick() {
+  var course = $(this).html();
+  var side = document.querySelectorAll("#courses_side .course_side");
+  for (var i in side) {
+    if (course == side[i].innerHTML) {
+      dragSrcEl=side[i];
+      break;
+    }
+  }
+  if (checkCourseCompatibility(course)) {
+    selectedCourses.push(course);
+    updateCourseEcts(course,ADD_COURSE);
+    addToCalendar(course);
+  }
+}
+
+function removeCourseClick() {
+  var course = $(this).html();
+  var side = document.querySelectorAll("#courses_side .course_side");
+  for (var i in side) {
+    if (course == side[i].innerHTML) {
+      dragSrcEl=side[i];
+      break;
+    }
+  }
   var idx = selectedCourses.indexOf(course);
   if(idx != -1) {
     selectedCourses.splice(idx, 1); //remove element from array
@@ -171,4 +260,31 @@ function updateCourseEcts(course, sign) {
   document.getElementById("total_ects").innerHTML = totalEcts;
 }
 
+var schedule = new Object();
 
+function initializeCalendar() {
+  for (var d in DAY) {
+    for (var h in HR_SLOT) {
+      var list = $('#' + DAY[d] + ' .' + HR_SLOT[h]);
+      var textToInstert = "<div class='inner_course_list'><ul></ul>"
+      if (h == "MOR") {
+        textToInstert += '<form><input type="hidden" value="845" name="from"><input type="hidden" value="1200" name="to"></form>';
+      } else {
+        textToInstert += '<form><input type="hidden" value="1330" name="from"><input type="hidden" value="1645" name="to"></form>';
+      }
+      textToInstert += "</div>";
+      list.html(textToInstert);
+      list = list.find(".inner_course_list");
+      for (var c in courseHour) {
+        if (courseHour[c][0]==d && courseHour[c][1]==h) {
+          list.append("<li><a "+"href='#"+c+"'>"+c+"</a></li>");
+        }
+      }
+      list.find('li > a').click(addCourseClick);
+    }
+  }
+}
+
+$(document).ready(function(){
+   initializeCalendar();
+ });

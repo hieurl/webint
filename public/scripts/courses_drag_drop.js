@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var calendar = document.getElementById('calendar_stub');
+	var calendar = document.getElementById('calendar');
 	calendar.addEventListener('dragenter', handleDragEnter, false)
 	calendar.addEventListener('dragover', handleDragOver, false);
 	calendar.addEventListener('dragleave', handleDragLeave, false);
@@ -55,7 +55,7 @@ function handleDrop(e) {
   /* INSERT HERE YOUR CODE TO BE EXECUTED AFTER DROPPED */
   /*DESTINATION SIDE*/
   var course = e.dataTransfer.getData('text/html');
-  addCourse(course);
+  addCourseDrop(course);
   
   return false;
 }
@@ -65,6 +65,6 @@ function handleDragEnd(e) {
 
   /* INSERT HERE YOUR CODE TO BE EXECUTED AFTER DRAGGED */
   /*SOURCE SIDE*/
-  document.getElementById('calendar_stub').classList.remove('over');
+  document.getElementById('calendar').classList.remove('over');
   this.style.opacity = '1';   
 }
