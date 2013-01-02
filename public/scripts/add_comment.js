@@ -24,7 +24,7 @@ function modifyCss() {
 	rate_num.style.fontSize="17px"
 	//comment rate
 	rate.style.cssFloat="left"
-	rate.style.marginLeft="30px"
+	rate.style.marginLeft="20%"
 	//rate.style.marginTop="20px"
 	//user
 	user.style.fontStyle="italic"
@@ -35,19 +35,19 @@ function modifyCss() {
 	time.style.fontStyle="italic"
 	time.style.color="#239CD3"
 	//comment
-	comment.style.border="1px #239CD3 solid"
+	comment.style.border="1px #C3C3C3 solid"
 	comment.style.textAlign="center"
-	comment.style.marginTop="5px"
+	comment.style.marginTop="7px"
 	comment.style.width="500px"
-	comment.style.marginRight="auto"
-	comment.style.marginLeft="auto"
-	comment.style.borderRadius="10px"
+	comment.style.marginLeft="26%"
+	//comment.style.borderRadius="10px"
 	comment.style.padding="5px"
-	comment.style.boxShadow="2px 2px 2px #C3C3C3"
+	comment.style.boxShadow="1px 1px 1px #239CD3"
 	comment.style.fontSize="15px"
-	i++
 	//button
+	button.style.marginTop="1px"
 	button.style.marginLeft="427px"
+	i++
     }
 }
 

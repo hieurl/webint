@@ -10,6 +10,9 @@ aside {
 }
 
 
+html{
+    height:100%;
+}
 body {
     font-family: arial, tahoma;
     font-size: 11pt;
@@ -17,7 +20,12 @@ body {
     //width: 978px;
     margin: 0 auto;
     color: #505050;
-	padding: 10px 70px 10px 70px
+<<<<<<< HEAD
+    padding: 10px 10px 10px 10px;
+    height: 100%;
+=======
+	
+>>>>>>> dec62202459e819c1f77d705ac809f8b75ed8024
 
 /*
   border: hidden;
@@ -28,6 +36,13 @@ body {
   border-right-style: solid;
   border-color: #505050;
   */
+}
+
+/* === Tablet and Desktops === */
+@media screen and (min-width: 768px) {
+	body{
+		padding: 10px 70px 10px 70px;
+	}
 }
 
 .top_border {
@@ -50,11 +65,15 @@ body {
     list-style: none;
     margin: 0px 0px 0px 0px;
     padding: 0px;
+<<<<<<< HEAD
+    width: 100%;
+=======
 	width: 97.5%;
 	background-color: #58ACFA;
 	padding: 5px 5px 5px 5px;
+>>>>>>> dec62202459e819c1f77d705ac809f8b75ed8024
     /*width: 978px;*/
-    /*background: #5D606E;*/
+    background: #5D606E;
 }
 
 .top_nav a {
@@ -66,7 +85,7 @@ body {
     margin: 0px;
     list-style: none;
     padding: 0px;
-    /*float: left;*/
+    float: left;
 }
 
 .top_nav li a {
@@ -106,6 +125,10 @@ body {
     float: left;
     width: 100%;
     position: relative;
+    border-bottom-width: thin;
+    border-bottom-style:solid;
+    border-bottom-color: #C3C3C3;
+    
 }
 
 .top_menu_right {
@@ -123,22 +146,35 @@ body {
 
 .main_content {
     float: left;
-    width: 80%;
+    width: 100%; //For mobile.
 }
 
 /* === Tablet and Desktops === */
 @media screen and (min-width: 768px) {
     aside{
-	float: right;
+		float: right;
     }
-    
+	
+	.page_aside{
+		width: 17%;
+    }
+	
+	.main_content {
+		width: 80%;
+		}
     /*.schedule_container {
 	margin-left: 18px;
     }*/
 }
 .page_aside {
+<<<<<<< HEAD
 	float: right;
 	width: 17%;
+	min-height : 100%;
+=======
+	//float: right; Again, no. This is only for desktops. See above.
+	//width: 17%; idem.
+>>>>>>> dec62202459e819c1f77d705ac809f8b75ed8024
 	text-align: right;
 	border-left-width: thin;
 	border-left-style:solid;
@@ -180,12 +216,13 @@ body {
 }
 
 .headline {
+    text-align:center;
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
-    float: right;
+    //float: right;
     margin-top: -34px;
-    width: 500px;
+    //width: 500px;
     color: #239CD3;
 /*
   position: relative;
@@ -198,7 +235,8 @@ body {
 
 .popup {
     display:none;
-    background: #58ACFA;
+/*    background: #58ACFA; */
+	background: #9BADC4;
     padding: 10px; 	
     border: 2px solid #ddd;
     float: left;
@@ -206,8 +244,67 @@ body {
     position: fixed;
     top: 50%; left: 50%;
     z-index: 99999;
-    border-radius:3px 3px 3px 3px;
+    border-radius:5px 5px 5px 5px;
 	color: white;
+	border: 1px solid #e1e1e1;
+	-moz-box-shadow: 0px 0px 8px #444;
+	-webkit-box-shadow: 0px 0px 8px #444;
+	
+}
+
+.popup label {
+	float: left; clear: left; margin: 11px 20px 0 0; 
+	text-align: right; color: #445668; 
+	text-shadow: 0px 1px 0px #f2f2f2;
+}
+
+.popup input {
+	height: 25px; padding: 5px 20px 0px 20px; margin: 0 0 20px 0; 
+	background: #5E768D;
+	background: -moz-linear-gradient(top, #546A7F 0%, #5E768D 20%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#546A7F), color-stop(20%,#5E768D)); /* webkit */
+	border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+	-moz-box-shadow: 0px 1px 0px #f2f2f2;-webkit-box-shadow: 0px 1px 0px #f2f2f2;
+	color: #f2f2f2; text-shadow: 0px -1px 0px #334f71; 
+}
+
+.popup input::-webkit-input-placeholder  {
+    	color: #a1b2c3; text-shadow: 0px -1px 0px #38506b;  
+}
+.popup input:-moz-placeholder {
+	    color: #a1b2c3; text-shadow: 0px -1px 0px #38506b; 
+}
+
+.popup textarea {
+	width: 260px; height: 170px; padding: 12px 20px 0px 20px; margin: 0 0 20px 0; 
+	background: #5E768D;
+	background: -moz-linear-gradient(top, #546A7F 0%, #5E768D 20%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#546A7F), color-stop(20%,#5E768D)); /* webkit */
+	border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+	-moz-box-shadow: 0px 1px 0px #f2f2f2;-webkit-box-shadow: 0px 1px 0px #f2f2f2;
+	color: #f2f2f2; text-shadow: 0px -1px 0px #334f71; 
+}
+
+.popup textarea::-webkit-input-placeholder  {
+    	color: #a1b2c3; text-shadow: 0px -1px 0px #38506b;  
+}
+.popup textarea:-moz-placeholder {
+	    color: #a1b2c3; text-shadow: 0px -1px 0px #38506b; 
+}
+	
+.popup input:focus, textarea:focus {
+	background: #728eaa;
+	background: -moz-linear-gradient(top, #668099 0%, #728eaa 20%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#668099), color-stop(20%,#728eaa)); /* webkit */
+}
+
+.popup input[type=submit] {
+	width: 185px; height: 52px; float: right; padding: 10px 15px; margin: 0 15px 0 0;
+	-moz-box-shadow: 0px 0px 5px #999;-webkit-box-shadow: 0px 0px 5px #999;
+	border: 1px solid #556f8c;
+	background: -moz-linear-gradient(top, #718DA9 0%, #415D79 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#718DA9), color-stop(100%,#415D79)); /* webkit */
+	cursor: pointer;
 }
 
 img.btn_close { 
@@ -287,18 +384,21 @@ a:hover {
 .my_course_content {	
 }
 .my_course_content a{
-	display: table-cell;
-	color: white;
 	font-size: 16px;
+<<<<<<< HEAD
+	text-decoration: none;
+	text-align: left;
+=======
 	width: 170px;
 	height: 30px;
 	text-decoration: none;
 	text-align: center;
+>>>>>>> dec62202459e819c1f77d705ac809f8b75ed8024
 	vertical-align: middle;
 }
 
 .my_course_content a:hover{
-	background:#363842;
+	text-decoration:underline;
 }
 
 .menu_button {
@@ -317,4 +417,22 @@ a:hover {
 .RSS_content {
 	font-size: 10pt;
 	text-align: left;
+}
+
+.event_window {
+    
+    padding : 5px;
+}
+
+.event_window:hover{
+    text-decoration :underline;
+    color : #239CD3;
+}
+
+.track_window{
+    padding:5px;
+}
+.track_window:hover{
+    text-decoration :underline;
+    color : #239CD3;
 }
