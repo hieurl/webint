@@ -58,7 +58,43 @@
       <div id="new_event" class="popup">
         <a href="#" class="close"><img src="./images/close_pop.png"
         class="btn_close" title="Close Window" alt="Close"></a>
-        This is form for create new event!
+        
+				<div id="contact">
+					<h3>New event</h3>
+						<form action="#" method="post">
+						  <div class="type" style="float: left">
+							<label for="etype">What do you plan?</label> <br />
+							<ul id="etype" style="list-style-type: none">
+								<li><input type="radio" name="event_type" value="Study group" />
+																		<img src="./images/pen.png" width="20" /> Study group</li>
+                                <li><input type="radio" name="event_type" value="Lunch" />
+                                                                        <img src="./images/lunch.png" width="20" /> Lunch</li>
+                                <li><input type="radio" name="event_type" value="Car lift" />
+                                                                        <img src="./images/car.png" width="20" /> Carlift</li>
+                                <li><input type="radio" name="event_type" value="Game" />
+                                                                        <img src="./images/game.jpg" width="20" /> Game</li>
+                                <li><input type="radio" name="event_type" value="Other" />
+                                                                         Other: <input type="text" width="25" /></li>
+
+									
+							</ul>
+						  </div>
+						  <div class="privacy" style="float: left">
+							<label for="pubpri">Public or private?</label><br />
+							<ul id="pubpri" style="list-style-type:none">
+	                       	 <li><input type="radio" name="_type" value="Public" /> Public</li>
+                             <li><input type="radio" name="_type" value="Private" /> Private</li>
+							</ul>
+                          </div>
+						  <div style="float: left" >
+							<label for="date">Date, time?</label><br />
+							<img id="date" src="./images/date.png" width="200"/>
+						 	<br /><br />
+							<input type="button" value="Create" /> <input type="button" value="Cancel" class="btn_close" />
+						  </div>
+						</form>
+				</div>	
+
       </div>
 
       <a href="#dropbox" class="dropbox menu_button">Import calendar</a> 
@@ -288,16 +324,8 @@
       </section>
     </article>
 
-    <article id="RSS">
-      <header>
-        <h4 class="page_aside_title">RSS</h4>
-      </header>
-
-      <section class="RSS_content"></section>
-    </article>
-
     <article id="statistics">
-      <h1>ECTS Statistics</h1>
+      <h4 class="page_aside_title">ECTS Statistics</h4>
 
       <div class="statistics">
         Mandatory <span id="mandatory_ects">0</span>
@@ -318,6 +346,22 @@
       <div class="statistics">
         Total <span id="total_ects">0</span>
       </div>
+    </article>
+
+	<article id="RSS">
+      <header>
+        <h4 class="page_aside_title">ACTIVITIES</h4>
+      </header>
+
+      <section class="RSS_content">
+        <ul >
+         <li><img src="./images/Antonio.jpg" width="20" /> Antonio joined WebInt </li>
+         <li><img src="./images/Ghassane.jpg" width="20" /> Ghassane created event <a href="#drink">Drink to hell</a> </li>
+         <li><img src="./images/Luca.jpg" width="20" /> Luca posted a file to WebInt </li>
+         <li><img src="./images/Hieu.jpg" width="20" />  Hieu joined the network</li>
+
+        </ul>
+	  </section>
     </article>
   </aside>
 
