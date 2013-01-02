@@ -23,7 +23,7 @@ function handleDragStart(e) {
   dragSrcEl = this;
 
   e.dataTransfer.effectAllowed = 'move';
-  e.dataTransfer.setData('text/html', this.innerHTML);
+  e.dataTransfer.setData('text/html', this.childNodes[0].innerHTML);
 }
 
 function handleDragOver(e) {
@@ -32,7 +32,7 @@ function handleDragOver(e) {
   }
 
   e.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
-
+  this.classList.add('over');
   return false;
 }
 

@@ -6,11 +6,11 @@
   <meta charset="UTF-8">
 
   <title>Setup your timetable</title>
-  <link rel="stylesheet" href="./stylesheets/style.css" type="text/css">
-  <link rel="stylesheet" href="./stylesheets/calendar.css" type="text/css">
   <link rel="stylesheet" href="./stylesheets/jquery-ui.css" type="text/css">
   <link rel="stylesheet" href="./stylesheets/drag_drop_style.css" type="text/css">
   <link rel="stylesheet" type="text/css" media="all" href="./stylesheets/drop_styles.css">
+  <link rel="stylesheet" href="./stylesheets/style.css" type="text/css">
+  <link rel="stylesheet" href="./stylesheets/calendar.css" type="text/css">
   
   <script type="text/javascript" src="./scripts/jquery-1.8.3.js"></script>
   <script type="text/javascript" src="./scripts/jquery-ui.js"></script>
@@ -204,32 +204,22 @@
   <aside class="page_aside">
     <article id="my_course">
       <header>
-        <h4 class="page_aside_title">MY COURSES</h4>
+        <h4 class="page_aside_title">DRAG YOUR COURSES!</h4>
       </header><!-- DRAG AND DROP COURSES -->
 
       <section>
         <div id="courses_side">
-          <div class="course_side" draggable="true">DistAlg</div>
-
-          <div class="course_side" draggable="true">InternetApp</div>
-
-          <div class="course_side" draggable="true">MobServ</div>
-
-          <div class="course_side" draggable="true">Netw_I</div>
-
-          <div class="course_side" draggable="true">OS</div>
-
-          <div class="course_side" draggable="true">SecCom</div>
-
-          <div class="course_side" draggable="true">SoftDev</div>
-
-          <div class="course_side" draggable="true">SysSec</div>
-
-          <div class="course_side" draggable="true">WebInt</div>
-
-          <div class="course_side" draggable="true">Entrep</div>
-
-          <div class="course_side" draggable="true">TeamLead</div>
+          <div class="course_side" draggable="true"><a href="#DistAlg">DistAlg</a></div>
+          <div class="course_side" draggable="true"><a href="#Entrep">Entrep</a></div>
+          <div class="course_side" draggable="true"><a href="#InternetApp">InternetApp</a></div>
+          <div class="course_side" draggable="true"><a href="#Mobserv">MobServ</a></div>
+          <div class="course_side" draggable="true"><a href="#Netw_1">Netw_I</a></div>
+          <div class="course_side" draggable="true"><a href="#OS">OS</a></div>
+          <div class="course_side" draggable="true"><a href="#SecCom">SecCom</a></div>
+          <div class="course_side" draggable="true"><a href="#SoftDev">SoftDev</a></div>
+          <div class="course_side" draggable="true"><a href="#SysSec">SysSec</a></div>
+          <div class="course_side" draggable="true"><a href="#TeamLead">TeamLead</a></div>
+          <div class="course_side" draggable="true"><a href="#WebInt">WebInt</a></div>
         </div>
       </section>
     </article>
@@ -244,13 +234,13 @@
 
         <div class="ui-widget">
           <input type="text" size="14" id="course_input">
-          <input type="button" value="Add">
+          <input id="add_course_button" type="button" value="Add">
         </div>
       </section>
     </article>
 
     <article id="statistics">
-      <h1>ECTS Statistics</h1>
+      <h4>ECTS STATISTICS</h4>
 
       <div class="statistics">
         Mandatory <span id="mandatory_ects">0</span>

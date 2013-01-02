@@ -1,3 +1,5 @@
+var COLORS = ["course_color_green","course_color_orange","course_color_blue","course_color_red","course_color_pink","course_color_yellow","course_color_violet"];
+
 /* YOU CAN MODIFY THE VALUE IN THE ARRAY WITH THE ID
  * OR WHATEVER IS ASSOCIATED TO THAT DAY
  * Ex: DAY["MON"]=id_div_monday_in_my_calendar
@@ -103,6 +105,7 @@ var selectedCourses = new Array();
 function addToCalendar(course) {
   //pure javascript (from handlers in pure javascript)
   dragSrcEl.style.display="none";
+  var srcClasses = dragSrcEl.className.split(/\s+/);
   
   //JQuery
   var dst = $('#' + DAY[courseHour[course][0]] + ' .' + HR_SLOT[courseHour[course][1]]);
@@ -122,17 +125,26 @@ function addToCalendar(course) {
     dst.prepend("<div class='selected_course_up'>"
     +"<a href='#"+course+"'>"+course+"</a>"
     +"</div>");
-    dst.find(".selected_course_up").find("a").click(removeCourseClick);
+    var up = dst.find(".selected_course_up");
+    up.addClass(srcClasses[1]);
+    up.find("a").click(removeCourseClick);
+    up.css("height","50%");
+    up.find("a").css("padding-top","18%");
     if (list.find("li").length <= 1) {
       list.hide();
     } else {
-      list.addClass("inner_course_list_down");
+      list.css("height","50%");
+      list.find("ul").css("padding-top","18%");
     }
   } else {
     up.after("<div class='selected_course_down'>"
     +"<a href='#"+course+"'>"+course+"</a>"
     +"</div>");
-    dst.find(".selected_course_down").find("a").click(removeCourseClick);
+    var down = dst.find(".selected_course_down");
+    down.addClass(srcClasses[1]);
+    down.find("a").click(removeCourseClick);
+    down.css("height","50%");
+    down.find("a").css("padding-top","18%");
     list.hide();
   }
 }
@@ -159,7 +171,8 @@ function removeFromCalendar(course) {
     if (list.find("li").length <= 1) {
       list.show();
     } else {
-      list.removeClass("inner_course_list_down");
+      list.css("height","100%");
+      list.find("ul").css("padding-top","35%");
     } 
   } else {
     if (down.find("a").html()==course) {
@@ -187,7 +200,8 @@ function addCourseClick() {
   var course = $(this).html();
   var side = document.querySelectorAll("#courses_side .course_side");
   for (var i in side) {
-    if (course == side[i].innerHTML) {
+    var name = side[i].childNodes;
+    if (course == name[0].innerHTML) {
       dragSrcEl=side[i];
       break;
     }
@@ -203,7 +217,8 @@ function removeCourseClick() {
   var course = $(this).html();
   var side = document.querySelectorAll("#courses_side .course_side");
   for (var i in side) {
-    if (course == side[i].innerHTML) {
+     var name = side[i].childNodes;
+    if (course == name[0].innerHTML) {
       dragSrcEl=side[i];
       break;
     }
@@ -213,6 +228,25 @@ function removeCourseClick() {
     selectedCourses.splice(idx, 1); //remove element from array
     updateCourseEcts(course,REMOVE_COURSE);
     removeFromCalendar(course);
+  }
+}
+
+function addCourseButton() {
+  var course = $('#course_input').val();
+  if ( courses.indexOf(course)!=-1 && selectedCourses.indexOf(course)==-1 ) {
+    var side = document.querySelectorAll("#courses_side .course_side");
+    for (var i in side) {
+      var name = side[i].childNodes;
+      if (course == name[0].innerHTML) {
+        dragSrcEl=side[i];
+        break;
+      }
+    }
+    if (checkCourseCompatibility(course)) {
+      selectedCourses.push(course);
+      updateCourseEcts(course,ADD_COURSE);
+      addToCalendar(course);
+    }
   }
 }
 
@@ -274,7 +308,7 @@ function initializeCalendar() {
       }
       textToInstert += "</div>";
       list.html(textToInstert);
-      list = list.find(".inner_course_list");
+      list = list.find(".inner_course_list").find("ul");
       for (var c in courseHour) {
         if (courseHour[c][0]==d && courseHour[c][1]==h) {
           list.append("<li><a "+"href='#"+c+"'>"+c+"</a></li>");
@@ -285,6 +319,20 @@ function initializeCalendar() {
   }
 }
 
+function colorSideCourses() {
+  var c = 0;
+  $(".course_side").each(function(){
+    $(this).addClass(COLORS[c]);
+    $(this).css("-moz-user-select","none");
+    $(this).css("-khtml-user-select:","none");
+    $(this).css("-webkit-user-select:","none");
+    $(this).css("user-select:","none");
+    c = (c+1)%COLORS.length;
+  });
+}
+
 $(document).ready(function(){
    initializeCalendar();
+   colorSideCourses();
+   $('#add_course_button').click(addCourseButton);  
  });
