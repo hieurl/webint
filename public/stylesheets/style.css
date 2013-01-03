@@ -378,21 +378,19 @@ a:hover {
 }
 .my_course_content a{
 	font-size: 16px;
-
 	text-decoration: none;
-	text-align: left;
-	/*
-=======
-	width: 170px;
+	width: 200px;
 	height: 30px;
+	color: white;
+	display:table-cell;
 	text-decoration: none;
 	text-align: center;
->>>>>>> dec62202459e819c1f77d705ac809f8b75ed8024 */
 	vertical-align: middle;
 }
 
 .my_course_content a:hover{
 	text-decoration:underline;
+	background-color: #5D606E;
 }
 
 .menu_button {
