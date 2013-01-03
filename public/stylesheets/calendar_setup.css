@@ -1,0 +1,294 @@
+/* Prevent the text contents of draggable elements from being selectable */
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+[draggable] a {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#calendar.over {
+   border: 2px dashed #000;
+}
+
+.day {
+  display: inline-block;
+  /*hack for display block alignment*/
+  vertical-align: top;
+  width: 18%;	
+	padding-left: 1%;
+	padding-right: 1%;
+	/*hack for display-block white spaces*/
+	margin-right: -4px;
+	margin-left: -4px;
+	text-align: center;
+}
+
+.day_head {
+	border: 2px #E2E2E2 solid;
+  margin-bottom: 5px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 3px 3px #25425E;
+  -ms-box-shadow: inset 0 0 3px 3px #25425E;
+  box-shadow: inset 0 0 3px 3px #25425E; /*#488FD2 #3D78AE*/
+  color: white;
+}
+
+.day_body {
+	height: 310px;
+	-webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.day_morning {
+	height: 150px;
+	border: 2px #E2E2E2 solid;
+	-webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.day_afternoon {
+  height: 150px;
+  border: 2px #E2E2E2 solid;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.inner_course_list {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;  
+  -webkit-box-shadow: inset 0 0 2px 2px #636363;
+  -ms-box-shadow: inset 0 0 2px 2px ##636363;
+  box-shadow: inset 0 0 2px 2px #636363;
+  height: 100%;
+}
+
+.inner_course_list ul {
+  list-style-type: none;
+  padding-left: 0;
+  padding-top: 35%;
+  margin: 0;  
+}
+
+.selected_course_up {
+  border: 2px #E2E2E2 solid;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.selected_course_up a {
+  display: block;
+}
+
+.selected_course_down {
+  border: 2px #E2E2E2 solid;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.selected_course_down a {
+  display: block;
+}
+
+.course_color_blue {
+  background-color: #2E9AFE;
+  -webkit-box-shadow: inset 0 0 3px 3px #25425E;
+  -ms-box-shadow: inset 0 0 3px 3px #25425E;
+  box-shadow: inset 0 0 3px 3px #25425E; /*#488FD2 #3D78AE*/
+}
+
+.course_color_blue a {
+ color: white;
+}
+
+.course_color_blue a:hover {
+ text-decoration: line-through;
+}
+
+.course_color_orange {
+  background-color: #FF8000;
+  -webkit-box-shadow: inset 0 0 3px 3px #86521D;
+  -ms-box-shadow: inset 0 0 3px 3px #86521D;
+  box-shadow: inset 0 0 3px 3px #86521D;
+}
+
+.course_color_orange a {
+ color: white;
+}
+
+.course_color_orange a:hover {
+ text-decoration: line-through;
+}
+
+.course_color_green {
+  background-color: #00CC00;
+  -webkit-box-shadow: inset 0 0 3px 3px #236F23;
+  -ms-box-shadow: inset 0 0 3px 3px #236F23;
+  box-shadow: inset 0 0 3px 3px #236F23;
+}
+
+.course_color_green a {
+ color: white;
+}
+
+.course_color_green a:hover {
+ text-decoration: line-through;
+}
+
+.course_color_yellow {
+  background-color: #FFBF00;
+  -webkit-box-shadow: inset 0 0 3px 3px #A37A00;
+  -ms-box-shadow: inset 0 0 3px 3px #A37A00;
+  box-shadow: inset 0 0 3px 3px #A37A00;
+}
+
+.course_color_yellow a {
+ color: white;
+}
+
+.course_color_yellow a:hover {
+ text-decoration: line-through;
+}
+
+.course_color_red {
+  background-color: #EE2C25;
+  -webkit-box-shadow: inset 0 0 3px 3px #9E231E;
+  -ms-box-shadow: inset 0 0 3px 3px #9E231E;
+  box-shadow: inset 0 0 3px 3px #9E231E;
+}
+
+.course_color_red a {
+ color: white;
+}
+
+.course_color_red a:hover {
+ text-decoration: line-through;
+}
+
+.course_color_pink {
+  background-color: #FF5590;
+  -webkit-box-shadow: inset 0 0 3px 3px #A75371;
+  -ms-box-shadow: inset 0 0 3px 3px #A75371;
+  box-shadow: inset 0 0 3px 3px #A75371;
+}
+
+.course_color_pink a {
+ color: white;
+}
+
+.course_color_pink a:hover {
+ text-decoration: line-through;
+}
+
+.course_color_violet {
+  background-color: #B13DEC;
+  -webkit-box-shadow: inset 0 0 3px 3px #501D6A
+  -ms-box-shadow: inset 0 0 3px 3px #501D6A;
+  box-shadow: inset 0 0 3px 3px #501D6A;
+}
+
+.course_color_violet a {
+ color: white;
+}
+
+.course_color_violet a:hover {
+ text-decoration: line-through;
+}
+
+.courses_side {
+}
+
+.course_side {
+  height: 25px;
+  padding-top: 5px;
+  width: 100%;
+	border: 2px #E2E2E2 solid;
+	-webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -moz-border-radius: 10px;
+  text-align: center;
+  /*IMPORTANT: don't forget it!*/
+  cursor: move;
+}
+
+.course_side a {
+}
+
+.vevent {
+/*	border: thin solid grey;
+	-webkit-border-radius: 2px 12px 2px 2px;*/
+	margin: 3px 3px 3px 3px;
+	height: 144px;
+}
+
+.vevent .summary{
+	margin: 0 5px;
+}
+
+.vevent .description{
+	font-size:1em;
+	font-weight:normal;
+}
+
+.vevent .location {
+	font-style: italic;
+} 
+
+
+/* === Tablet and Desktops === */
+
+@media screen and (min-width: 480px) {
+	.day{
+		height:400px;
+	}
+}
+
+
+.bg-color-blue {
+	background-color: #2E9AFE;
+}
+
+.bg-color-green {
+	background-color: #64FE2E;
+}
+
+.bg-color-pink {
+	background-color: #FA58D0;
+}
+
+.bg-color-orange {
+	background-color: #FFBF00;
+}
+
+.bg-color-yellow {
+	background-color: #D7DF01;
+}
+
+.bg-color-gray {
+	background-color: gray;
+}
