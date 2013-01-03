@@ -24,7 +24,7 @@ function modifyCss() {
 	rate_num.style.fontSize="17px"
 	//comment rate
 	rate.style.cssFloat="left"
-	rate.style.marginLeft="20%"
+	rate.style.marginLeft="5%"
 	//rate.style.marginTop="20px"
 	//user
 	user.style.fontStyle="italic"
@@ -39,7 +39,7 @@ function modifyCss() {
 	comment.style.textAlign="center"
 	comment.style.marginTop="7px"
 	comment.style.width="500px"
-	comment.style.marginLeft="26%"
+	comment.style.marginLeft="13%"
 	//comment.style.borderRadius="10px"
 	comment.style.padding="5px"
 	comment.style.boxShadow="1px 1px 1px #239CD3"

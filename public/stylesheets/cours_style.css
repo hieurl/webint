@@ -1,116 +1,112 @@
-.comment {
-
-	width: 350px;
-	border: 1px solid #239CD3;
-	border-radius: 3px;
-	font-family: Tahoma, sans-serif;
-	resize : none;
-	margin-top : 30px;
-	margin-left : 32%;
-    
-    
-}
-
-.comments {
-	margin-top : 30px;
-}
-
-.commentaires{
-	float : left;
-	width : 70%;
-	margin-left:5%;
-    
-}
 .course {
     
-	float : left;
-	width : 70%;
-	margin-left : 10%;
-	margin-top : 30px;
-    
-}
-
-.course_descript {
-
-	width : 30%;
-	float : left;
-	border: 1px #239CD3 solid;
-	margin-left:10%;
-	border-radius: 10px;
-	box-shadow: 2px 2px 2px #C3C3C3;
-	padding : 5px;
-	height : 129px;
-}
-
-.eval{
-	width : 30%;
-	margin-left:10%;
-	float : left;
-	border: 1px #239CD3 solid;
-	border-radius: 10px;
-	margin-top : 30px;
-	box-shadow: 2px 2px 2px #C3C3C3;
-	padding : 5px;
-	height : 129px
-}
-
-.proj {
-	width : 30%;
-	float : left;
-	border: 1px #239CD3 solid;
-	border-radius: 10px;
-	margin-top : 30px;
-	margin-left:70px;
-	box-shadow: 2px 2px 2px #C3C3C3;
-	padding : 5px;
-	height : 129px;
-}
-
-
-.classmate_pict {
-
-	height : 90px;
-	width : 90px;
-	float : left;
-	border: 1px #239CD3 solid;
-	margin-top: 5px;
+    float : left;
+    width : 70%;
+    margin-top : 30px;
+    margin-left : 5%;
+    margin-right: 5%;
     
 }
 
 .classmates {
-
-	width : 30%;
-	height : 129px;
-	float : left;
-	border: 1px #239CD3 solid;
-	border-radius: 10px;
-	margin-left : 70px;
-	margin-top : 30px
-	box-shadow: 2px 2px 2px #C3C3C3;
-	padding : 5px;
-
+    width : 35%;
+    height : 129px;
+    float : left;
+    border: 1px #239CD3 solid;
+    border-radius: 10px;
+    margin-left : 40px;
+    box-shadow: 2px 2px 2px #C3C3C3;
+    padding : 5px;
 }
 
+.eval{
+    width : 35%;
+    margin-left:10%;
+    float : left;
+    border: 1px #239CD3 solid;
+    border-radius: 10px;
+    margin-top : 30px;
+    box-shadow: 2px 2px 2px #C3C3C3;
+    padding : 5px;
+    height : 129px;
+}
+
+.comment {
+    width: 350px;
+    border: 1px solid #239CD3;
+    border-radius: 3px;
+    font-family: Tahoma, sans-serif;
+    resize : none;
+    margin-top : 30px;
+    margin-left : 25%; 
+    margin-right:75%;
+}
+
+.comments {
+    margin-top : 30px;
+}
+
+.commentaires{
+    float : left;
+    width : 60%;
+    margin-left:9%; 
+    margin-right:10%;
+}
+
+
+.course_descript {
+
+    width : 35%;
+    float : left;
+    border: 1px #239CD3 solid;
+    margin-left:10%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #C3C3C3;
+    padding : 5px;
+    height : 129px;
+}
+
+.proj {
+    width : 35%;
+    float : left;
+    border: 1px #239CD3 solid;
+    border-radius: 10px;
+    margin-top : 30px;
+    margin-left:40px;
+    box-shadow: 2px 2px 2px #C3C3C3;
+    padding : 5px;
+    height : 129px;
+}
+
+.classmate_pict {
+
+    height : 90px;
+    width : 90px;
+    float : left;
+    border: 1px #239CD3 solid;
+    margin-top: 5px;
+}
+
+
 p {
-	margin-top : 30px;
-	text-align : center;
+    margin-top : 30px;
+    text-align : center;
 }
 
 .post {
-
-	width : 100px;
-	background : #239CD3;
-	Font-style : italic;
-	font-family: Tahoma, sans-serif;
-	border-radius: 5px;
-	margin-left : 46%;
+    width : 100px;
+    background : #239CD3;
+    Font-style : italic;
+    font-family: Tahoma, sans-serif;
+    border-radius: 5px;
+    margin-left : 46%;
 }
 
 
 
 .what {
-	text-align : center;
-	font-style: italic;
-	font-size : 22px;
-	color : #239CD3;
+    text-align : center;
+    font-style: italic;
+    font-size : 22px;
+    color : #239CD3;
 }
