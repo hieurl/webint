@@ -18,10 +18,10 @@
 }
 
 .day {
-  display: inline-block;
+  
   /*hack for display block alignment*/
   vertical-align: top;
-  width: 18%;	
+  
 	padding-left: 1%;
 	padding-right: 1%;
 	/*hack for display-block white spaces*/
@@ -44,11 +44,12 @@
 }
 
 .day_body {
-	height: 310px;
+	
 	-webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   border-radius: 10px;
+
 }
 
 .day_morning {
@@ -265,6 +266,13 @@
 @media screen and (min-width: 480px) {
 	.day{
 		height:400px;
+		display: inline-block;
+		width: 18%;	
+	}
+	
+	.day_body{
+		height: 310px;
+		position:absolute; /*this is really, really important! */
 	}
 }
 
