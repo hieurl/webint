@@ -17,15 +17,12 @@ body {
     font-family: arial, tahoma;
     font-size: 11pt;
     /* luca didn't want the fixed width */ 
-    //width: 978px;
+    /* width: 978px; */
     margin: 0 auto;
     color: #505050;
-<<<<<<< HEAD
-    padding: 10px 10px 10px 10px;
+
     height: 100%;
-=======
-	
->>>>>>> dec62202459e819c1f77d705ac809f8b75ed8024
+
 
 /*
   border: hidden;
@@ -65,13 +62,11 @@ body {
     list-style: none;
     margin: 0px 0px 0px 0px;
     padding: 0px;
-<<<<<<< HEAD
-    width: 100%;
-=======
+
 	width: 97.5%;
 	background-color: #58ACFA;
 	padding: 5px 5px 5px 5px;
->>>>>>> dec62202459e819c1f77d705ac809f8b75ed8024
+
     /*width: 978px;*/
     background: #5D606E;
 }
@@ -167,14 +162,12 @@ body {
     }*/
 }
 .page_aside {
-<<<<<<< HEAD
-	float: right;
-	width: 17%;
+
 	min-height : 100%;
-=======
-	//float: right; Again, no. This is only for desktops. See above.
-	//width: 17%; idem.
->>>>>>> dec62202459e819c1f77d705ac809f8b75ed8024
+
+	/*float: right; Again, no. This is only for desktops. See above.
+	width: 17%; idem.*/
+
 	text-align: right;
 	border-left-width: thin;
 	border-left-style:solid;
@@ -385,15 +378,16 @@ a:hover {
 }
 .my_course_content a{
 	font-size: 16px;
-<<<<<<< HEAD
+
 	text-decoration: none;
 	text-align: left;
+	/*
 =======
 	width: 170px;
 	height: 30px;
 	text-decoration: none;
 	text-align: center;
->>>>>>> dec62202459e819c1f77d705ac809f8b75ed8024
+>>>>>>> dec62202459e819c1f77d705ac809f8b75ed8024 */
 	vertical-align: middle;
 }
 
