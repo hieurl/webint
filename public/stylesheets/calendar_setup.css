@@ -236,7 +236,8 @@
   cursor: move;
 }
 
-.course_side a {
+.course_side a:hover {
+  text-decoration: none;
 }
 
 .vevent {

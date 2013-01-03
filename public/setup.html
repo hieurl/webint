@@ -49,9 +49,30 @@
   </nav>
 
   <section class="top_menu">
-    <div class="top_menu_left">
-      <a href="#dropbox" class="dropbox menu_button">Import
-      calendar</a> <!--BEGIN DROPBOX-->
+  
+      <div class="top_menu_button top_menu_button_color_blue"><a href="#dropbox" class="dropbox">Import Calendar</a></div>
+      
+      <div class="my_track top_menu_button top_menu_button_color_blue">
+        <a href="#choose_track" class="track_window">WEB ENGINEERING</a>
+
+        <div id="choose_track" class="popup">
+          <a href="#" class="close"><img src=
+          "./images/close_pop.png" class="btn_close" title=
+          "Close Window" alt="Close"></a> <select>
+            <option>
+              Web Engineerning
+            </option>
+
+            <option>
+              Network
+            </option>
+          </select><br>
+          <input type="button" value="Save"> <input type="button"
+          class="close" value="Close">
+        </div>
+      </div>
+      
+      <!--BEGIN DROPBOX-->
 
       <div id="dropbox" class="popup">
         <a href="#" class="close"><img src="./images/close_pop.png"
@@ -82,30 +103,6 @@
       </div>
       <!--END OF POPUP DROPBOX-->
       
-    </div>
-
-    <div class="top_menu_right">
-      <div class="my_track">
-        <a href="#choose_track" class="track_window menu_button"
-        style="width: 185px">WEB ENGINEERING</a>
-
-        <div id="choose_track" class="popup">
-          <a href="#" class="close"><img src=
-          "./images/close_pop.png" class="btn_close" title=
-          "Close Window" alt="Close"></a> <select>
-            <option>
-              Web Engineerning
-            </option>
-
-            <option>
-              Network
-            </option>
-          </select><br>
-          <input type="button" value="Save"> <input type="button"
-          class="close" value="Close">
-        </div>
-      </div>
-    </div>
   </section>
 
   <section class="main_content">

@@ -49,15 +49,29 @@
   </header>
 
   <nav class="top_nav">
-    <a href="./main.html">HOME</a> <img height="12" src=
-    "./images/arrow_right_red.png" alt="Arrow Red">
+    <a href="./main.html">HOME</a> <img height="12" src="./images/arrow_right_red.png" alt="Arrow Red">
   </nav>
 
   <section class="top_menu">
+  <!--
     <div class="top_menu_left">
-      <a href="#new_event" class="event_window menu_button">New
-      Event</a> <!--TODO: ADD NEW EVENT CONTENT FORM-->
-
+  -->  
+      <div class="top_menu_button top_menu_button_color_blue"><a href="#new_event" class="event_window">Create New Event</a></div>
+      
+      <div class="top_menu_button top_menu_button_color_blue"><a href="#dropbox" class="dropbox">Import Calendar</a></div>
+      
+      <div class="top_menu_button top_menu_button_color_blue"><a id="export" href="./CalendarDragOut.eurcal" id="dragout" draggable="true"
+      data-downloadurl="application/octet-stream:Calendar.eurcal:./CalendarDragOut.eurcal">Export Calendar</a></div>
+      
+      <div class="search_bar">
+        <input type="text" size="15">
+        <input type="button" value="Search">
+      </div>
+      
+      <div class="my_track top_menu_button top_menu_button_color_blue"><a href="#choose_track" class="track_window_static">WEB ENGINEERING</a></div>
+      
+      <!-- BEGIN POPUP -->      
+      
       <div id="new_event" class="popup">
         <a href="#" class="close"><img src="./images/close_pop.png"
         class="btn_close" title="Close Window" alt="Close"></a>
@@ -114,8 +128,9 @@
             </div>
           </form>
         </div>
-      </div><a href="#dropbox" class="dropbox menu_button">Import
-      calendar</a> <!--BEGIN DROPBOX-->
+      </div>
+      
+      <!--BEGIN DROPBOX-->
 
       <div id="dropbox" class="popup">
         <a href="#" class="close"><img src="./images/close_pop.png"
@@ -144,25 +159,16 @@
           <p>Status Messages</p>
         </div><script src="./scripts/filedrag.js">
 </script>
-      </div><!--END OF POPUP DROPBOX-->
-      <a href="./CalendarDragOut.eurcal" class="menu_button" id=
-      "dragout" draggable="true" data-downloadurl=
-      "application/octet-stream:Calendar.eurcal:./CalendarDragOut.eurcal">Export
-      calendar</a>
-
-      <div class="search_bar">
-        <input type="text" value="Search ..." width="700">
-        <input type="button" value="Search">
       </div>
-      
+      <!--END OF POPUP DROPBOX-->
+    
+    <!--  
     </div>
-
+    -->
+    <!--
     <div class="top_menu_right">
-      <div class="my_track">
-        <a href="#choose_track" class=
-        "track_window_static menu_button" style="width: 185px">WEB
-        ENGINEERING</a>
-      </div>
+    -->
+    
     </div>
   </section>
 
