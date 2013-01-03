@@ -50,11 +50,18 @@
     height : 200px;
 }
 
+.section_video{
+    float:left;
+    border: 1px #C3C3C3 solid;
+    width : 250px;
+    height : 200px;
+}
+
 .Network_descript{
     margin-top : 90px;
     margin-right:auto;
     margin-left:auto;
-    width:95%;
+    width:85%;
 }
 
 video {
