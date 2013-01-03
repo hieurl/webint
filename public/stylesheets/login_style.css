@@ -46,8 +46,8 @@
 .section {
     float:left;
     border: 1px #C3C3C3 solid;
-    width :30%;
-    height : 30%;
+    width : 350px;
+    height : 200px;
 }
 
 .Network_descript{
