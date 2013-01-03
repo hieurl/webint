@@ -1,37 +1,33 @@
 .login_form {
-
-    margin-top : 230px;
+    margin-top : auto;
     margin-right: auto;
     margin-left : auto;
-    margin-bottom:230px;
-    width : 310px;
-    //min-height :100%;
+    margin-bottom: auto;
+    width : 45%;
+}
+
+.login_form input {
+  font-size: 1.2em;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .logo_login {
-    
     background : #239CD3;
     color : #239CD3;
-    width: 300px;
-    margin-left:110px;
+    width: 70%;
+    margin-left: 24%;
     text-align:center;
-    
+    height: 1.6em;   
 }
 
 .button {
-    width: 305px;
+    width: 70%;
     background: #CCCCCC;
 }
 
 .text {
-    width:300px;
+    width:70%;
     background: #CCCCCC;
     font-style:italic;
-}
-
-html {
-    height :100%;
-}
-body{
-    height : 100%;
 }

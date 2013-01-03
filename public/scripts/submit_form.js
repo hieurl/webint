@@ -11,7 +11,7 @@ function submit_form() {
     var login=document.getElementById('login').value
     var pass=document.getElementById('passwrd').value
     if ((include(loginList,login)) && (pass==password)) {
-	document.location.href="./main.html"
+	document.location.href="./setup.html"
     }
     else {
 	alert("Try Again")
