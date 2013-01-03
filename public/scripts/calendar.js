@@ -13,6 +13,14 @@ function drawCalendar(){
 	var firsthour=845; // when does morning start?
 	var lasthour=1900; // when does the school close?
 	var calHeight=400; // how tall is the calendar (in px) ?
+	
+	w=document.getElementById("monday_head").offsetWidth-6;
+	var dow = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
+    var length= dow.length;
+    for (var i=0; i<length; i++){
+        b=document.getElementById(dow[i]+"_body");
+        b.style.width=w+"px";
+    } 
 		
 	articles = document.getElementsByTagName('article')
 	for (a in articles) {
@@ -33,6 +41,7 @@ function drawCalendar(){
 				//TODO: manage event duration
 				articles[a].style.position="absolute";
 				articles[a].style.top=Math.floor(pos)+"px";
+				articles[a].style.width=w+"px";
 				//TODO: manage concurrent events
 			}
 		}

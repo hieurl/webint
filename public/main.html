@@ -181,13 +181,14 @@
 	  <!-- SCHEDULE -->
 	  <!-- This is a scratch for the schedule-to-be. -->
 	  <div id="calendar">
-	    <div class="day">
-	      <div class="day_head bg-color-blue">
-		<h1>Today, 16th</h1>
+	    <div class="day" id="monday">
+	      <div class="day_head bg-color-blue" id="monday_head">
+		<h1>Mon, 16th</h1>
 	      </div>
-	      <div class="day_body">
-		<!-- EVENTS -->	
-		<article id="event001" class="vevent">
+	      <div class="day_body" id="monday_body">
+
+		<!-- EVENTS -->
+		<article id="event001" class="vevent bg-color-green">
 		  <h1 class="summary"> WebInt </h1>
 		  <h2 class="description"> "HTML5" </h2>
 		  <p> from 
@@ -201,34 +202,36 @@
 			<!-- This form defines the timelapse where to show the event -->
 			<input type="hidden" value="845" name="from" />
 			<input type="hidden" value="1200" name="to" />
+			<!-- To get the size of the parent div -->
+			<input type="hidden" value="monday" name="datecode"/>
 		  </form>
 		  
 		</article>
 	      </div>
 	    </div>
-	    <div class="day">
-	      <div class="day_head bg-color-blue">
-		<h1>Tomorrow, 17th</h1>
+	    <div class="day" id="tuesday">
+	      <div class="day_head bg-color-blue" id="tuesday_head">
+		<h1>Tue, 17th</h1>
 	      </div>
-	      <div class="day_body">
+	      <div class="day_body" id="tuesday_body">
 		<!-- EVENTS -->	
 	      </div>
 	    </div>
-	    <div class="day">
-          <div class="day_head bg-color-blue">
-		<h1>18th, Fri</h1>
+	    <div class="day" id="wednesday">
+          <div class="day_head bg-color-blue" id="wednesday_head">
+		<h1>Wed, 18th</h1>
 	      </div>
-	      <div class="day_body">
+	      <div class="day_body" id="wednesday_body">
 		<!-- EVENTS -->	
 	      </div>
 	    </div>
-	    <div class="day">
-          <div class="day_head bg-color-blue">
-		<h1>22nd, Mon</h1>
+	    <div class="day" id="thursday">
+          <div class="day_head bg-color-blue" id="thursday_head">
+		<h1>Thu, 19th</h1>
 	      </div>
-	      <div class="day_body">
+	      <div class="day_body" id="thursday_body">
 		<!-- EVENTS -->	
-			<article id="event002" class="vevent">
+			<article id="event002" class="vevent" style="background-color: #FA58D0">
 			  <h1 class="summary"> SysSec </h1>
 			  <h2 class="description"> "SQL injection" </h2>
 			  <p> from 
@@ -242,16 +245,35 @@
 				<!-- This form defines the timelapse where to show the event -->
 				<input type="hidden" value="1330" name="from" />
 				<input type="hidden" value="1645" name="to" />
+				<input type="hidden" value="thursday" name="datecode" />
 			  </form>
 			  
 			</article>
 	      </div>
 	    </div>
-	    <div class="day">
-          <div class="day_head bg-color-blue">
-		<h1>23rd, Tue</h1>
+	    <div class="day" id="friday">
+          <div class="day_head bg-color-blue" id="friday_head">
+		<h1>Fri, 20th</h1>
 	      </div>
-	      <div class="day_body">
+	      <div class="day_body" id="friday_body">
+			<article id="event003" class="vevent bg-color-orange">
+              <h1 class="summary"> Network </h1>
+              <h2 class="description"> "HTTP, TCP, UDP,..." </h2>
+              <p> from 
+                <abbr class="dtstart" title="2013-01-14T08:45:00+01:00">8.45</abbr>
+                to  
+                <abbr class="dtend" title="2013-01-09T11:45:00+01:00">11.45</abbr>
+              </p>
+              <p class="location"> room 101 </p>
+                  
+              <form>
+                <!-- This form defines the timelapse where to show the event -->
+                <input type="hidden" value="1330" name="from" />
+                <input type="hidden" value="1645" name="to" />
+                <input type="hidden" value="thursday" name="datecode" />
+              </form>
+
+            </article>
 		<!-- EVENTS -->	
 	      </div>
 	    </div>
