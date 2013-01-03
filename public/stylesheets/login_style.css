@@ -2,7 +2,6 @@
     margin-top : auto;
     margin-right: auto;
     margin-left : auto;
-    margin-bottom: auto;
     width : 45%;
 }
 
@@ -30,4 +29,35 @@
     width:70%;
     background: #CCCCCC;
     font-style:italic;
+}
+
+.calendar{
+    width : 100%;
+    height : 100%;
+    
+}
+
+.courses{
+    width : 100%;
+    height : 100%;
+    
+}
+
+.section {
+    float:left;
+    border: 1px #C3C3C3 solid;
+    width :30%;
+    height : 30%;
+}
+
+.Network_descript{
+    margin-top : 90px;
+    margin-right:auto;
+    margin-left:auto;
+    width:95%;
+}
+
+video {
+    width : 100%;
+    height : 100%;
 }
