@@ -363,6 +363,7 @@ a:hover {
     }
 	
 	.page_aside{
+		padding-top:0;
 		width: 17%;
     }
 	
@@ -385,6 +386,7 @@ a:hover {
 	border-left-style:solid;
 	border-left-color: #C3C3C3;
 	padding-left: 1%;
+	padding-top:1px;
 	text-align: center;
 }
 
@@ -435,8 +437,15 @@ a:hover {
 
 .stat_label {
   width: 68%;
-  padding-left: 12%;
+  /*padding-left: 12%;*/
   text-align: left;
+}
+
+/* === Tablet and Desktops === */
+@media screen and (min-width: 768px) {
+	.stat_label {
+		padding-left: 12%;
+	}
 }
 
 .stat_val {
