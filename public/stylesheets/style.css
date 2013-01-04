@@ -342,6 +342,13 @@ a:hover {
   display: inline-block;
 }
 
+/* === Mobile and Tablets === */
+@media screen and (max-width: 1200px) {
+	#week_header {
+		display:none;
+	}
+}
+
 #arrow_back {
   width: 30px;
 }
