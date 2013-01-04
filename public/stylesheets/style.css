@@ -278,6 +278,17 @@ a:hover {
   text-decoration: none;
 }
 
+#subscribe {
+  min-width: 80px;
+}
+
+/* === Tablet and Desktops === */
+@media screen and (min-width: 768px) {
+	#subscribe {
+	  margin-left: 81%;
+	}
+}
+
 .top_menu_button_color_blue {
   background-color: #2E9AFE;
   -webkit-box-shadow: inset 0 0 1px 1px #25425E;
