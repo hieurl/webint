@@ -92,10 +92,10 @@
     float : left;
     border: 1px #239CD3 solid;
 /*    margin-top: 5px;*/
--webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
+-webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  border-radius: 60px;
     
 }
 
