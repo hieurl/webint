@@ -238,6 +238,7 @@
 
 .course_side a:hover {
   text-decoration: none;
+  cursor: move;
 }
 
 .vevent {

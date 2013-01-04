@@ -85,6 +85,9 @@ $(document).ready(function() {
    $( "#course_input" ).autocomplete({
                	source: courses
 	});
+   $( "#search_input" ).autocomplete({
+                source: courses
+        });
 
 });
 

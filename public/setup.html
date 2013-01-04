@@ -24,33 +24,30 @@
     <a class="overlap" href="#">Logout</a>
 
     <div class="user_status">
-      <table align="left">
-        <tr>
-          <td><img src="./images/Hieu.jpg" width="50" alt=
-          "Hieu Profile Photo"></td>
-
-          <td align="left">
-            <a href="#2event"><img src="./images/Event.png" width=
-            "20" alt="Event Image"> 0 events</a><br>
-            <a href="#0msg"><img src="./images/PM.jpg" width="20"
-            alt="Messages Image"> 0 message</a>
-          </td>
-        </tr>
-      </table>
+      <img id="user_img" src="./images/Hieu.jpg" alt="Hieu Profile Photo">
+      <div>
+      <div><img id="user_event_img" src="./images/Event.png" alt="Event Image"><a href="#2event">2 Events</a></div>
+      <div id="user_div_sub"><img id="user_msg_img" src="./images/PM.jpg" alt="Messages Image"><a href="#0msg">0 Messages</a></div>
+      </div>
     </div>
 
-    <div class="logo"><img src="./images/logo.gif" alt=
-    "Eurecom Logo"></div>
+    <div class="logo"><img src="./images/logo.gif" alt="Eurecom Logo"></div>
+    
+    <div class="headline">
+    <div class="headline_news_title">WELCOME</div>
+    <div class="headline_news_body">Setup Up Your Timetable</div>
+    </div>
   </header>
 
   <nav class="top_nav">
-    <a href="./main.html">HOME</a> <img height="12" src=
-    "./images/arrow_right_red.png" alt="Arrow Red">
+    <a href="./main.html" class="setup_nav">HOME</a> <img class="setup_nav" height="12" src="./images/arrow_right_red.png" alt="Arrow Red">
   </nav>
 
   <section class="top_menu">
   
       <div class="top_menu_button top_menu_button_color_blue"><a href="#dropbox" class="dropbox">Import Calendar</a></div>
+
+      <div class="top_menu_button top_menu_button_color_red"><a href="./main.html">Setup Completed</a></div>      
       
       <div class="my_track top_menu_button top_menu_button_color_blue">
         <a href="#choose_track" class="track_window">WEB ENGINEERING</a>
