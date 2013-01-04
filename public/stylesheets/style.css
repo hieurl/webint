@@ -149,8 +149,6 @@ body {
 
 /*MY SCHEDULE IN THE MAIN CONTENT*/
 h4 {
-    margin-top: 5px;
-    margin-bottom: 5px;
     color: #239CD3;
 }
 
@@ -266,6 +264,28 @@ a:hover {
   text-align: center;
 }
 
+.webint_head {
+  margin: 0.2%;
+  padding: 0.5% 0;
+	border: 2px #E2E2E2 solid;
+	-webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -moz-border-radius: 10px;
+  text-align: center;
+  background-color: #00CC00;
+  -webkit-box-shadow: inset 0 0 1px 1px #236F23;
+  -ms-box-shadow: inset 0 0 1px 1px #236F23;
+  box-shadow: inset 0 0 1px 1px #236F23; /*#488FD2 #3D78AE*/
+}
+
+.webint_head {
+ color: white;
+}
+
 /*
 .event_window:hover{
     color : #239CD3;
@@ -346,7 +366,7 @@ a:hover {
 
 /* === Tablet and Desktops === */
 @media screen and (min-width: 768px) {
-    aside{
+    aside {
 		float: right;
     }
 	
@@ -361,6 +381,7 @@ a:hover {
 	margin-left: 18px;
     }*/
 }
+
 .page_aside {
 
 	min-height : 100%;
@@ -368,48 +389,32 @@ a:hover {
 	/*float: right; Again, no. This is only for desktops. See above.
 	width: 17%; idem.*/
 
-	text-align: right;
 	border-left-width: thin;
 	border-left-style:solid;
 	border-left-color: #C3C3C3;
-	padding-left: 10px;
-	padding-right: 20px;
+	padding-left: 1%;
+	text-align: center;
 }
-
-.page_footer {
-    position: relative;
-    clear: both;
-    bottom: -35px;
-    font-size: 10pt;
-    font-style: italic;
-    height: 30px;
-    text-align: center;
-    margin-top: 5px;
-    color: white;
-}
-
 
 .page_aside_title {
-
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 3%;
     color: #239CD3;
     font-weight: bold;
 }
 
-.course_description {
-    
+.page_aside article {
+    margin: 10% 0;
+}
+
+#prof_photo {
+  height: 200px;
+}
+
+.course_description {    
     font-size: 13px;
     font-style: italic;
 }
 
-
-.my_course_content ul {
-	list-style-image: url('../images/arrow_left.png');
-}
-
-.my_course_content {	
-}
 .my_course_content a{
 	font-size: 16px;
 	text-decoration: none;
@@ -427,16 +432,67 @@ a:hover {
 	background-color: #5D606E;
 }
 
+.statistics {
+  color: #505050;
+  font-size: 1.1em;
+}
+
+.statistics div {
+  display: inline-block;
+}
+
+.stat_label {
+  width: 68%;
+  padding-left: 12%;
+  text-align: left;
+}
+
+.stat_val {
+  font-weight: bold;
+  width: 20%;
+  text-align: right;;
+
+}
 
 .RSS_content {
-	font-size: 10pt;
+	font-size: 0.9em;
 	text-align: left;
 }
 
 
+.RSS_content ul {
+  list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+}
 
+.RSS_content ul li {
+	  border-bottom-width: thin;
+    border-bottom-style:solid;
+    border-bottom-color: #C3C3C3;
+    padding: 5% 0;
+    float: left;
+    width: 100%;
+}
 
+.RSS_content ul li img {
+	  width: 30px;
+	  float: left;
+	  vertical-align: middle;
+	  padding-right: 5%;
+}
 
+.page_footer {
+    position: relative;
+    clear: both;
+    bottom: -35px;
+    font-size: 10pt;
+    font-style: italic;
+    height: 30px;
+    text-align: center;
+    margin-top: 5px;
+    color: white;
+}
 
 
 
