@@ -54,7 +54,7 @@ body {
 }
 
 .user_status {
-    float: right;
+    /*float: right;*/
     margin-top: 85px;
     padding-right: 8px;
     color: #239CD3;
@@ -67,6 +67,13 @@ body {
     -webkit-box-shadow: inset 0 0 1px 1px #636363;
     -ms-box-shadow: inset 0 0 1px 1px ##636363;
     box-shadow: inset 0 0 1px 1px #636363;
+}
+
+/* === Tablet and Desktops === */
+@media screen and (min-width: 768px) {
+	.user_status {
+		float: right;
+	}
 }
 
 .user_status div {
@@ -107,8 +114,7 @@ body {
 .headline {
     text-align:center;
     font-weight: bold;
-    margin-top: -34px;
-    padding-left: 15%;
+
     color: #239CD3;
 }
 
@@ -119,6 +125,14 @@ body {
 .headline_news_body {
     padding-top: 1%;
     font-size: 1.8em;
+}
+
+/* === Tablet and Desktops === */
+@media screen and (min-width: 768px) {
+	.headline {
+		margin-top: -34px;
+		padding-left: 15%;
+	}
 }
 
 .overlap {
