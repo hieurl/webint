@@ -189,6 +189,13 @@ a:hover {
     text-decoration: underline;
 }
 
+/* === Tablet and Desktops === */
+@media screen and (min-width: 768px) {
+	.top_nav {
+		width:99%;
+	}
+}
+
 .setup_nav{
     visibility: hidden; 
 }
