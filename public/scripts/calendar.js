@@ -52,7 +52,8 @@ function drawCalendar(){
 				//TODO: manage event duration
 				articles[a].style.position="absolute";
 				articles[a].style.top=Math.floor(pos)+"px";
-				articles[a].style.width=w+"px";
+				//articles[a].style.width=w+"px";
+				articles[a].style.width="96%";
 				//TODO: manage concurrent events
 			}
 		}
