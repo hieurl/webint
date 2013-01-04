@@ -24,17 +24,18 @@ function drawCalendar(){
 	if (window.innerWidth < 480){
 		articles = document.getElementsByTagName('article')
 		for (a in articles) {
-			if (articles[a].className=="vevent") {
+			if (hasClass(articles[a], "vevent")) {
 				articles[a].style.position="static";
 				articles[a].style.width="100%";
 			}
 		}
-		return;//TODO: reset the style to default if mobile.
+		return;
 	}
 		
 	articles = document.getElementsByTagName('article')
 	for (a in articles) {
-		if (articles[a].className=="vevent") {
+		//if (articles[a].className=="vevent")
+		if (hasClass(articles[a], "vevent")) {
 			form=articles[a].getElementsByTagName('form')[0];
 			if(typeof(form)!="undefined"){
 				inputs=form.getElementsByTagName('input');
@@ -60,5 +61,8 @@ function drawCalendar(){
 
 };
 
+function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+}
 window.onload=drawCalendar;
 window.onresize=drawCalendar;
