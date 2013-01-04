@@ -9,6 +9,12 @@ aside {
     float:none;
 }
 
+/* === Mobile === */
+@media screen and (max-width: 768px) {
+	aside{
+		clear:both;
+	}
+}
 
 body {
     font-family: arial, tahoma;
@@ -470,7 +476,7 @@ a:hover {
 	  border-bottom-width: thin;
     border-bottom-style:solid;
     border-bottom-color: #C3C3C3;
-    padding: 5% 0;
+    padding: 7px 0;
     float: left;
     width: 100%;
 }
@@ -479,7 +485,7 @@ a:hover {
 	  width: 30px;
 	  float: left;
 	  vertical-align: middle;
-	  padding-right: 5%;
+	  padding-right: 7px;
 }
 
 .page_footer {
