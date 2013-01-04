@@ -340,6 +340,15 @@ a:hover {
   font-size: 1.1em;
   margin-left: 25%;
   display: inline-block;
+  color: #505050;
+}
+
+#week_header_setup {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-left: 38%;
+  display: inline-block;
+  color: #505050;
 }
 
 #arrow_back {

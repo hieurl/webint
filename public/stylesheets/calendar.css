@@ -231,6 +231,17 @@
   text-align: center;
 }
 
+.course_side_main {
+  height: 25px;
+  width: 100%;
+	border: 2px #E2E2E2 solid;
+	-webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
 .course_side a {
 }
 
