@@ -33,6 +33,7 @@ body {
 	}
 }
 
+ 	
 .top_border {
     height: 22px;
     background: #363842;
@@ -327,19 +328,19 @@ a:hover {
     width: 100%; /*For mobile.*/
 }
 
-.main_content h1 {
+.main_content_evaluation h1 {
   font-weight: bold;
   color: #239CD3;
   font-size: 2em;
 }
 
-.main_content h2 {
+.main_content_evaluation h2 {
   font-weight: bold;
   color: #505050;
   font-size: 1.5em;
 }
 
-.main_content h3 {
+.main_content_evaluation h3 {
   color: #505050;
   font-size: 1.2em;
   display: inline-block;
