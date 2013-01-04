@@ -187,7 +187,7 @@ $(function () {
 					document.getElementById('my_score_button').disabled=true;
 					document.getElementById('my_score_undo').hidden=false;
 				} else {
-					alert('Please, put an integer number between 0 and 5');
+					alert('Please, put an integer number between 1 and 5');
 				}	
 			} else {
 				alert('Only numbers allowed');
