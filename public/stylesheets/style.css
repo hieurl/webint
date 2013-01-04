@@ -338,7 +338,17 @@ a:hover {
 #week_header {
   font-weight: bold;
   font-size: 1.1em;
-  margin-left: 30%;
+  margin-left: 25%;
+  display: inline-block;
+}
+
+#arrow_back {
+  width: 30px;
+}
+
+#arrow_forward {
+  width: 30px;
+  margin-left: 20%;
 }
 
 .evaluation h1 {
