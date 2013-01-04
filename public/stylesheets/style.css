@@ -74,6 +74,7 @@ body {
     -webkit-box-shadow: inset 0 0 1px 1px #636363;
     -ms-box-shadow: inset 0 0 1px 1px ##636363;
     box-shadow: inset 0 0 1px 1px #636363;
+    max-width: 200px;
 }
 
 /* === Tablet and Desktops === */
