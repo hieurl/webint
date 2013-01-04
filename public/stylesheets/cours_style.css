@@ -91,7 +91,12 @@
     width : 90px;
     float : left;
     border: 1px #239CD3 solid;
-    margin-top: 5px;
+/*    margin-top: 5px;*/
+-webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  border-radius: 60px;
+    
 }
 
 

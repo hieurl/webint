@@ -1,4 +1,4 @@
-var loginList=["amchyaa@eurecom.fr","ghassane.amchyaa@eurecom.fr", "antonio.verardi@eurecom.fr"]
+var loginList=["hieu@eurecom.fr","amchyaa@eurecom.fr","ghassane.amchyaa@eurecom.fr", "antonio.verardi@eurecom.fr"]
 var password="webint"
 
 //verify if an object is the array or not

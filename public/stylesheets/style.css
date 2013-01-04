@@ -175,7 +175,7 @@ a:hover {
     float: left;
     list-style: none;
     margin: 0px 0px 0px 0px;
-    width: 99%;
+    width: 96%;
     padding: 5px 5px 5px 5px;
     background-color: #5D606E;
 }
@@ -187,6 +187,13 @@ a:hover {
 
 .top_nav a:hover {
     text-decoration: underline;
+}
+
+/* === Tablet and Desktops === */
+@media screen and (min-width: 768px) {
+	.top_nav {
+		width:99%;
+	}
 }
 
 .setup_nav{
@@ -271,6 +278,17 @@ a:hover {
   text-decoration: none;
 }
 
+#subscribe {
+  min-width: 80px;
+}
+
+/* === Tablet and Desktops === */
+@media screen and (min-width: 768px) {
+	#subscribe {
+	  margin-left: 81%;
+	}
+}
+
 .top_menu_button_color_blue {
   background-color: #2E9AFE;
   -webkit-box-shadow: inset 0 0 1px 1px #25425E;
@@ -328,19 +346,51 @@ a:hover {
     width: 100%; /*For mobile.*/
 }
 
-.main_content_evaluation h1 {
+#week_header {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-left: 25%;
+  display: inline-block;
+  color: #505050;
+}
+
+#week_header_setup {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-left: 38%;
+  display: inline-block;
+  color: #505050;
+}
+
+/* === Mobile and Tablets === */
+@media screen and (max-width: 1200px) {
+	#week_header {
+		display:none;
+	}
+}
+
+#arrow_back {
+  width: 30px;
+}
+
+#arrow_forward {
+  width: 30px;
+  margin-left: 20%;
+}
+
+.evaluation h1 {
   font-weight: bold;
   color: #239CD3;
   font-size: 2em;
 }
 
-.main_content_evaluation h2 {
+.evaluation h2 {
   font-weight: bold;
   color: #505050;
   font-size: 1.5em;
 }
 
-.main_content_evaluation h3 {
+.evaluation h3 {
   color: #505050;
   font-size: 1.2em;
   display: inline-block;
@@ -363,6 +413,7 @@ a:hover {
     }
 	
 	.page_aside{
+		padding-top:0;
 		width: 17%;
     }
 	
@@ -385,6 +436,7 @@ a:hover {
 	border-left-style:solid;
 	border-left-color: #C3C3C3;
 	padding-left: 1%;
+	padding-top:1px;
 	text-align: center;
 }
 
@@ -421,7 +473,7 @@ a:hover {
 
 .my_course_content a:hover{
 	text-decoration:underline;
-	background-color: #5D606E;
+	/*background-color: #5D606E; bleah! =) */
 }
 
 .statistics {
@@ -435,8 +487,15 @@ a:hover {
 
 .stat_label {
   width: 68%;
-  padding-left: 12%;
+  /*padding-left: 12%;*/
   text-align: left;
+}
+
+/* === Tablet and Desktops === */
+@media screen and (min-width: 768px) {
+	.stat_label {
+		padding-left: 12%;
+	}
 }
 
 .stat_val {
@@ -551,7 +610,7 @@ a:hover {
 	    color: #a1b2c3; text-shadow: 0px -1px 0px #38506b; 
 }
 	
-.popup input:focus, textarea:focus {
+.popup input:focus, .popup textarea:focus {
 	background: #728eaa;
 	background: -moz-linear-gradient(top, #668099 0%, #728eaa 20%); /* firefox */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#668099), color-stop(20%,#728eaa)); /* webkit */

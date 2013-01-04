@@ -1,9 +1,18 @@
+html{
+    height :100%;
+}
+
+body {
+    height : 100%;
+}
+
 .login_form {
-    margin-top : auto;
     margin-right: auto;
     margin-left : auto;
     width : 45%;
+    height : 60%;
 }
+
 
 .login_form input {
   font-size: 1.2em;
@@ -17,7 +26,7 @@
     width: 70%;
     margin-left: 24%;
     text-align:center;
-    height: 1.6em;   
+    height: 1.6em; 
 }
 
 .button {
@@ -38,27 +47,26 @@
 }
 
 .courses{
-    margin-left: 75px;
-    width :200px;
-    height : 190px;
+    margin-left :5%;
+    width :90%;
+    height : 100%;
 }
 
 .section {
     float:left;
     border: 1px #C3C3C3 solid;
     width : 350px;
-    height : 190px;
+    height : 188px;
 }
 
 .section_video{
     float:left;
     border: 1px #C3C3C3 solid;
     width : 250px;
-    height : 190px;
+    height : 188px;
 }
 
 .Network_descript{
-    margin-top : 90px;
     margin-right:auto;
     margin-left:auto;
     width:956px;
@@ -67,4 +75,5 @@
 video {
     width : 100%;
     height : 100%;
+    //padding: 10px 15px 10px 15px;
 }
