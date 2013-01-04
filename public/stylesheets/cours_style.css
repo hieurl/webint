@@ -1,7 +1,7 @@
 .course {
     
     float : left;
-    width : 70%;
+    /*width : 70%;*/
     margin-top : 30px;
     margin-left : 5%;
     margin-right: 5%;
@@ -12,8 +12,10 @@
 	overflow:hidden;
 }
 
+
+
 .classmates {
-    width : 35%;
+    /*width : 35%;*/
     /*height : 129px;*/
     float : left;
     border: 1px #239CD3 solid;
@@ -24,7 +26,7 @@
 }
 
 .eval{
-    width : 35%;
+    /*width : 35%;*/
     margin-left:10%;
     float : left;
     border: 1px #239CD3 solid;
@@ -60,7 +62,7 @@
 
 .course_descript {
 
-    width : 35%;
+    /*width : 35%;*/
     float : left;
     border: 1px #239CD3 solid;
     margin-left:10%;
@@ -70,15 +72,9 @@
 
 }
 
-/* === Desktops === */
-@media screen and (min-width: 1280px) {
-	.course article {
-		height : 129px;
-	}
-}
 
 .proj {
-    width : 35%;
+    /*width : 35%;*/
     float : left;
     border: 1px #239CD3 solid;
     border-radius: 10px;
@@ -120,4 +116,36 @@ p {
     font-style: italic;
     font-size : 22px;
     color : #239CD3;
+}
+
+.course article {
+	width:95%;
+}
+
+/* == Mobile == */
+@media screen and (max-width: 1280px) {
+	.course article {
+		margin:0;
+		margin-bottom:30px;
+	}
+}
+
+/* === Tablet and Desktops === */
+@media screen and (min-width: 768px) {
+	.course {
+		width: 70%;
+	}
+}
+
+/* === Desktops === */
+@media screen and (min-width: 1280px) {
+
+	
+	.course article {
+		height : 129px;
+		width : 35%;
+
+	}
+	
+
 }
