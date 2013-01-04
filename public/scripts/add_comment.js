@@ -47,7 +47,8 @@ function modifyCss() {
 	comment.style.fontSize="15px"
 	//button
 	button.style.marginTop="1px"
-	button.style.marginLeft="427px"
+	//button.style.marginLeft="427px"
+	//non responsive at all!!!!!
 	i++
     }
 }
