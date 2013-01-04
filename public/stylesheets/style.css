@@ -351,6 +351,13 @@ a:hover {
   color: #505050;
 }
 
+/* === Mobile and Tablets === */
+@media screen and (max-width: 1200px) {
+	#week_header {
+		display:none;
+	}
+}
+
 #arrow_back {
   width: 30px;
 }
