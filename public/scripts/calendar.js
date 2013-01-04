@@ -5,9 +5,7 @@
 */
 
 function drawCalendar(){
-	// Responsive layout:
-	if (window.innerWidth < 480)
-		return;//TODO: recall drawCalendar when the window is resized, and reset the style to default if mobile.
+
 		
 	// PARAMETERS
 	var firsthour=845; // when does morning start?
@@ -21,6 +19,18 @@ function drawCalendar(){
         b=document.getElementById(dow[i]+"_body");
         b.style.width=w+"px";
     } 
+		
+	// Responsive layout:
+	if (window.innerWidth < 480){
+		articles = document.getElementsByTagName('article')
+		for (a in articles) {
+			if (articles[a].className=="vevent") {
+				articles[a].style.position="static";
+				articles[a].style.width="100%";
+			}
+		}
+		return;//TODO: reset the style to default if mobile.
+	}
 		
 	articles = document.getElementsByTagName('article')
 	for (a in articles) {
@@ -51,3 +61,4 @@ function drawCalendar(){
 };
 
 window.onload=drawCalendar;
+window.onresize=drawCalendar;
