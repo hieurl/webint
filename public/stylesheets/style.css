@@ -423,7 +423,7 @@ a:hover {
 
 .my_course_content a:hover{
 	text-decoration:underline;
-	background-color: #5D606E;
+	/*background-color: #5D606E; bleah! =) */
 }
 
 .statistics {
